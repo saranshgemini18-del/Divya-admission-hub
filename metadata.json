@@ -1,0 +1,6 @@
+{
+  "name": "Divya Admission Hub",
+  "description": "Elite Academic Consultancy for global standard credentials. We bridge the gap between institutional requirements and your professional aspirations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
