@@ -231,7 +231,7 @@ export default function Home() {
       {/* Fast-Track Admission Query Box */}
       <section className="mb-48 flex justify-center w-full" id="query-box">
         <div className="w-full max-w-2xl">
-          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-2xl relative transition-transform duration-300 ease-out bg-white/70 dark:bg-slate-800/80" id="hero-card">
+          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-2xl relative ease-out bg-white/70 dark:bg-slate-800/80" id="hero-card">
             <div className="absolute -top-4 -right-4 bg-emerald-accent p-3 rounded-2xl shadow-lg animate-bounce">
               <span className="material-symbols-outlined text-white">rocket_launch</span>
             </div>

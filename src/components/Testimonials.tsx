@@ -61,7 +61,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
             className="absolute inset-0 glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg flex flex-col items-center text-center bg-white/40 dark:bg-slate-800/80 h-full justify-center"
           >
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-emerald-accent/20 mb-6 flex-shrink-0">
@@ -105,7 +105,7 @@ export default function Testimonials() {
                   <button
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
+                    className={`h-2 rounded-full transition-all duration-150 ${
                       idx === currentIndex ? 'w-8 bg-emerald-accent' : 'w-2 bg-glass-border dark:bg-slate-700'
                     }`}
                     aria-label={`Go to testimonial ${idx + 1}`}

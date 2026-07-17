@@ -61,7 +61,7 @@ export default function InteractiveRoadmap() {
           <div key={step.id} className="relative z-10 flex flex-col items-center">
             <button
               onClick={() => setActiveStep(index)}
-              className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
+              className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-150 ${
                 index <= activeStep 
                   ? 'bg-emerald-accent text-white shadow-lg shadow-emerald-accent/30 scale-110 border-4 border-white dark:border-slate-900' 
                   : 'bg-white dark:bg-slate-800 text-on-surface-variant dark:text-slate-400 border-4 border-glass-border dark:border-slate-700 hover:scale-105'
@@ -71,7 +71,7 @@ export default function InteractiveRoadmap() {
             >
               <span className="material-symbols-outlined text-xl md:text-2xl">{step.icon}</span>
             </button>
-            <div className={`mt-4 font-bold text-sm md:text-base hidden sm:block transition-colors duration-300 ${
+            <div className={`mt-4 font-bold text-sm md:text-base hidden sm:block transition-colors duration-150 ${
               index <= activeStep ? 'text-navy-deep dark:text-emerald-accent' : 'text-on-surface-variant dark:text-slate-500'
             }`}>
               {step.title}
@@ -85,10 +85,10 @@ export default function InteractiveRoadmap() {
         <AnimatePresence mode="popLayout">
           <motion.div
             key={activeStep}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
             className="flex flex-col md:flex-row gap-6 items-start md:items-center h-full"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-emerald-accent/10 dark:bg-emerald-accent/20 text-emerald-accent rounded-2xl flex items-center justify-center border border-emerald-accent/20">

@@ -20,7 +20,7 @@ function AnimatedRoutes() {
   const location = useLocation();
   
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="popLayout">
       {/* @ts-expect-error - key is required for AnimatePresence to detect route changes */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={
@@ -56,10 +56,10 @@ function AnimatedRoutes() {
 function PageTransition({ children }: { children: ReactNode }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.15, ease: "easeInOut" }}
       className="w-full"
     >
       {children}

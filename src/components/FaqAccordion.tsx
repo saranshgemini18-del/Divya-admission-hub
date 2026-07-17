@@ -62,7 +62,7 @@ export default function FaqAccordion() {
         {faqs.map((faq, index) => (
           <div 
             key={index} 
-            className={`glass-card rounded-2xl border transition-all duration-300 overflow-hidden ${openIndex === index ? 'border-primary/30 shadow-md bg-white dark:bg-slate-800' : 'border-glass-border dark:border-white/10 hover:border-primary/20 dark:hover:border-primary/40 bg-white/50 dark:bg-slate-800/50'}`}
+            className={`glass-card rounded-2xl border transition-all duration-150 overflow-hidden ${openIndex === index ? 'border-primary/30 shadow-md bg-white dark:bg-slate-800' : 'border-glass-border dark:border-white/10 hover:border-primary/20 dark:hover:border-primary/40 bg-white/50 dark:bg-slate-800/50'}`}
           >
             <button 
               onClick={() => toggleAccordion(index)}
@@ -71,12 +71,12 @@ export default function FaqAccordion() {
               <span className={`font-display-xl text-lg md:text-xl transition-colors ${openIndex === index ? 'text-primary dark:text-emerald-400' : 'text-navy-deep dark:text-slate-200'}`}>
                 {faq.question}
               </span>
-              <span className={`material-symbols-outlined transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-primary dark:text-emerald-400' : 'text-on-surface-variant dark:text-slate-400'}`}>
+              <span className={`material-symbols-outlined transition-transform duration-150 ${openIndex === index ? 'rotate-180 text-primary dark:text-emerald-400' : 'text-on-surface-variant dark:text-slate-400'}`}>
                 expand_more
               </span>
             </button>
             <div 
-              className={`transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100 pb-6 px-6' : 'max-h-0 opacity-0 overflow-hidden px-6'}`}
+              className={`transition-all duration-150 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100 pb-6 px-6' : 'max-h-0 opacity-0 overflow-hidden px-6'}`}
             >
               <p className="text-on-surface-variant dark:text-slate-300 font-medium text-sm md:text-base border-t border-black/5 dark:border-white/10 pt-4">
                 {faq.answer}

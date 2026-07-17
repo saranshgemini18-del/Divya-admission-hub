@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       {/* Desktop Header */}
-      <header className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-[1280px] z-[100] transition-all duration-300 ${scrolled ? 'scale-95 top-2' : ''}`}>
+      <header className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-[1280px] z-[100] transition-all duration-150 ${scrolled ? 'scale-95 top-2' : ''}`}>
         <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-[rgba(0,0,0,0.08)] dark:border-[rgba(255,255,255,0.08)] rounded-full flex justify-between items-center px-4 md:px-6 py-4 shadow-xl">
           <div className="flex items-center gap-3 md:gap-4">
             <button 
