@@ -1,48 +1,18 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
 import FaqAccordion from '../components/FaqAccordion';
 import SEO from '../components/SEO';
 
 export default function Support() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    interest: 'Doctoral Research Support',
+    phone: '',
+    interest: 'NIOS Board Admissions (10th/12th)',
     urgency: 'Standard',
     narrative: ''
   });
-
-  const handleSupportSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.narrative) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-    
-    const message = `Hello, I have an inquiry:
-Name: ${formData.name}
-Email: ${formData.email}
-Interest: ${formData.interest}
-Urgency: ${formData.urgency}
-Message: ${formData.narrative}`;
-
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/918178056407?text=${encodedMessage}`, '_blank');
-    
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
-
-    setFormData({
-      name: '',
-      email: '',
-      interest: 'Doctoral Research Support',
-      urgency: 'Standard',
-      narrative: ''
-    });
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -50,30 +20,94 @@ Message: ${formData.narrative}`;
       ...prev,
       [name]: value
     }));
+    if (errorMessage) {
+      setErrorMessage('');
+    }
+  };
+
+  const handleSupportSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.narrative.trim()) {
+      setErrorMessage("Please fill in candidate name, contact email/phone, and your inquiry details.");
+      return;
+    }
+    
+    const message = `Hello Divya Admission Hub! I have submitted an official inquiry:
+• *Name:* ${formData.name.trim()}
+• *Email:* ${formData.email.trim()}
+• *Phone:* ${formData.phone.trim() || 'Not specified'}
+• *Interest:* ${formData.interest}
+• *Urgency:* ${formData.urgency}
+• *Inquiry:* ${formData.narrative.trim()}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const waUrl = `https://wa.me/918178056407?text=${encodedMessage}`;
+    const link = document.createElement('a');
+    link.href = waUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    setIsSubmitted(true);
   };
 
   return (
-    <main className="relative z-10 pt-32 pb-24 md:pt-40 max-w-[1280px] mx-auto px-6 md:px-16">
+    <main className="relative z-10 pt-28 md:pt-36 pb-24 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
-        title="Support & Consultation" 
-        description="Elite educational consulting for global standard credentials. Contact our expert advisors for personalized academic guidance." 
-        keywords="academic support, admission consultancy, NIOS admission, IGNOU support, academic advising" 
+        title="Student Support & Admission Helpline Dayalpur Delhi" 
+        description="Contact Divya Admission Hub counseling desk at 2nd Floor, Prime Dental Clinic, Near Water Tank, Dayalpur, Delhi 110094. Instant WhatsApp & phone helpline for NIOS admissions, IGNOU enrollment, and TOC solutions." 
+        keywords="admission helpline Dayalpur Delhi, NIOS inquiry phone number, IGNOU student support, Divya Admission Hub contact, Divya Dhariwal phone number, education counselor Dayalpur Delhi, Prime Dental Clinic Dayalpur 110094, TOC counseling" 
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Divya Admission Hub Helpdesk & Consultation",
+          "description": "Direct student helpdesk for NIOS and IGNOU admission queries in Dayalpur, Delhi 110094 and PAN India.",
+          "mainEntity": {
+            "@type": "EducationalOrganization",
+            "name": "Divya Admission Hub",
+            "telephone": "+918178056407",
+            "email": "Divya19970719@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki (Water Tank), Dayalpur",
+              "addressLocality": "Dayalpur, Delhi",
+              "addressRegion": "Delhi",
+              "postalCode": "110094",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+918178056407",
+              "contactType": "admission counseling",
+              "availableLanguage": ["English", "Hindi"],
+              "areaServed": "IN"
+            }
+          }
+        }}
       />
+
       {/* Hero Section */}
-      <section className="mb-20 text-center md:text-left">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+      <section className="mb-14 text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-3xl">
-            <h1 className="font-display-xl text-4xl md:text-5xl mb-4 text-navy-deep dark:text-white">
-              <span className="gradient-text">Design Your Academic Future</span>
+            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold mb-2 inline-block">
+              Authoritative Advisory &amp; Inquiries
+            </span>
+            <h1 className="font-display-xl text-3xl sm:text-4xl md:text-5xl mb-4 text-navy-deep dark:text-white leading-tight">
+              Design Your <span className="text-emerald-accent">Academic Future</span>
             </h1>
-            <p className="font-body-lg text-lg text-on-surface-variant dark:text-slate-300 max-w-xl md:mx-0 mx-auto">
-              Elite educational consulting for global standard credentials. We bridge the gap between institutional requirements and your professional aspirations with authoritative guidance.
+            <p className="font-body-md text-base md:text-lg text-on-surface-variant dark:text-slate-300 max-w-xl md:mx-0 mx-auto">
+              We bridge the gap between institutional regulations and your academic aspirations. Reach our certified educational mentors directly.
             </p>
           </div>
-          <div className="hidden md:flex gap-4 mb-2">
-            <div className="glass-card p-4 rounded-xl flex items-center gap-3 border-primary/10 dark:border-white/10 dark:bg-slate-800/80">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span className="font-label-mono text-xs text-primary dark:text-white uppercase tracking-widest font-bold">Active Enrollment Support</span>
+          <div className="flex flex-wrap gap-3">
+            <div className="glass-card px-4 py-3 rounded-2xl flex items-center gap-2.5 border-emerald-500/20 dark:border-white/10 bg-white/70 dark:bg-slate-800/80">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+              <span className="font-label-mono text-xs text-emerald-700 dark:text-emerald-300 uppercase tracking-widest font-bold">
+                Counselors Online Now
+              </span>
             </div>
           </div>
         </div>
@@ -82,227 +116,334 @@ Message: ${formData.narrative}`;
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        {/* Left Column: Inquiry Form & Consultant Cards */}
+        {/* Left Column: Priority Form & Advisors */}
         <div className="lg:col-span-8 space-y-8">
           
           {/* Priority Inquiry Form */}
-          <div className="glass-card p-8 md:p-10 rounded-2xl relative overflow-hidden bg-white dark:bg-slate-800 shadow-lg">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 dark:bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-            <h2 className="font-display-xl text-2xl text-primary dark:text-white mb-8 flex items-center gap-3">
-              <span className="material-symbols-outlined">priority_high</span>
-              Priority Inquiry Portal
-            </h2>
+          <div className="glass-card p-6 md:p-10 rounded-3xl relative overflow-hidden bg-white/90 dark:bg-slate-800/90 shadow-lg border border-glass-border dark:border-white/10">
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-glass-border dark:border-white/10">
+              <h2 className="font-display-xl text-xl md:text-2xl text-navy-deep dark:text-white flex items-center gap-2.5">
+                <span className="material-symbols-outlined text-emerald-accent text-2xl">mail_lock</span>
+                Priority Inquiry Portal
+              </h2>
+              <span className="font-label-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full">
+                SLA: &lt; 2 Hours
+              </span>
+            </div>
+
+            {errorMessage && (
+              <div className="mb-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs md:text-sm font-medium flex items-center gap-2">
+                <span className="material-symbols-outlined text-base">error</span>
+                <span>{errorMessage}</span>
+              </div>
+            )}
             
             {isSubmitted ? (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex flex-col items-center justify-center text-center py-16"
-              >
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 10 }}
-                  className="w-24 h-24 bg-emerald-accent/10 rounded-full flex items-center justify-center mb-6 relative"
-                >
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.4 }}
-                    className="absolute inset-0 rounded-full border-4 border-emerald-accent/30 scale-110"
-                  />
-                  <span className="material-symbols-outlined text-5xl text-emerald-accent">check_circle</span>
-                </motion.div>
-                <h3 className="font-display-xl text-3xl text-navy-deep dark:text-white mb-4">Inquiry Received Successfully</h3>
-                <p className="text-on-surface-variant dark:text-slate-300 max-w-md text-lg">
-                  Thank you for reaching out. Our consultancy team has received your priority inquiry and will contact you shortly regarding your academic future.
-                </p>
-                <button 
-                  onClick={() => setIsSubmitted(false)}
-                  className="mt-10 font-label-mono text-sm text-emerald-accent font-bold uppercase tracking-widest hover:underline bg-emerald-accent/5 px-6 py-3 rounded-full"
-                >
-                  Submit Another Inquiry
-                </button>
-              </motion.div>
-            ) : (
-              <form className="space-y-8" onSubmit={handleSupportSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative group">
-                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">Candidate Name</label>
-                  <input name="name" value={formData.name} onChange={handleInputChange} type="text" className="w-full bg-transparent border-0 border-b-2 border-outline-variant dark:border-slate-600 py-3 px-0 focus:ring-0 focus:border-b-primary dark:focus:border-b-white text-on-surface dark:text-white placeholder:text-outline-variant transition-all outline-none" placeholder="Dr. Jane Doe" required />
+              <div className="flex flex-col items-center justify-center text-center py-12">
+                <div className="w-20 h-20 bg-emerald-500/15 rounded-full flex items-center justify-center mb-5 text-emerald-500">
+                  <span className="material-symbols-outlined text-4xl">check_circle</span>
                 </div>
-                <div className="relative group">
-                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">Email Address</label>
-                  <input name="email" value={formData.email} onChange={handleInputChange} type="email" className="w-full bg-transparent border-0 border-b-2 border-outline-variant dark:border-slate-600 py-3 px-0 focus:ring-0 focus:border-b-primary dark:focus:border-b-white text-on-surface dark:text-white placeholder:text-outline-variant transition-all outline-none" placeholder="jane.doe@institution.edu" required />
+                <h3 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white mb-3">
+                  Inquiry Dispatched Successfully!
+                </h3>
+                <p className="text-on-surface-variant dark:text-slate-300 max-w-md text-sm md:text-base leading-relaxed mb-6">
+                  Your details have been forwarded to our senior admissions team. If your WhatsApp did not open automatically, click the button below.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <a
+                    href={`https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20just%20submitted%20my%20inquiry%20for%20${encodeURIComponent(formData.interest)}.%20My%20name%20is%20${encodeURIComponent(formData.name)}.`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold uppercase px-6 py-3 rounded-full shadow-md transition-all flex items-center gap-2"
+                  >
+                    <span className="material-symbols-outlined text-base">chat</span>
+                    Open WhatsApp Chat
+                  </a>
+                  <button 
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        interest: 'NIOS Board Admissions (10th/12th)',
+                        urgency: 'Standard',
+                        narrative: ''
+                      });
+                    }}
+                    className="font-label-mono text-xs text-on-surface-variant dark:text-slate-300 font-bold uppercase tracking-wider bg-black/5 dark:bg-white/5 hover:bg-black/10 px-5 py-3 rounded-full transition-colors"
+                  >
+                    Submit Another Query
+                  </button>
                 </div>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative group">
-                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">Academic Interest</label>
-                  <select name="interest" value={formData.interest} onChange={handleInputChange} className="w-full bg-transparent border-0 border-b-2 border-outline-variant dark:border-slate-600 py-3 px-0 focus:ring-0 focus:border-b-primary dark:focus:border-b-white text-on-surface dark:text-white transition-all outline-none appearance-none">
-                    <option value="Doctoral Research Support">Doctoral Research Support</option>
-                    <option value="Post-Graduate Specialization">Post-Graduate Specialization</option>
-                    <option value="NIOS Board Admissions">NIOS Board Admissions</option>
-                    <option value="IGNOU Distance Excellence">IGNOU Distance Excellence</option>
-                  </select>
-                </div>
-                <div className="relative group">
-                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">Urgency Level</label>
-                  <div className="flex gap-4 mt-2">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="radio" name="urgency" value="Standard" checked={formData.urgency === 'Standard'} onChange={handleInputChange} className="text-primary focus:ring-primary accent-primary" />
-                      <span className="text-sm font-medium dark:text-white">Standard</span>
+            ) : (
+              <form className="space-y-6" onSubmit={handleSupportSubmit}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                      Candidate Full Name *
                     </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="radio" name="urgency" value="Immediate" checked={formData.urgency === 'Immediate'} onChange={handleInputChange} className="text-premium-gold focus:ring-premium-gold accent-premium-gold" />
-                      <span className="text-sm font-medium dark:text-white">Immediate</span>
+                    <input 
+                      name="name" 
+                      value={formData.name} 
+                      onChange={handleInputChange} 
+                      type="text" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      placeholder="Enter candidate full name" 
+                      required 
+                    />
+                  </div>
+                  <div>
+                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                      Email Address *
+                    </label>
+                    <input 
+                      name="email" 
+                      value={formData.email} 
+                      onChange={handleInputChange} 
+                      type="email" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      placeholder="Enter email address" 
+                      required 
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                      Mobile / WhatsApp Number
+                    </label>
+                    <input 
+                      name="phone" 
+                      value={formData.phone} 
+                      onChange={handleInputChange} 
+                      type="tel" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      placeholder="+91 98765 43210" 
+                    />
+                  </div>
+                  <div>
+                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                      Academic Vertical of Interest
+                    </label>
+                    <select 
+                      name="interest" 
+                      value={formData.interest} 
+                      onChange={handleInputChange} 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all"
+                    >
+                      <option value="NIOS Board Admissions (10th/12th)">NIOS Board Admissions (10th/12th)</option>
+                      <option value="IGNOU Distance Degree (UG/PG)">IGNOU Distance Degree (UG/PG)</option>
+                      <option value="B.Tech / MBA Regular College Admission">B.Tech / MBA Regular College Admission</option>
+                      <option value="Doctoral Research & PhD Guidance">Doctoral Research &amp; PhD Guidance</option>
+                      <option value="Transfer of Credit (TOC) Consultation">Transfer of Credit (TOC) Consultation</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    Inquiry Urgency
+                  </label>
+                  <div className="flex gap-6">
+                    <label className="flex items-center gap-2 cursor-pointer text-sm font-medium">
+                      <input 
+                        type="radio" 
+                        name="urgency" 
+                        value="Standard" 
+                        checked={formData.urgency === 'Standard'} 
+                        onChange={handleInputChange} 
+                        className="accent-emerald-600"
+                      />
+                      <span>Standard (Within 24 Hours)</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer text-sm font-medium">
+                      <input 
+                        type="radio" 
+                        name="urgency" 
+                        value="Immediate" 
+                        checked={formData.urgency === 'Immediate'} 
+                        onChange={handleInputChange} 
+                        className="accent-emerald-600"
+                      />
+                      <span className="text-amber-600 dark:text-amber-400 font-semibold">Immediate Priority (Session Deadline)</span>
                     </label>
                   </div>
                 </div>
-              </div>
-              
-              <div className="relative group">
-                <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">Case Narrative / Inquiry Details</label>
-                <textarea name="narrative" value={formData.narrative} onChange={handleInputChange} className="w-full bg-transparent border-0 border-b-2 border-outline-variant dark:border-slate-600 py-3 px-0 focus:ring-0 focus:border-b-primary dark:focus:border-b-white text-on-surface dark:text-white placeholder:text-outline-variant transition-all resize-none outline-none" placeholder="Briefly describe your academic background and objectives..." rows={4} required></textarea>
-              </div>
-              
-              <button type="submit" className="w-full py-5 rounded-xl bg-gradient-to-r from-[#006c49] to-[#005c6e] dark:from-emerald-600 dark:to-emerald-800 text-white font-bold text-lg uppercase tracking-widest shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-[0.98] transition-all flex justify-center items-center gap-3">
-                SUBMIT SECURE INQUIRY
-                <span className="material-symbols-outlined">lock</span>
-              </button>
-            </form>
+                
+                <div>
+                  <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    Case Narrative &amp; Prior Academic Background *
+                  </label>
+                  <textarea 
+                    name="narrative" 
+                    value={formData.narrative} 
+                    onChange={handleInputChange} 
+                    className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all resize-none" 
+                    placeholder="Briefly describe your qualification, previous board/college, and what admission outcome you are seeking..." 
+                    rows={4} 
+                    required
+                  ></textarea>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full py-4 rounded-xl bg-emerald-accent hover:bg-emerald-600 text-white font-bold font-label-mono text-sm uppercase tracking-wider shadow-lg shadow-emerald-accent/20 active:scale-[0.99] transition-all flex justify-center items-center gap-2"
+                >
+                  <span>SUBMIT PRIORITY INQUIRY</span>
+                  <span className="material-symbols-outlined text-lg">lock</span>
+                </button>
+              </form>
             )}
           </div>
 
-          {/* Consultant Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Consultant 1 */}
-            <div className="glass-card p-6 rounded-2xl flex flex-col gap-4 group hover:border-primary/20 transition-colors bg-white dark:bg-slate-800 shadow-sm hover:-translate-y-1">
-              <div className="flex justify-between items-start">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3n4fOrxDIBxs6gk1dJF4q6tpKQ-cSjnnB2qPxGc_KgXELd4LLu1qTjhMK2Y86TlS3JiOnXBAIKJrtTJ48Y4FOYyrXSg_thRiQ5EGVUrILMj_Ao6gKAfbqhSkLLFUiUy0Q-J_NXtiheW2Ly6RtqQ4DFFVUy-3TEyxr6YR5lfVLjHaFDnrCDfvKoPQZpH-cDL4A28_UYhJzyWoHS6799NP9bwX22Zp0piVGfXGJ3-aChgOcsBTlb_jtAxtYsxTDDiTIMuj-S9f32gBF" alt="Dr. Aryan Sharma" className="w-full h-full object-cover" />
-                </div>
-                <div className="flex items-center gap-2 bg-primary/5 px-3 py-1 rounded-full">
-                  <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(16,185,129,0.4)]"></div>
-                  <span className="text-[10px] font-bold text-primary dark:text-emerald-400 uppercase tracking-tighter">Available Now</span>
-                </div>
+          {/* Director & Principal Academic Counselor Profile */}
+          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-glass-border dark:border-white/10 bg-white/80 dark:bg-slate-800/80 shadow-md">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-emerald-accent/40 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-lg group">
+                <img 
+                  src="/director-divya.svg" 
+                  alt="Divya Dhariwal - Founder & Director, Divya Admission Hub" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
-              <div>
-                <h3 className="font-display-xl text-xl text-on-surface dark:text-white group-hover:text-primary transition-colors">Dr. Aryan Sharma</h3>
-                <p className="text-primary dark:text-emerald-400 font-label-mono text-[10px] uppercase tracking-wider mb-2 font-bold">Senior Research Advisor</p>
-                <p className="text-on-surface-variant dark:text-slate-300 text-sm line-clamp-2 italic">Expert in doctoral thesis structuring and international grant navigation for elite scholars.</p>
-              </div>
-              <div className="flex gap-2 pt-2 border-t border-black/5 dark:border-white/10">
-                <span className="material-symbols-outlined text-primary dark:text-emerald-400 text-sm">verified</span>
-                <span className="text-on-surface-variant dark:text-slate-400 text-[11px] font-medium">Verified Academic Consultant</span>
-              </div>
-            </div>
 
-            {/* Consultant 2 */}
-            <div className="glass-card p-6 rounded-2xl flex flex-col gap-4 group hover:border-tertiary/20 transition-colors bg-white dark:bg-slate-800 shadow-sm hover:-translate-y-1">
-              <div className="flex justify-between items-start">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-tertiary/10 group-hover:border-tertiary/30 transition-colors">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRjIL3n1TC7bP4OUS9gGNO8zxugP13iNKd8mNn1fdHKGDNI_Z4-IghOXPcRNJB0sRe4aRpl8iNTPdwDNChLpPvN0zIUAk7ruUshjS21s0-pZdXvmni6K935fimDaDlNewmfQR-bl1-S7jpbThXcgsaz5fQotx7BLlHtNrAjRpdLsfUBdjmglZsTkkhV4gxpwZSXyAXjxVxtfkVgTGPpB3Xy9hSHlNS5tiOJVnqFBxaNj6_XgndHNKxtIka579D3_mcJEfOGc7nXVQG" alt="Priya Varma" className="w-full h-full object-cover" />
+              <div className="flex-grow text-center sm:text-left space-y-2">
+                <div className="flex flex-wrap items-center justify-center sm:justify-between gap-2">
+                  <div>
+                    <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white font-bold">Divya Dhariwal</h3>
+                    <p className="text-emerald-600 dark:text-emerald-400 font-label-mono text-xs uppercase font-bold tracking-wider mt-0.5">
+                      Founder &amp; Principal Academic Counselor
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold font-label-mono uppercase">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Accepting Consultations
+                  </span>
                 </div>
-                <div className="flex items-center gap-2 bg-primary/5 px-3 py-1 rounded-full">
-                  <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(16,185,129,0.4)]"></div>
-                  <span className="text-[10px] font-bold text-primary dark:text-emerald-400 uppercase tracking-tighter">Available Now</span>
+
+                <p className="text-on-surface-variant dark:text-slate-300 text-sm leading-relaxed pt-1">
+                  12+ years of verified student mentorship across NIOS board certification, IGNOU higher education curricula, and regular university degree admissions. Leading all strategic counseling personally to guarantee transparent and authentic enrollment.
+                </p>
+
+                <div className="pt-3 border-t border-black/5 dark:border-white/10 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold text-navy-deep dark:text-slate-200">
+                  <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+                    <span className="material-symbols-outlined text-base">verified</span>
+                    Verified Academic Strategist
+                  </span>
+                  <span className="flex items-center gap-1 text-premium-gold">
+                    <span className="material-symbols-outlined text-base">award_star</span>
+                    15,000+ Students Mentored
+                  </span>
+                  <a 
+                    href="https://instagram.com/dhriti19977777" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="flex items-center gap-1 text-[#E1306C] hover:underline"
+                  >
+                    <span className="material-symbols-outlined text-base">photo_camera</span>
+                    @dhriti19977777
+                  </a>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-display-xl text-xl text-on-surface dark:text-white group-hover:text-tertiary transition-colors">Priya Varma</h3>
-                <p className="text-tertiary dark:text-teal-400 font-label-mono text-[10px] uppercase tracking-wider mb-2 font-bold">Admissions Strategist</p>
-                <p className="text-on-surface-variant dark:text-slate-300 text-sm line-clamp-2 italic">Specializing in IGNOU &amp; NIOS fast-track certifications and distance education workflow.</p>
-              </div>
-              <div className="flex gap-2 pt-2 border-t border-black/5 dark:border-white/10">
-                <span className="material-symbols-outlined text-tertiary dark:text-teal-400 text-sm">verified</span>
-                <span className="text-on-surface-variant dark:text-slate-400 text-[11px] font-medium">Verified Academic Consultant</span>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Right Column: Executive Hub Contact & Map */}
-        <aside className="lg:col-span-4 space-y-8">
-          {/* Executive Hub Card */}
-          <div className="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-white dark:bg-slate-800 shadow-lg">
-            <div className="relative h-64 w-full">
-              <div className="absolute inset-0 bg-[#e2e2e6] dark:bg-slate-700" style={{ backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpr3kMPZZcDlyWIfVRrOFwLUoGMyYSMwwirXSngSR00ESREpc75txMOYtVlJLNB-MmbTt5jIlDiL_WC-gugIMm50dH9_eVivi-Nfh8jF9dMlZbbsXzLKdnD7s6ooeJ6M08O-m8d3Ir5ao4XRAqI4HW6lWTzQMuw2QWg1G1JZZl2jPjhYbhz4vhXgfRuEpGMFL801CzGCnFY-5CEQ05QqlcM0_5XXASor1VcAaWHo42ctDRh7dVw4UvHw9zD20ebQFtBHRglpH7Sf_a')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center animate-ping">
-                  <div className="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#10b981]"></div>
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-6">
-                <span className="font-label-mono text-[10px] font-bold bg-navy-deep dark:bg-white text-white dark:text-navy-deep px-3 py-1 rounded-full backdrop-blur-sm border border-white/20 uppercase tracking-widest shadow-md">Global HQ</span>
-              </div>
-            </div>
-            
-            <div className="p-8 flex-grow">
-              <h2 className="font-display-xl text-2xl text-on-surface dark:text-white mb-6">Executive Hub</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-surface-container dark:bg-slate-700 p-3 rounded-lg text-primary dark:text-white">
-                    <span className="material-symbols-outlined">location_on</span>
-                  </div>
-                  <div>
-                    <p className="font-label-mono text-[10px] font-bold text-primary dark:text-emerald-400 uppercase tracking-wider">Address</p>
-                    <p className="text-on-surface-variant dark:text-slate-300 text-sm mt-1">Elite Academic Tower, Sector 18, NOIDA, NCR-110044</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-surface-container dark:bg-slate-700 p-3 rounded-lg text-primary dark:text-white">
-                    <span className="material-symbols-outlined">mail</span>
-                  </div>
-                  <div>
-                    <p className="font-label-mono text-[10px] font-bold text-primary dark:text-emerald-400 uppercase tracking-wider">Executive Direct</p>
-                    <p className="text-on-surface-variant dark:text-slate-300 text-sm mt-1">divyaadmissionhub@gmail.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-surface-container dark:bg-slate-700 p-3 rounded-lg text-primary dark:text-white">
-                    <span className="material-symbols-outlined">call</span>
-                  </div>
-                  <div>
-                    <p className="font-label-mono text-[10px] font-bold text-primary dark:text-emerald-400 uppercase tracking-wider">Priority Hotline</p>
-                    <p className="text-on-surface-variant dark:text-slate-300 text-sm mt-1">+91 (120) 4500-Elite</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-10 pt-8 border-t border-black/5 dark:border-white/10 space-y-4">
-                <h4 className="font-label-mono text-[10px] font-bold text-on-surface-variant dark:text-slate-400 uppercase tracking-widest">Office Protocol</h4>
-                <ul className="space-y-3 text-sm text-on-surface-variant dark:text-slate-300 font-medium">
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                    Mon — Fri: 09:00 - 18:00
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-premium-gold rounded-full"></span>
-                    Sat: Priority Bookings Only
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          {/* Support Badge */}
-          <div onClick={() => window.open('https://wa.me/918178056407', '_blank')} className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-black/5 dark:border-white/10 flex items-center justify-between group cursor-pointer hover:bg-surface-container dark:hover:bg-slate-700 transition-all shadow-sm">
+        {/* Right Column: Executive Hub Contact Info */}
+        <aside className="lg:col-span-4 space-y-6">
+          <div className="glass-card rounded-3xl overflow-hidden bg-white/90 dark:bg-slate-800/90 shadow-lg border border-glass-border dark:border-white/10 p-6 md:p-8 space-y-6">
             <div>
-              <p className="font-label-mono text-[10px] font-bold text-tertiary dark:text-teal-400 uppercase tracking-widest mb-1">Live Chat</p>
-              <h3 className="font-display-xl text-xl group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors text-navy-deep dark:text-white">Talk to a Consultant</h3>
+              <span className="font-label-mono text-[10px] uppercase tracking-widest text-emerald-accent font-bold">
+                Central Office
+              </span>
+              <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mt-1">
+                Admission Desk
+              </h3>
+              <p className="text-xs text-on-surface-variant dark:text-slate-400 mt-1">
+                Serving scholars across Delhi NCR and Pan-India.
+              </p>
             </div>
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-              <span className="material-symbols-outlined">forum</span>
+
+            <div className="space-y-4 text-sm">
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <span className="material-symbols-outlined text-xl">location_on</span>
+                </div>
+                <div>
+                  <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Office Address</p>
+                  <p className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 leading-relaxed">
+                    2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki (Water Tank), Dayalpur, Delhi - 110094
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <span className="material-symbols-outlined text-xl">call</span>
+                </div>
+                <div>
+                  <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Direct Helpline</p>
+                  <a href="tel:+918178056407" className="text-navy-deep dark:text-slate-200 font-bold text-xs mt-1 block hover:text-emerald-accent">
+                    +91 81780 56407
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <span className="material-symbols-outlined text-xl">mail</span>
+                </div>
+                <div>
+                  <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Official Correspondence</p>
+                  <a href="mailto:Divya19970719@gmail.com" className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 block hover:text-emerald-accent break-all">
+                    Divya19970719@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Action CTAs */}
+            <div className="pt-4 border-t border-glass-border dark:border-white/10 space-y-2.5">
+              <a 
+                href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20speak%20with%20an%20academic%20counselor."
+                target="_blank"
+                rel="noreferrer"
+                className="w-full bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all"
+              >
+                <span className="material-symbols-outlined text-base">chat</span>
+                Instant WhatsApp Chat
+              </a>
+              <a 
+                href="tel:+918178056407"
+                className="w-full bg-navy-deep hover:bg-slate-800 text-white font-label-mono text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all"
+              >
+                <span className="material-symbols-outlined text-base">phone_in_talk</span>
+                Call Counselor Directly
+              </a>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 space-y-2 text-xs">
+              <div className="font-label-mono font-bold uppercase tracking-wider text-on-surface-variant dark:text-slate-400">
+                Operating Schedule
+              </div>
+              <div className="flex justify-between text-on-surface-variant dark:text-slate-300">
+                <span>Monday – Saturday:</span>
+                <span className="font-semibold text-navy-deep dark:text-white">09:00 – 19:00 IST</span>
+              </div>
+              <div className="flex justify-between text-on-surface-variant dark:text-slate-300">
+                <span>Sunday &amp; Holidays:</span>
+                <span className="font-semibold text-emerald-600 dark:text-emerald-400">WhatsApp Support On</span>
+              </div>
             </div>
           </div>
         </aside>
       </div>
       
       {/* FAQ Section */}
-      <div className="mt-24">
+      <div className="mt-20">
         <FaqAccordion />
       </div>
     </main>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-alt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="skin-alt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD5B5"/>
+      <stop offset="100%" stop-color="#EAA882"/>
+    </linearGradient>
+    <linearGradient id="hair-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22150E"/>
+      <stop offset="100%" stop-color="#0F0906"/>
+    </linearGradient>
+    <linearGradient id="jacket-black" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+    <linearGradient id="lip-alt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E25C3E"/>
+      <stop offset="100%" stop-color="#BF3B1F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg-alt)"/>
+  <circle cx="200" cy="180" r="180" fill="#10B981" opacity="0.06"/>
+
+  <!-- Hair Back -->
+  <path d="M110 180 C80 240 70 360 85 450 C110 460 140 450 145 400 C140 320 150 240 150 190 Z" fill="url(#hair-dark)"/>
+  <path d="M290 180 C320 240 330 360 315 450 C290 460 260 450 255 400 C260 320 250 240 250 190 Z" fill="url(#hair-dark)"/>
+
+  <!-- Neck -->
+  <path d="M174 250 L226 250 L230 340 L170 340 Z" fill="url(#skin-alt)"/>
+
+  <!-- White Top -->
+  <path d="M165 325 Q200 345 235 325 L245 500 L155 500 Z" fill="#FFFFFF"/>
+  <!-- Silver Pendant -->
+  <path d="M178 285 Q200 310 222 285" stroke="#CBD5E1" stroke-width="1.5" fill="none"/>
+  <circle cx="200" cy="310" r="3" fill="#E2E8F0"/>
+
+  <!-- Black Designer Blazer with Embellished Lapels -->
+  <path d="M80 500 L115 330 L165 325 L200 450 L235 325 L285 330 L320 500 Z" fill="url(#jacket-black)"/>
+  
+  <!-- Lapel Stitch / Bead Detail -->
+  <path d="M115 330 L165 325 L200 450 L185 450 L145 340 Z" fill="#182234"/>
+  <circle cx="150" cy="345" r="1.5" fill="#E2E8F0"/>
+  <circle cx="158" cy="365" r="1.5" fill="#E2E8F0"/>
+  <circle cx="168" cy="385" r="1.5" fill="#E2E8F0"/>
+  <circle cx="178" cy="405" r="1.5" fill="#E2E8F0"/>
+  <circle cx="188" cy="425" r="1.5" fill="#E2E8F0"/>
+
+  <path d="M285 330 L235 325 L200 450 L215 450 L255 340 Z" fill="#182234"/>
+  <circle cx="250" cy="345" r="1.5" fill="#E2E8F0"/>
+  <circle cx="242" cy="365" r="1.5" fill="#E2E8F0"/>
+  <circle cx="232" cy="385" r="1.5" fill="#E2E8F0"/>
+  <circle cx="222" cy="405" r="1.5" fill="#E2E8F0"/>
+  <circle cx="212" cy="425" r="1.5" fill="#E2E8F0"/>
+
+  <!-- Shoulders -->
+  <path d="M80 500 L60 410 L115 330 L135 340 L125 500 Z" fill="url(#jacket-black)"/>
+  <path d="M320 500 L340 410 L285 330 L265 340 L275 500 Z" fill="url(#jacket-black)"/>
+
+  <!-- Face -->
+  <circle cx="132" cy="205" r="13" fill="url(#skin-alt)"/>
+  <circle cx="268" cy="205" r="13" fill="url(#skin-alt)"/>
+  <ellipse cx="200" cy="200" rx="66" ry="76" fill="url(#skin-alt)"/>
+
+  <!-- Hair Crown & Braid -->
+  <path d="M134 185 C130 120 155 95 200 95 C245 95 270 120 266 185 C260 140 235 118 200 118 C165 118 140 140 134 185 Z" fill="url(#hair-dark)"/>
+  <path d="M142 135 Q200 110 258 135" stroke="#78350F" stroke-width="3" fill="none" stroke-dasharray="4,4"/>
+
+  <!-- Front Hair -->
+  <path d="M134 180 C130 220 125 280 145 350 C149 350 152 340 150 290 C146 240 148 190 154 165 Z" fill="url(#hair-dark)"/>
+  <path d="M266 180 C270 220 275 280 255 350 C251 350 248 340 250 290 C254 240 252 190 246 165 Z" fill="url(#hair-dark)"/>
+
+  <!-- Eyebrows -->
+  <path d="M162 170 Q178 164 190 170" stroke="#1F140E" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M210 170 Q222 164 238 170" stroke="#1F140E" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Cat-Eye Thick Black Frame Glasses -->
+  <path d="M152 168 Q174 166 194 174 L192 198 Q172 206 156 198 Z" fill="none" stroke="#0B0F19" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M248 168 Q226 166 206 174 L208 198 Q228 206 244 198 Z" fill="none" stroke="#0B0F19" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M194 174 Q200 171 206 174" stroke="#0B0F19" stroke-width="3.5" fill="none"/>
+
+  <!-- Eyes inside Glasses -->
+  <ellipse cx="174" cy="186" rx="9" ry="5.5" fill="#FFF"/>
+  <ellipse cx="226" cy="186" rx="9" ry="5.5" fill="#FFF"/>
+  <circle cx="174" cy="186" r="4.5" fill="#2A1810"/>
+  <circle cx="226" cy="186" r="4.5" fill="#2A1810"/>
+  <circle cx="175" cy="184" r="1.5" fill="#FFF"/>
+  <circle cx="227" cy="184" r="1.5" fill="#FFF"/>
+
+  <!-- Nose -->
+  <path d="M200 188 L198 210 Q200 214 204 212" stroke="#D39870" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="166" cy="214" rx="12" ry="7" fill="#F472B6" opacity="0.25"/>
+  <ellipse cx="234" cy="214" rx="12" ry="7" fill="#F472B6" opacity="0.25"/>
+
+  <!-- Smile Lips (Coral Red) -->
+  <path d="M182 232 Q200 248 218 232 Q200 238 182 232 Z" fill="url(#lip-alt)"/>
+
+  <!-- Name Badge -->
+  <rect x="60" y="445" width="280" height="42" rx="21" fill="rgba(15, 23, 42, 0.85)" stroke="#059669" stroke-width="1.5"/>
+  <text x="200" y="463" font-family="'Sora', sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">DIVYA DHARIWAL</text>
+  <text x="200" y="478" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#34D399" text-anchor="middle" letter-spacing="1.5">DIRECTOR &amp; STRATEGIST</text>
+</svg>

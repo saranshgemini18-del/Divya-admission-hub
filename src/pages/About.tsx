@@ -1,56 +1,107 @@
+import React from 'react';
 import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <div className="w-full min-h-screen bg-surface dark:bg-slate-900 text-on-surface dark:text-slate-200">
       <SEO 
-        title="About Us" 
-        description="Learn about Divya Admission Hub, our mission, vision, and our commitment to educational excellence." 
-        keywords="about divya admission hub, education consultancy, our mission, academic excellence" 
+        title="About Divya Dhariwal & Divya Admission Hub | 12+ Years Excellence" 
+        description="Founded by Divya Dhariwal, Divya Admission Hub is India's premier academic consultancy with 15,000+ students guided for NIOS, IGNOU, and university degrees." 
+        keywords="divya dhariwal, about divya admission hub, educational consultancy delhi, academic counseling excellence, NIOS admission guidance director, IGNOU counselors, Dayalpur Delhi 110094" 
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Divya Admission Hub",
+          "url": "https://divyaadmissionhub.com/about",
+          "description": "Educational leadership and 12+ years history of Divya Admission Hub under Divya Dhariwal.",
+          "mainEntity": {
+            "@type": "EducationalOrganization",
+            "name": "Divya Admission Hub",
+            "founder": {
+              "@type": "Person",
+              "name": "Divya Dhariwal",
+              "jobTitle": "Principal Academic Strategist & Founder",
+              "sameAs": "https://instagram.com/dhriti19977777"
+            }
+          }
+        }}
       />
-      <div className="relative z-10 pt-32 pb-24 md:pt-40 px-6 md:px-16 max-w-[1280px] mx-auto">
-        <header className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/50 border border-secondary/20 mb-6">
-            <span className="material-symbols-outlined text-secondary text-sm">info</span>
-            <span className="font-label-mono text-xs font-bold text-secondary uppercase tracking-wider">About Us</span>
+      
+      <div className="relative z-10 pt-28 md:pt-36 pb-24 px-4 md:px-12 max-w-[1280px] mx-auto">
+        {/* Header */}
+        <header className="mb-16 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
+            <span className="material-symbols-outlined text-emerald-accent text-sm">verified</span>
+            <span className="font-label-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+              12+ Years of Educational Leadership
+            </span>
           </div>
-          <h1 className="font-display-xl text-5xl md:text-6xl text-navy-deep dark:text-white leading-tight mb-6">
-            Empowering <span className="text-primary italic">Minds</span>,<br />
-            Transforming <span className="text-emerald-accent">Futures</span>
+          <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl text-navy-deep dark:text-white leading-[1.15] mb-5 font-bold">
+            Bridging Potential with <span className="text-emerald-accent">Academic Success</span>
           </h1>
-          <p className="text-on-surface-variant dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-            At Divya Admission Hub, we are dedicated to providing world-class educational consultancy, helping students navigate their academic journeys with confidence and clarity.
+          <p className="text-on-surface-variant dark:text-slate-300 text-base md:text-xl leading-relaxed">
+            Divya Admission Hub was founded with a singular purpose: to remove bureaucratic obstacles and provide unambiguous, authoritative guidance for secondary schooling and higher education degrees.
           </p>
         </header>
 
-        <section className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-6">
-            <h2 className="font-display-xl text-3xl md:text-4xl text-navy-deep dark:text-white">Our Story</h2>
-            <p className="text-on-surface-variant dark:text-slate-300 text-lg leading-relaxed">
-              Founded on the principles of integrity, excellence, and personalized guidance, Divya Admission Hub has been a beacon of hope for countless students. We recognized the complexities and challenges students face when seeking admissions in competitive educational environments and set out to create a streamlined, supportive process.
+        {/* Story & Philosophy */}
+        <section className="grid md:grid-cols-2 gap-10 items-center mb-20">
+          <div className="space-y-5">
+            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">
+              Our Genesis
+            </span>
+            <h2 className="font-display-xl text-3xl md:text-4xl text-navy-deep dark:text-white">
+              Every Learner Deserves an Open Pathway
+            </h2>
+            <p className="text-on-surface-variant dark:text-slate-300 text-base leading-relaxed">
+              Traditional educational systems often leave behind sports athletes, creative professionals, and students facing sudden health or academic interruptions. We recognized that boards like NIOS and open universities like IGNOU provide extraordinary opportunities, yet their procedures, subject choices, and documentation can be confusing.
             </p>
-            <p className="text-on-surface-variant dark:text-slate-300 text-lg leading-relaxed">
-              From our humble beginnings to becoming a trusted name in educational consulting, our journey is defined by the success stories of the students we have had the privilege to mentor. We believe that every student has unique potential, and our mission is to help them unlock it.
+            <p className="text-on-surface-variant dark:text-slate-300 text-base leading-relaxed">
+              For over a decade, Divya Admission Hub has served as a trusted partner for families across India. We ensure correct subject mapping, assist with Transfer of Credit (TOC) to save precious academic years, and guide candidates all the way to graduation and doctoral research.
             </p>
+
+            <div className="pt-2 grid grid-cols-2 gap-4">
+              <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10">
+                <span className="font-display-xl text-2xl font-bold text-emerald-accent block">15,000+</span>
+                <span className="text-xs text-on-surface-variant dark:text-slate-400 font-medium">Students Successfully Enrolled</span>
+              </div>
+              <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10">
+                <span className="font-display-xl text-2xl font-bold text-emerald-accent block">99.4%</span>
+                <span className="text-xs text-on-surface-variant dark:text-slate-400 font-medium">Clearance &amp; Verification Rate</span>
+              </div>
+            </div>
           </div>
-          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg relative overflow-hidden bg-white/40 dark:bg-slate-800/80">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-            <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-6 relative z-10">Our Core Values</h3>
-            <ul className="space-y-4 relative z-10">
+
+          <div className="glass-panel p-6 md:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg bg-white/80 dark:bg-slate-800/80">
+            <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-6">
+              Our Core Principles
+            </h3>
+            <ul className="space-y-4">
               {[
-                { title: 'Excellence', desc: 'Striving for the highest standards in all our services.' },
-                { title: 'Integrity', desc: 'Acting with honesty, transparency, and ethical conduct.' },
-                { title: 'Empowerment', desc: 'Equipping students with the knowledge and tools to succeed.' },
-                { title: 'Personalization', desc: 'Tailoring our guidance to each individual\'s unique needs.' }
+                { 
+                  title: '100% Authenticity & Transparency', 
+                  desc: 'We only partner with UGC, AIU, MHRD, and AICTE recognized boards and universities. No unverified promises or shortcuts.' 
+                },
+                { 
+                  title: 'Academic Year Protection', 
+                  desc: 'Through Transfer of Credit (TOC) and on-demand examination roadmaps, we prevent students from losing crucial academic years.' 
+                },
+                { 
+                  title: 'Full Lifecycle Mentorship', 
+                  desc: 'From syllabus selection to solved assignments, practical preparations, admit cards, and final marksheet delivery.' 
+                },
+                { 
+                  title: 'Accessible & Empathetic Counseling', 
+                  desc: 'Direct access to senior education strategists without corporate red tape or hidden fee escalations.' 
+                }
               ].map((value, i) => (
-                <li key={i} className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-accent/10 flex items-center justify-center flex-shrink-0 text-emerald-accent">
-                    <span className="material-symbols-outlined">check_circle</span>
+                <li key={i} className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-accent/15 text-emerald-accent flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="material-symbols-outlined text-xl">check_circle</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy-deep dark:text-white text-lg">{value.title}</h4>
-                    <p className="text-on-surface-variant dark:text-slate-400 text-sm mt-1">{value.desc}</p>
+                    <h4 className="font-bold text-navy-deep dark:text-white text-base">{value.title}</h4>
+                    <p className="text-on-surface-variant dark:text-slate-300 text-xs md:text-sm mt-1 leading-relaxed">{value.desc}</p>
                   </div>
                 </li>
               ))}
@@ -58,62 +109,94 @@ export default function About() {
           </div>
         </section>
 
-        <section className="text-center">
-          <h2 className="font-display-xl text-3xl md:text-4xl text-navy-deep dark:text-white mb-8">Ready to Start Your Journey?</h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Director's Profile & Note */}
+        <section className="mb-20 glass-card rounded-3xl p-8 md:p-12 border border-glass-border dark:border-white/10 bg-white/70 dark:bg-slate-800/70 relative overflow-hidden">
+          <div className="grid md:grid-cols-12 gap-8 items-center">
+            {/* Director Photo Frame */}
+            <div className="md:col-span-5 flex flex-col items-center">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-4 border-emerald-accent/30 shadow-2xl bg-slate-900 group">
+                <img 
+                  src="/director-divya.svg" 
+                  alt="Divya Dhariwal - Founder & Director, Divya Admission Hub" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-center">
+                  <span className="font-label-mono text-[10px] uppercase font-bold tracking-widest text-emerald-400 bg-emerald-950/70 px-3 py-1 rounded-full border border-emerald-500/30">
+                    Founder &amp; Director
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Director's Note & Philosophy */}
+            <div className="md:col-span-7 space-y-5 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold font-label-mono uppercase">
+                <span className="material-symbols-outlined text-sm">format_quote</span> Director's Note
+              </div>
+              <blockquote className="font-display-xl text-xl sm:text-2xl text-navy-deep dark:text-white leading-relaxed italic">
+                "Education is not one-size-fits-all. When a student discovers the right flexible academic pathway, their confidence returns and their career takes flight. That is the mission that drives us every single day."
+              </blockquote>
+              <div className="space-y-1">
+                <h3 className="font-display-xl text-2xl font-bold text-navy-deep dark:text-white">Divya Dhariwal</h3>
+                <p className="font-label-mono text-xs text-emerald-accent uppercase font-bold tracking-wider">
+                  Founder &amp; Principal Academic Counselor
+                </p>
+              </div>
+              <p className="text-on-surface-variant dark:text-slate-300 text-sm leading-relaxed">
+                With more than 12 years of hands-on counseling experience, Divya Dhariwal has helped over 15,000 students navigate board certifications, university lateral entries, and doctoral research proposals. Her student-first approach ensures every learner receives honest, verified, and personalized guidance.
+              </p>
+              
+              <div className="pt-3 flex flex-wrap justify-center md:justify-start gap-4">
+                <a 
+                  href="https://wa.me/918178056407?text=Hello%20Divya%20Dhariwal,%20I%20would%20like%20to%20consult%20regarding%20my%20academic%20pathway." 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md transition-all"
+                >
+                  <span className="material-symbols-outlined text-sm">chat</span>
+                  Connect Directly on WhatsApp
+                </a>
+                <a 
+                  href="https://instagram.com/dhriti19977777" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-emerald-accent transition-colors"
+                >
+                  <span className="material-symbols-outlined text-sm text-[#E1306C]">photo_camera</span>
+                  Instagram @dhriti19977777
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA Strip */}
+        <section className="text-center max-w-xl mx-auto">
+          <h2 className="font-display-xl text-3xl text-navy-deep dark:text-white mb-4">
+            Begin Your Consultation
+          </h2>
+          <p className="text-on-surface-variant dark:text-slate-300 text-sm md:text-base mb-6">
+            Speak directly with Divya Dhariwal and senior counselors regarding your 2024-25 admissions.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="https://wa.me/918178056407" 
+              href="https://wa.me/918178056407?text=Hello%20Divya%20Dhariwal,%20I%20would%20like%20to%20consult%20regarding%20my%20admission%20pathway."
               target="_blank" 
               rel="noreferrer" 
-              className="inline-flex items-center gap-2 bg-navy-deep dark:bg-white text-white dark:text-navy-deep px-8 py-4 rounded-full font-label-mono font-bold hover:scale-105 active:scale-95 transition-all shadow-xl shadow-navy-deep/20 dark:shadow-white/20"
+              className="inline-flex items-center gap-2 bg-emerald-accent hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full font-label-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-accent/20 transition-all hover:scale-105 active:scale-95"
             >
-              <span className="material-symbols-outlined">rocket_launch</span>
-              Let's Talk
+              <span className="material-symbols-outlined text-base">chat</span>
+              WhatsApp Director Directly
             </a>
-            
-            <div className="flex items-center gap-4 mt-4 sm:mt-0">
-              <a 
-                href="https://wa.me/918178056407" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="group relative flex items-center justify-center w-14 h-14 rounded-2xl bg-white/40 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-xl hover:shadow-[#25D366]/20 transition-all duration-300 hover:scale-110 overflow-hidden"
-                aria-label="WhatsApp Contact"
-              >
-                <div className="absolute inset-0 bg-[#25D366] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" className="text-[#25D366] drop-shadow-sm transition-transform duration-300 group-hover:scale-110 relative z-10">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                </svg>
-              </a>
-              
-              <a 
-                href="https://instagram.com/directordivya" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="group relative flex items-center justify-center w-14 h-14 rounded-2xl bg-white/40 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-xl hover:shadow-[#E1306C]/20 transition-all duration-300 hover:scale-110 overflow-hidden"
-                aria-label="Instagram Page"
-              >
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="url(#ig-grad)" className="drop-shadow-sm transition-transform duration-300 group-hover:scale-110 relative z-10">
-                  <defs>
-                    <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#F58529" />
-                      <stop offset="50%" stopColor="#DD2A7B" />
-                      <stop offset="100%" stopColor="#8134AF" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-                </svg>
-              </a>
-              
-              <a 
-                href="mailto:divyaadmissionhub@gmail.com" 
-                className="group relative flex items-center justify-center w-14 h-14 rounded-2xl bg-white/40 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-xl hover:shadow-[#D44638]/20 transition-all duration-300 hover:scale-110 overflow-hidden"
-                aria-label="Email Us"
-              >
-                <div className="absolute inset-0 bg-[#D44638] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                <span className="material-symbols-outlined text-[#D44638] text-2xl drop-shadow-sm transition-transform duration-300 group-hover:scale-110 relative z-10">mail</span>
-              </a>
-            </div>
+            <a 
+              href="tel:+918178056407"
+              className="inline-flex items-center gap-2 bg-navy-deep hover:bg-slate-800 text-white px-7 py-3.5 rounded-full font-label-mono text-xs font-bold uppercase tracking-wider shadow-md transition-all hover:scale-105 active:scale-95"
+            >
+              <span className="material-symbols-outlined text-base">call</span>
+              +91 81780 56407
+            </a>
           </div>
         </section>
       </div>

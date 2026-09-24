@@ -1,6 +1,6 @@
 {
   "name": "Divya Admission Hub",
-  "description": "Elite Academic Consultancy for global standard credentials. We bridge the gap between institutional requirements and your professional aspirations.",
+  "description": "Divya Admission Hub is India's premier academic consultancy for NIOS 10th/12th, IGNOU distance degrees, and accredited university admissions. Save your year with fast-track guidance.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

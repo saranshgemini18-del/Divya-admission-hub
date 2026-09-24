@@ -9,6 +9,7 @@ export default function FloatingContact() {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -34,29 +35,38 @@ export default function FloatingContact() {
       ...prev,
       [name]: value
     }));
+    if (errorMessage) setErrorMessage('');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all required fields.");
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setErrorMessage("Please fill in all required fields.");
       return;
     }
     
-    const message = `Hello, I have a quick inquiry:
-Name: ${formData.name}
-Email/Phone: ${formData.email}
-Message: ${formData.message}`;
+    const message = `Hello Divya Admission Hub! Quick inquiry:
+Name: ${formData.name.trim()}
+Contact: ${formData.email.trim()}
+Message: ${formData.message.trim()}`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/918178056407?text=${encodedMessage}`, '_blank');
+    const waUrl = `https://wa.me/918178056407?text=${encodedMessage}`;
+    const link = document.createElement('a');
+    link.href = waUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
       setIsOpen(false);
       setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+      setErrorMessage('');
+    }, 2500);
   };
 
   return (
@@ -120,6 +130,12 @@ Message: ${formData.message}`;
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {errorMessage && (
+                      <div className="p-2.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-medium flex items-center gap-1.5">
+                        <span className="material-symbols-outlined text-sm">error</span>
+                        <span>{errorMessage}</span>
+                      </div>
+                    )}
                     <div>
                       <label className="block font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 mb-1 uppercase tracking-wider font-bold">Name</label>
                       <input 

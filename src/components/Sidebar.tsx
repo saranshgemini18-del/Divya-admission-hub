@@ -10,6 +10,16 @@ interface SidebarProps {
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
 
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   const links = [
     { name: 'HOME', path: '/', icon: 'home' },
     { name: 'PROGRAMS', path: '/programs', icon: 'menu_book' },
@@ -40,10 +50,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed top-0 left-0 bottom-0 w-72 max-w-[80vw] bg-white dark:bg-slate-900 z-[160] shadow-2xl border-r border-glass-border dark:border-white/10 flex flex-col"
           >
             <div className="p-6 flex items-center justify-between border-b border-glass-border dark:border-white/10">
-              <Link to="/" onClick={onClose} className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
-                <span className="font-display-xl text-xl font-extrabold tracking-tighter uppercase">
-                  <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-primary">HUB</span>
+              <Link to="/" onClick={onClose} className="flex items-center gap-2" title="Divya Admission Hub">
+                <span className="material-symbols-outlined text-emerald-accent text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+                <span className="font-display-xl text-base font-extrabold tracking-tighter uppercase">
+                  <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-emerald-accent">ADMISSION HUB</span>
                 </span>
               </Link>
               <button 
@@ -75,7 +85,29 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               })}
             </nav>
             
-            <div className="p-6 border-t border-glass-border dark:border-white/10">
+            <div className="p-6 border-t border-glass-border dark:border-white/10 flex flex-col gap-3">
+              <button
+                onClick={() => {
+                  const isDark = document.documentElement.classList.contains('dark');
+                  if (isDark) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                  } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                  }
+                  // Force re-render of components if needed
+                  window.dispatchEvent(new Event('storage'));
+                }}
+                className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl border border-glass-border dark:border-white/10 text-on-surface dark:text-white bg-slate-50 dark:bg-slate-800 text-xs font-label-mono font-bold"
+              >
+                <span className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-premium-gold text-lg">contrast</span>
+                  <span>THEME MODE</span>
+                </span>
+                <span className="text-[10px] uppercase text-emerald-accent">Toggle Light / Dark</span>
+              </button>
+
               <a 
                 href="https://wa.me/918178056407" 
                 target="_blank" 

@@ -35,7 +35,7 @@ const roadmapSteps = [
     title: 'Enrollment',
     description: 'Final seat allocation and issuance of enrollment documentation from the institution.',
     icon: 'school',
-    details: 'Receive your official enrollment number, ID card, and study materials. Welcome to your new academic journey with Divya Academia!'
+    details: 'Receive your official enrollment number, ID card, and study materials. Welcome to your new academic journey with Divya Admission Hub!'
   }
 ];
 
@@ -82,13 +82,13 @@ export default function InteractiveRoadmap() {
 
       {/* Active Step Details */}
       <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-glass-border dark:border-slate-700 rounded-3xl p-6 md:p-8 min-h-[220px] md:min-h-[200px] shadow-lg relative overflow-hidden">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={activeStep}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             className="flex flex-col md:flex-row gap-6 items-start md:items-center h-full"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-emerald-accent/10 dark:bg-emerald-accent/20 text-emerald-accent rounded-2xl flex items-center justify-center border border-emerald-accent/20">
