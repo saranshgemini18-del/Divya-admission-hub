@@ -98,9 +98,9 @@ export default function Home() {
   return (
     <main className="relative z-10 pt-28 md:pt-36 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
-        title="Premier NIOS, IGNOU & Direct Admission Consultancy Delhi" 
-        description="Divya Admission Hub at Dayalpur, Delhi 110094 offers official admission guidance for NIOS 10th/12th, IGNOU distance degrees, B.Ed, DIET/JBT, D.Pharma & B.Pharma." 
-        keywords="Divya Admission Hub, NIOS admission Delhi, NIOS admission center Dayalpur Delhi 110094, NIOS 10th admission 2024 2025, NIOS 12th stream 1 stream 2, IGNOU admission consultancy Dayalpur, B.Ed admission Delhi, D.Pharma admission Delhi, Transfer of Credit TOC NIOS, Divya Dhariwal admission consultant, save academic year failed students" 
+        title="Class 10th & 12th by Open Near Me | NIOS Dayalpur" 
+        description="Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407." 
+        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma" 
         schema={{
           "@context": "https://schema.org",
           "@type": "WebPage",
