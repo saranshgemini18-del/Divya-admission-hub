@@ -14,7 +14,12 @@ interface SEOProps {
 }
 
 const SITE_NAME = "Divya Admission Hub";
-const BASE_URL = "https://divyaadmissionhub.com";
+const getBaseUrl = (): string => {
+  if (typeof window !== 'undefined' && window.location?.origin) {
+    return window.location.origin;
+  }
+  return "https://divya-admission-hub.vercel.app";
+};
 const DEFAULT_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuDEMDK-lMRgWcjlI2V-PjeDCPVkV6Sfs1gqwoVcpwF4PX4y3cyZ4InOCUEdyeVazEJdD-34t4j8JIsQK_QIYn_-nCISUVJ8daYKRWW616jEUXd2dLgvrZtJvbakJ2nMAc8Pb3nQFlz1E_zYJ0NNe5Se5BB3qgDx-tcehKiClJKmykOGLOvjrFFOGqhCMIUaKsTGz-ExJApogZPEOplV-f8d9ry0o9tHmFtzRoK-D8OejFdWc5PpUAiLUsUl5NV61k5Fd_96LH1ht7bc";
 
 export default function SEO({ 
@@ -28,8 +33,9 @@ export default function SEO({
   noindex = false
 }: SEOProps) {
   const location = useLocation();
-  const fullTitle = `${title} | ${SITE_NAME}`;
-  const canonicalUrl = canonical || `${BASE_URL}${location.pathname === '/' ? '' : location.pathname}`;
+  const baseUrl = getBaseUrl();
+  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  const canonicalUrl = canonical || `${baseUrl}${location.pathname === '/' ? '' : location.pathname}`;
 
   // Automatically generate BreadcrumbList for SERP snippets
   const pathParts = location.pathname.split('/').filter(Boolean);
@@ -38,7 +44,7 @@ export default function SEO({
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": `${BASE_URL}/`
+      "item": `${baseUrl}/`
     }
   ];
 
@@ -50,7 +56,7 @@ export default function SEO({
       "@type": "ListItem",
       "position": index + 2,
       "name": formattedName,
-      "item": `${BASE_URL}/${pathParts.slice(0, index + 1).join('/')}`
+      "item": `${baseUrl}/${pathParts.slice(0, index + 1).join('/')}`
     });
   });
 
