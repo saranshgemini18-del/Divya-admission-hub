@@ -84,6 +84,9 @@ export default function Testimonials() {
               <img 
                 src={testimonials[currentIndex].avatar} 
                 alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
+                width="64"
+                height="64"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover" 
                 loading="lazy"
                 onError={(e) => {

@@ -23,13 +23,13 @@
   --color-emerald-accent: #059669;
   --color-glass-border: rgba(0, 0, 0, 0.08);
   
-  --font-display-lg: "Sora", sans-serif;
-  --font-display-xl: "Sora", sans-serif;
-  --font-body-md: "Geist", "Sora", sans-serif;
-  --font-body-lg: "Sora", sans-serif;
-  --font-headline-md: "Sora", sans-serif;
-  --font-label-sm: "Sora", sans-serif;
-  --font-label-mono: "JetBrains Mono", monospace;
+  --font-display-lg: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display-xl: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body-md: "Geist", "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body-lg: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-headline-md: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-label-sm: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-label-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
   --spacing-container-max: 1280px;
   --spacing-margin-mobile: 20px;

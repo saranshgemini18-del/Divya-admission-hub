@@ -103,7 +103,7 @@ Message: ${formData.message.trim()}`;
             >
               {/* Header */}
               <div className="bg-navy-deep dark:bg-slate-800 p-6 flex justify-between items-center relative overflow-hidden flex-shrink-0">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent pointer-events-none"></div>
                 <div className="relative z-10">
                   <h3 className="text-white font-display-xl text-xl">Quick Inquiry</h3>
                   <p className="text-white/70 text-xs mt-1">Real-time support connection</p>
