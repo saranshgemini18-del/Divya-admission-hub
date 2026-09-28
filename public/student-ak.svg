@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <circle cx="64" cy="64" r="64" fill="#b45309"/>
+  <circle cx="64" cy="50" r="26" fill="#f8fafc"/>
+  <!-- Hair short fade -->
+  <path d="M42 42 C 44 26, 84 26, 86 42 C 84 34, 44 34, 42 42 Z" fill="#1e293b"/>
+  <!-- Eyes -->
+  <circle cx="54" cy="52" r="3" fill="#0f172a"/>
+  <circle cx="74" cy="52" r="3" fill="#0f172a"/>
+  <!-- Smile -->
+  <path d="M57 64 Q 64 69 71 64" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Body/Formal -->
+  <path d="M26 128 C 26 96, 42 86, 64 86 C 86 86, 102 96, 102 128 Z" fill="#1e293b"/>
+  <polygon points="64,98 54,86 74,86" fill="#f8fafc"/>
+  <polygon points="64,116 60,98 68,98" fill="#f59e0b"/>
+</svg>

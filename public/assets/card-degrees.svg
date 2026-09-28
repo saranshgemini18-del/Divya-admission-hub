@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <linearGradient id="degrees-g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#78350f" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="degrees-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#degrees-g1)"/>
+  <circle cx="330" cy="90" r="135" fill="url(#degrees-accent)"/>
+  <circle cx="70" cy="330" r="95" fill="url(#degrees-accent)"/>
+  <g opacity="0.35" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Star & Laurel / Prestige Medal Motif -->
+    <circle cx="200" cy="205" r="45" fill="none"/>
+    <circle cx="200" cy="205" r="38" stroke-dasharray="4 4" fill="none"/>
+    <!-- Central 5-point star -->
+    <polygon points="200,178 206,197 226,197 210,209 216,228 200,216 184,228 190,209 174,197 194,197" fill="none"/>
+    <!-- Ribbon tails -->
+    <path d="M185 245 L175 285 L200 275 L225 285 L215 245"/>
+  </g>
+  <!-- Architectural radial rings -->
+  <g opacity="0.12" stroke="#b45309" stroke-width="1.5">
+    <circle cx="200" cy="205" r="110"/>
+    <circle cx="200" cy="205" r="150" stroke-dasharray="8 8"/>
+  </g>
+</svg>

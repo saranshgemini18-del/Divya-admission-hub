@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,36 +6,36 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Engineering Scholar",
-      initials: "ES",
+      name: "Rahul Verma",
+      initials: "RV",
       program: "B.Tech Computer Science",
       institution: "Delhi NCR University Placement",
       quote: "The consulting team at Divya Admission Hub made my admission process seamless. Their documentation verification was prompt and saved me months of procedural hurdles.",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBT01O3f-1F7Z5y81_5sXYdN6MGTEaJ7dxwTQUO-3xlytwb2jsei5omP-IrqR2K30cjmSYA93snFS7HwLDNiirYWnbzvFilp8WTINr9UTFtICPuJ3DbT7n88HQf7nUA2Yn2_6xJehFihK7rjTPSH08QDlR-q0yxeB3-JK2Kb1AHEK_VjCcx5TaMasxdD3WDGeFI-SZsd2fxNwzvQQODzLi9S1Fi8pxaWmOEPn_lmc132tjAx_l0wJBpwDjgHam0YyqKNpYuT-AIoCjj"
+      avatar: "/student-rv.svg"
     },
     {
-      name: "Senior Secondary Scholar",
-      initials: "SS",
+      name: "Priya Sharma",
+      initials: "PS",
       program: "NIOS Sr. Secondary (12th)",
       institution: "State Athlete & Sports Aspirant",
       quote: "I needed to clear senior secondary via NIOS to pursue national sports trials. The guidance was highly professional and accommodated my training schedule with on-demand exams.",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDajlNlbXN3KwJd65VkvcOW4pM-pjUMoFeRU5arJwrFUXQgGEa4ssXmFdPfMYLGPlXBC-KcEVP6UGAijnwElprgeF-tTg2aX3RG-g5vwsWiY0SSineuQC3Y_RpTgh7I0lkltHKEbOgWaDdB9UGVUHwFC5-ZG1zCe86psoxeV6aKJxBmcyWSTdqNCOhL32aTptVyf85SlhMT5Ke-KAiCIkOTsLEBBSucaTbzcvoVt6MC7v9TxKcShL4J7NpJdsvUL0noOjVFZVoYRal6"
+      avatar: "/student-ps.svg"
     },
     {
-      name: "Master's Graduate",
-      initials: "MG",
+      name: "Amit Kumar",
+      initials: "AK",
       program: "Master of Arts & B.Ed",
       institution: "IGNOU Central University",
       quote: "Navigating IGNOU's re-registration and assignment deadlines was overwhelming at first. Divya Admission Hub's structured support was invaluable to finishing my degree on time.",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAOD5B5DiMPduKyrxRAY_8xmuvJZeHjfggp178DycqqjzTIsyuAHM4JnwUu9LijJhTs95cqPJ49QonKYzOCEtwNjlZ1NFljyTP76GT8AcDH-muyCnjKStQlOMboQKF3mYFdJ3UCYhBOz_1Y2KCs0OTQKNW8XuJ4y9Pb7_APiKJ8MTuxqMs4AwWAHYqMfHjXlWgXP8Xx4_itf2RMMTih6rvv7dsaziKjsnj0MgjnYoTh5DBr8Y0ufHyIGMeMHrTJ3zEnq2-o7_gH_fY8"
+      avatar: "/student-ak.svg"
     },
     {
-      name: "Doctoral Researcher",
-      initials: "DR",
+      name: "Sneha Patel",
+      initials: "SP",
       program: "PhD Research & Thesis",
       institution: "UGC-CARE Accredited University",
       quote: "The personalized attention I received during my PhD application was outstanding. They guided my research proposal structuring and viva preparation with deep academic rigor.",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDajlNlbXN3KwJd65VkvcOW4pM-pjUMoFeRU5arJwrFUXQgGEa4ssXmFdPfMYLGPlXBC-KcEVP6UGAijnwElprgeF-tTg2aX3RG-g5vwsWiY0SSineuQC3Y_RpTgh7I0lkltHKEbOgWaDdB9UGVUHwFC5-ZG1zCe86psoxeV6aKJxBmcyWSTdqNCOhL32aTptVyf85SlhMT5Ke-KAiCIkOTsLEBBSucaTbzcvoVt6MC7v9TxKcShL4J7NpJdsvUL0noOjVFZVoYRal6"
+      avatar: "/student-sp.svg"
     }
   ];
 
@@ -68,83 +67,79 @@ export default function Testimonials() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.98 }}
-            transition={{ duration: 0.18, ease: "easeOut" }}
-            className="glass-panel p-6 sm:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg flex flex-col items-center text-center bg-white/80 dark:bg-slate-800/90 w-full"
-          >
-            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-accent/40 mb-4 shrink-0 bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-              <span className="font-display-xl text-lg font-bold text-emerald-accent select-none">
-                {testimonials[currentIndex].initials}
-              </span>
-              <img 
-                src={testimonials[currentIndex].avatar} 
-                alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
-                width="64"
-                height="64"
-                decoding="async"
-                className="absolute inset-0 w-full h-full object-cover" 
-                loading="lazy"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
-            </div>
-            
-            <div className="flex text-premium-gold mb-4 gap-1">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-              ))}
-            </div>
-            
-            <p className="text-on-surface-variant dark:text-slate-200 font-medium text-base md:text-lg mb-6 flex-grow italic max-w-xl leading-relaxed">
-              "{testimonials[currentIndex].quote}"
+        <div
+          key={currentIndex}
+          className="glass-panel p-6 sm:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg flex flex-col items-center text-center bg-white/80 dark:bg-slate-800/90 w-full transition-opacity duration-300 ease-out"
+        >
+          <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-accent/40 mb-4 shrink-0 bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+            <span className="font-display-xl text-lg font-bold text-emerald-accent select-none">
+              {testimonials[currentIndex].initials}
+            </span>
+            <img 
+              src={testimonials[currentIndex].avatar} 
+              alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
+              width="64"
+              height="64"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover" 
+              loading="lazy"
+              onError={(e) => {
+                (e.target as HTMLElement).style.display = 'none';
+              }}
+            />
+          </div>
+          
+          <div className="flex text-premium-gold mb-4 gap-1">
+            {[...Array(5)].map((_, i) => (
+              <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+            ))}
+          </div>
+          
+          <p className="text-on-surface-variant dark:text-slate-200 font-medium text-base md:text-lg mb-6 flex-grow italic max-w-xl leading-relaxed">
+            "{testimonials[currentIndex].quote}"
+          </p>
+          
+          <div>
+            <h3 className="font-display-xl text-lg text-navy-deep dark:text-white font-bold leading-tight">
+              {testimonials[currentIndex].name}
+            </h3>
+            <p className="font-label-mono text-xs text-emerald-700 dark:text-emerald-400 uppercase tracking-wider font-bold mt-1">
+              {testimonials[currentIndex].program}
             </p>
-            
-            <div>
-              <h4 className="font-display-xl text-lg text-navy-deep dark:text-white font-bold leading-tight">
-                {testimonials[currentIndex].name}
-              </h4>
-              <p className="font-label-mono text-xs text-emerald-accent uppercase tracking-wider font-bold mt-1">
-                {testimonials[currentIndex].program}
-              </p>
-              <p className="text-xs text-on-surface-variant dark:text-slate-400 font-medium mt-0.5">
-                {testimonials[currentIndex].institution}
-              </p>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+            <p className="text-xs text-on-surface-variant dark:text-slate-400 font-medium mt-0.5">
+              {testimonials[currentIndex].institution}
+            </p>
+          </div>
+        </div>
         
         {/* Carousel Controls */}
         <div className="flex justify-center items-center gap-4 mt-6">
           <button 
             onClick={() => setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-            className="w-9 h-9 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
+            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
             aria-label="Previous testimonial"
           >
             <span className="material-symbols-outlined text-base">arrow_back</span>
           </button>
           
-          <div className="flex gap-2">
+          <div className="flex items-center gap-1">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-2 rounded-full transition-all duration-200 ${
-                  idx === currentIndex ? 'w-8 bg-emerald-accent' : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
-                }`}
+                className="min-w-[36px] min-h-[36px] p-2 flex items-center justify-center cursor-pointer"
                 aria-label={`Go to testimonial ${idx + 1}`}
-              />
+              >
+                <span className={`h-2 rounded-full transition-all duration-200 block ${
+                  idx === currentIndex ? 'w-8 bg-emerald-accent' : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
+                }`} />
+              </button>
             ))}
           </div>
           
           <button 
             onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)}
-            className="w-9 h-9 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
+            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
             aria-label="Next testimonial"
           >
             <span className="material-symbols-outlined text-base">arrow_forward</span>

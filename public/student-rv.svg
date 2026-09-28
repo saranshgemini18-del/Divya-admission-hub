@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <circle cx="64" cy="64" r="64" fill="#047857"/>
+  <!-- Student silhouette / avatar -->
+  <circle cx="64" cy="50" r="26" fill="#f1f5f9"/>
+  <!-- Hair -->
+  <path d="M40 44 C 42 26, 86 26, 88 44 C 84 34, 46 34, 40 44 Z" fill="#1e293b"/>
+  <!-- Glasses -->
+  <rect x="46" y="46" width="14" height="10" rx="3" stroke="#0f172a" stroke-width="2" fill="none"/>
+  <rect x="68" y="46" width="14" height="10" rx="3" stroke="#0f172a" stroke-width="2" fill="none"/>
+  <line x1="60" y1="51" x2="68" y2="51" stroke="#0f172a" stroke-width="2"/>
+  <!-- Smile -->
+  <path d="M56 63 Q 64 68 72 63" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Body/Suit -->
+  <path d="M26 128 C 26 96, 42 86, 64 86 C 86 86, 102 96, 102 128 Z" fill="#0f172a"/>
+  <!-- Collar -->
+  <polygon points="64,96 52,86 76,86" fill="#ffffff"/>
+  <polygon points="64,112 59,96 69,96" fill="#10b981"/>
+</svg>

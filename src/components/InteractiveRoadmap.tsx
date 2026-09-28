@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState } from 'react';
 
 const roadmapSteps = [
   {
@@ -48,85 +47,90 @@ export default function InteractiveRoadmap() {
       <div className="relative flex justify-between items-center mb-12">
         {/* Connecting Line */}
         <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-glass-border dark:bg-slate-700 rounded-full z-0 overflow-hidden">
-          <motion.div 
-            className="h-full bg-emerald-accent"
-            initial={{ width: 0 }}
-            animate={{ width: `${(activeStep / (roadmapSteps.length - 1)) * 100}%` }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
+          <div 
+            className="h-full bg-emerald-accent transition-all duration-300 ease-in-out"
+            style={{ width: `${(activeStep / (roadmapSteps.length - 1)) * 100}%` }}
           />
         </div>
 
         {/* Steps */}
         {roadmapSteps.map((step, index) => (
-          <div key={step.id} className="relative z-10 flex flex-col items-center">
-            <button
-              onClick={() => setActiveStep(index)}
-              className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-150 ${
-                index <= activeStep 
-                  ? 'bg-emerald-accent text-white shadow-lg shadow-emerald-accent/30 scale-110 border-4 border-white dark:border-slate-900' 
-                  : 'bg-white dark:bg-slate-800 text-on-surface-variant dark:text-slate-400 border-4 border-glass-border dark:border-slate-700 hover:scale-105'
+          <button
+            key={step.id}
+            onClick={() => setActiveStep(index)}
+            className={`relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none`}
+            aria-label={`Step ${step.id}: ${step.title}`}
+          >
+            <div 
+              className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-sm md:text-base transition-all duration-300 ${
+                index <= activeStep
+                  ? 'bg-emerald-accent text-white shadow-lg shadow-emerald-accent/25 ring-4 ring-emerald-accent/20 scale-105'
+                  : 'bg-white dark:bg-slate-800 text-on-surface-variant dark:text-slate-400 border border-glass-border dark:border-slate-700 group-hover:border-emerald-accent'
               }`}
-              aria-label={`Step ${index + 1}: ${step.title}`}
-              aria-pressed={index === activeStep}
             >
-              <span className="material-symbols-outlined text-xl md:text-2xl">{step.icon}</span>
-            </button>
-            <div className={`mt-4 font-bold text-sm md:text-base hidden sm:block transition-colors duration-150 ${
-              index <= activeStep ? 'text-navy-deep dark:text-emerald-accent' : 'text-on-surface-variant dark:text-slate-500'
-            }`}>
-              {step.title}
+              <span className="material-symbols-outlined text-lg md:text-xl">
+                {step.icon}
+              </span>
             </div>
-          </div>
+            <span 
+              className={`absolute -bottom-7 font-label-mono text-[10px] md:text-xs font-semibold whitespace-nowrap transition-colors duration-300 ${
+                index === activeStep 
+                  ? 'text-emerald-700 dark:text-emerald-400 font-bold' 
+                  : 'text-on-surface-variant dark:text-slate-400 group-hover:text-emerald-700'
+              }`}
+            >
+              {step.title}
+            </span>
+          </button>
         ))}
       </div>
 
-      {/* Active Step Details */}
-      <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-glass-border dark:border-slate-700 rounded-3xl p-6 md:p-8 min-h-[220px] md:min-h-[200px] shadow-lg relative overflow-hidden">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={activeStep}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
-            className="flex flex-col md:flex-row gap-6 items-start md:items-center h-full"
-          >
-            <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-emerald-accent/10 dark:bg-emerald-accent/20 text-emerald-accent rounded-2xl flex items-center justify-center border border-emerald-accent/20">
-              <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                {roadmapSteps[activeStep].icon}
-              </span>
+      {/* Step Content Card */}
+      <div className="mt-14 glass-panel p-6 md:p-8 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg bg-white/80 dark:bg-slate-800/80">
+        <div
+          key={activeStep}
+          className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between transition-opacity duration-300 ease-out"
+        >
+          <div className="space-y-2 max-w-xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-accent/15 text-emerald-800 dark:text-emerald-300 font-label-mono text-xs font-bold uppercase tracking-wider">
+              Step {roadmapSteps[activeStep].id} of {roadmapSteps.length}
             </div>
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="font-label-mono text-xs font-bold text-emerald-accent bg-emerald-accent/10 px-2 py-1 rounded">STEP 0{activeStep + 1}</span>
-                <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white">{roadmapSteps[activeStep].title}</h3>
-              </div>
-              <p className="text-on-surface-variant dark:text-slate-300 text-lg font-medium mb-3">
-                {roadmapSteps[activeStep].description}
-              </p>
-              <p className="text-on-surface-variant/80 dark:text-slate-400 text-sm">
-                {roadmapSteps[activeStep].details}
-              </p>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-        
-        {/* Navigation buttons */}
-        <div className="absolute bottom-6 right-6 flex gap-2">
-          <button 
-            onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
-            disabled={activeStep === 0}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-          >
-            <span className="material-symbols-outlined">chevron_left</span>
-          </button>
-          <button 
-            onClick={() => setActiveStep(prev => Math.min(roadmapSteps.length - 1, prev + 1))}
-            disabled={activeStep === roadmapSteps.length - 1}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-          >
-            <span className="material-symbols-outlined">chevron_right</span>
-          </button>
+            <h3 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white font-bold">
+              {roadmapSteps[activeStep].title}
+            </h3>
+            <p className="text-on-surface-variant dark:text-slate-300 text-sm md:text-base leading-relaxed">
+              {roadmapSteps[activeStep].details}
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+            <button
+              onClick={() => setActiveStep((prev) => Math.max(0, prev - 1))}
+              disabled={activeStep === 0}
+              className={`min-w-[44px] min-h-[44px] px-5 py-2.5 rounded-full font-label-mono text-xs font-bold transition-all border border-glass-border dark:border-slate-700 flex items-center justify-center gap-1.5 ${
+                activeStep === 0
+                  ? 'opacity-40 cursor-not-allowed bg-black/5 dark:bg-white/5 text-on-surface-variant'
+                  : 'hover:bg-slate-100 dark:hover:bg-slate-700 text-navy-deep dark:text-white'
+              }`}
+              aria-label="Previous step"
+            >
+              <span className="material-symbols-outlined text-sm">arrow_back</span>
+              PREV
+            </button>
+            <button
+              onClick={() => setActiveStep((prev) => Math.min(roadmapSteps.length - 1, prev + 1))}
+              disabled={activeStep === roadmapSteps.length - 1}
+              className={`min-w-[44px] min-h-[44px] px-5 py-2.5 rounded-full font-label-mono text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                activeStep === roadmapSteps.length - 1
+                  ? 'opacity-40 cursor-not-allowed bg-black/5 dark:bg-white/5 text-on-surface-variant'
+                  : 'bg-emerald-accent hover:bg-emerald-600 text-white shadow-md shadow-emerald-accent/20'
+              }`}
+              aria-label="Next step"
+            >
+              NEXT
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

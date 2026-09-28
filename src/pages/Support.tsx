@@ -181,10 +181,11 @@ export default function Support() {
               <form className="space-y-6" onSubmit={handleSupportSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    <label htmlFor="support-name" className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
                       Candidate Full Name *
                     </label>
                     <input 
+                      id="support-name"
                       name="name" 
                       value={formData.name} 
                       onChange={handleInputChange} 
@@ -192,13 +193,15 @@ export default function Support() {
                       className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="Enter candidate full name" 
                       required 
+                      aria-label="Candidate Full Name"
                     />
                   </div>
                   <div>
-                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    <label htmlFor="support-email" className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
                       Email Address *
                     </label>
                     <input 
+                      id="support-email"
                       name="email" 
                       value={formData.email} 
                       onChange={handleInputChange} 
@@ -206,33 +209,38 @@ export default function Support() {
                       className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="Enter email address" 
                       required 
+                      aria-label="Email Address"
                     />
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    <label htmlFor="support-phone" className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
                       Mobile / WhatsApp Number
                     </label>
                     <input 
+                      id="support-phone"
                       name="phone" 
                       value={formData.phone} 
                       onChange={handleInputChange} 
                       type="tel" 
                       className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="+91 98765 43210" 
+                      aria-label="Mobile or WhatsApp Number"
                     />
                   </div>
                   <div>
-                    <label className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
+                    <label htmlFor="support-interest" className="block font-label-mono text-xs text-on-surface-variant dark:text-slate-400 mb-2 uppercase tracking-wider font-bold">
                       Academic Vertical of Interest
                     </label>
                     <select 
+                      id="support-interest"
                       name="interest" 
                       value={formData.interest} 
                       onChange={handleInputChange} 
                       className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all"
+                      aria-label="Academic Vertical of Interest"
                     >
                       <option value="NIOS Board Admissions (10th/12th)">NIOS Board Admissions (10th/12th)</option>
                       <option value="IGNOU Distance Degree (UG/PG)">IGNOU Distance Degree (UG/PG)</option>

@@ -15,15 +15,7 @@ export default defineConfig(() => {
       cssCodeSplit: true,
       sourcemap: false,
       chunkSizeWarningLimit: 1000,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          },
-        },
-      },
+      rollupOptions: {},
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

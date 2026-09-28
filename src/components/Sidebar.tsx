@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -29,100 +28,75 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Overlay */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+    <>
+      {/* Overlay */}
+      <div
+        onClick={onClose}
+        className={`fixed inset-0 bg-navy-deep/50 dark:bg-slate-900/70 backdrop-blur-xs z-[150] transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      />
+      
+      {/* Sidebar Panel */}
+      <div
+        className={`fixed top-0 left-0 bottom-0 w-72 max-w-[80vw] bg-white dark:bg-slate-900 z-[160] shadow-2xl border-r border-glass-border dark:border-white/10 flex flex-col transition-transform duration-300 ease-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="p-6 flex items-center justify-between border-b border-glass-border dark:border-white/10">
+          <Link to="/" onClick={onClose} className="flex items-center gap-2" title="Divya Admission Hub">
+            <span className="material-symbols-outlined text-emerald-accent text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+            <span className="font-display-xl text-base font-extrabold tracking-tighter uppercase">
+              <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-emerald-accent">ADMISSION HUB</span>
+            </span>
+          </Link>
+          <button 
             onClick={onClose}
-            className="fixed inset-0 bg-navy-deep/40 dark:bg-slate-900/60 backdrop-blur-sm z-[150]"
-          />
-          
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 left-0 bottom-0 w-72 max-w-[80vw] bg-white dark:bg-slate-900 z-[160] shadow-2xl border-r border-glass-border dark:border-white/10 flex flex-col"
+            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Close navigation menu"
           >
-            <div className="p-6 flex items-center justify-between border-b border-glass-border dark:border-white/10">
-              <Link to="/" onClick={onClose} className="flex items-center gap-2" title="Divya Admission Hub">
-                <span className="material-symbols-outlined text-emerald-accent text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
-                <span className="font-display-xl text-base font-extrabold tracking-tighter uppercase">
-                  <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-emerald-accent">ADMISSION HUB</span>
-                </span>
-              </Link>
-              <button 
-                onClick={onClose}
-                className="min-w-[40px] min-h-[40px] w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                aria-label="Close navigation menu"
-              >
-                <span className="material-symbols-outlined text-lg">close</span>
-              </button>
-            </div>
-            
-            <nav className="flex-grow py-6 px-4 flex flex-col gap-2">
-              {links.map((link) => {
-                const isActive = location.pathname === link.path;
-                return (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={onClose}
-                    className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all font-label-mono font-bold text-sm tracking-wider ${
-                      isActive 
-                        ? 'bg-emerald-accent/10 text-emerald-accent' 
-                        : 'text-on-surface-variant dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-accent'
-                    }`}
-                  >
-                    <span className="material-symbols-outlined text-xl">{link.icon}</span>
-                    {link.name}
-                  </Link>
-                );
-              })}
-            </nav>
-            
-            <div className="p-6 border-t border-glass-border dark:border-white/10 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  const isDark = document.documentElement.classList.contains('dark');
-                  if (isDark) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                  } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                  }
-                  // Force re-render of components if needed
-                  window.dispatchEvent(new Event('storage'));
-                }}
-                className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl border border-glass-border dark:border-white/10 text-on-surface dark:text-white bg-slate-50 dark:bg-slate-800 text-xs font-label-mono font-bold"
-              >
-                <span className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-premium-gold text-lg">contrast</span>
-                  <span>THEME MODE</span>
-                </span>
-                <span className="text-[10px] uppercase text-emerald-accent">Toggle Light / Dark</span>
-              </button>
+            <span className="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
 
-              <a 
-                href="https://wa.me/918178056407" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="w-full bg-premium-gold text-white px-6 py-3 rounded-full font-label-mono text-xs font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-premium-gold/20"
+        <div className="flex-1 overflow-y-auto py-6 px-4 space-y-1">
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
                 onClick={onClose}
+                className={`flex items-center gap-3 px-4 py-3 rounded-2xl font-label-mono text-xs uppercase tracking-wider font-semibold transition-all ${
+                  isActive
+                    ? 'bg-emerald-accent text-white font-bold shadow-md shadow-emerald-accent/20'
+                    : 'text-on-surface-variant dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-800/60 hover:text-emerald-accent'
+                }`}
               >
-                <span className="material-symbols-outlined text-sm">support_agent</span>
-                CONSULT NOW
-              </a>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+                <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
+                  {link.icon}
+                </span>
+                {link.name}
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="p-6 border-t border-glass-border dark:border-white/10 space-y-4">
+          <a
+            href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20consult%20regarding%20admissions."
+            target="_blank"
+            rel="noreferrer"
+            className="w-full bg-emerald-accent hover:bg-emerald-600 text-white py-3 rounded-xl font-label-mono text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2"
+          >
+            <span className="material-symbols-outlined text-sm">support_agent</span>
+            TALK TO COUNSELOR
+          </a>
+          <p className="text-[10px] text-center font-label-mono text-on-surface-variant/60 dark:text-slate-500 uppercase">
+            Dayalpur, Delhi • +91 8178056407
+          </p>
+        </div>
+      </div>
+    </>
   );
 }

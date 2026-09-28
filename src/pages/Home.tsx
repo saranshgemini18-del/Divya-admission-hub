@@ -228,19 +228,19 @@ export default function Home() {
         {/* Quick Highlights Strip */}
         <div className="w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-emerald-accent font-bold">15,000+</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-emerald-700 dark:text-emerald-400 font-bold">15,000+</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Students Guided</span>
           </div>
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-primary font-bold">100%</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-emerald-700 dark:text-emerald-400 font-bold">100%</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Govt Recognized</span>
           </div>
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-premium-gold font-bold">12+ Yrs</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-amber-800 dark:text-amber-400 font-bold">12+ Yrs</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Academic Mentorship</span>
           </div>
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-tertiary font-bold">24/7</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-cyan-800 dark:text-cyan-300 font-bold">24/7</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Direct Support</span>
           </div>
         </div>
@@ -264,14 +264,14 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEMDK-lMRgWcjlI2V-PjeDCPVkV6Sfs1gqwoVcpwF4PX4y3cyZ4InOCUEdyeVazEJdD-34t4j8JIsQK_QIYn_-nCISUVJ8daYKRWW616jEUXd2dLgvrZtJvbakJ2nMAc8Pb3nQFlz1E_zYJ0NNe5Se5BB3qgDx-tcehKiClJKmykOGLOvjrFFOGqhCMIUaKsTGz-ExJApogZPEOplV-f8d9ry0o9tHmFtzRoK-D8OejFdWc5PpUAiLUsUl5NV61k5Fd_96LH1ht7bc')" }}
+              style={{ backgroundImage: "url('/assets/card-nios.svg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-navy-deep/5 dark:bg-white/10 p-4 rounded-2xl border border-navy-deep/10 dark:border-white/20 backdrop-blur-sm">
               <span className="material-symbols-outlined text-emerald-accent dark:text-emerald-400 text-3xl">menu_book</span>
             </div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-accent/15 text-emerald-accent text-xs font-bold font-label-mono mb-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-accent/15 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-label-mono mb-2">
                 STREAM 1 & 2
               </div>
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-emerald-accent transition-colors">NIOS Board</h3>
@@ -291,21 +291,21 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVMwjtUhCPg8U4xJv8zNAJ7uGCljEnFm4qzAJvubGt38H3nDCho-gixkJaGULtYwdIKQupr1MphBNdqVanl5F-ro7e09LpDzImw395NJ8numR6ZdeE7CoBhaTs5qGpfNLGlau3ykiFocGhug87axbjlNgpPyzQTC-uU1bCTVWwwAD6f1SnUS5uMpmUldbjWjgajjCGiZMGyCSFVXA5KDRe1QqTrYbbi_53wgcDlJP9-GEAmdMNW2uPEHVOJw0euei4qfsYjrI6qkUb')" }}
+              style={{ backgroundImage: "url('/assets/card-ignou.svg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-tertiary/10 dark:bg-tertiary/20 p-4 rounded-2xl border border-tertiary/20 backdrop-blur-sm">
-              <span className="material-symbols-outlined text-tertiary text-3xl">school</span>
+              <span className="material-symbols-outlined text-cyan-700 dark:text-cyan-400 text-3xl">school</span>
             </div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary/15 text-tertiary text-xs font-bold font-label-mono mb-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-800 dark:text-cyan-300 text-xs font-bold font-label-mono mb-2">
                 UG / PG DEGREES
               </div>
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-tertiary transition-colors">IGNOU Hub</h3>
               <p className="text-on-surface-variant dark:text-slate-300 text-sm mb-4 font-medium leading-relaxed">
                 Direct admission and comprehensive assignment, registration, and exam guidance for India's premier central university.
               </p>
-              <div className="flex items-center gap-2 text-tertiary font-bold text-sm">
+              <div className="flex items-center gap-2 text-cyan-800 dark:text-cyan-400 font-bold text-sm">
                 VIEW SUPPORT <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </div>
             </div>
@@ -318,21 +318,21 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZQZ5jTABr8F0LhMcuRwZoRQS_DMSbp4nY_ytGR8mcwPcbpGf8at5PiWpOGSoBphrJd16UBHyfYZF1nADshyGlAa8OTKVkNm2lpc2iokGzqHedWWb_2c-Kg4u0RjfqWRab8eAMwsCiy2BwPVDG0s71iavDkVhRsJ7cxrBoDxKM13ZmyZ-qom7HFnlfjPbPukWOLQZbR_AlRKoYgfm2KEBQjiZtSxvm5O9PGWgZ-KisR_aWA3E1PCactfPf1mv-0lQyMKTNGzjOFHK2')" }}
+              style={{ backgroundImage: "url('/assets/card-degrees.svg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-premium-gold/10 dark:bg-premium-gold/20 p-4 rounded-2xl border border-premium-gold/20 backdrop-blur-sm">
               <span className="material-symbols-outlined text-premium-gold text-3xl">workspace_premium</span>
             </div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-premium-gold/15 text-premium-gold text-xs font-bold font-label-mono mb-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-premium-gold/15 text-amber-800 dark:text-amber-300 text-xs font-bold font-label-mono mb-2">
                 TOP COLLEGES
               </div>
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-premium-gold transition-colors">Prestige Degrees</h3>
               <p className="text-on-surface-variant dark:text-slate-300 text-sm mb-4 font-medium leading-relaxed">
                 Direct admission assistance for accredited regular B.Tech, MBA, MCA, and PhD doctoral research programs.
               </p>
-              <div className="flex items-center gap-2 text-premium-gold font-bold text-sm">
+              <div className="flex items-center gap-2 text-amber-800 dark:text-amber-400 font-bold text-sm">
                 SEE COLLEGES <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </div>
             </div>
@@ -449,7 +449,7 @@ export default function Home() {
 
             {/* Director Bio & Vision */}
             <div className="md:col-span-7 space-y-5 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold font-label-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-label-mono uppercase tracking-wider">
                 <span className="material-symbols-outlined text-sm">school</span>
                 Direct Leadership &amp; Mentorship
               </div>
@@ -465,15 +465,15 @@ export default function Home() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center">
-                  <span className="font-display-xl text-xl font-bold text-emerald-accent block">12+ Yrs</span>
+                  <span className="font-display-xl text-xl font-bold text-emerald-700 dark:text-emerald-400 block">12+ Yrs</span>
                   <span className="font-label-mono text-[10px] uppercase text-on-surface-variant dark:text-slate-400 font-semibold">Experience</span>
                 </div>
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center">
-                  <span className="font-display-xl text-xl font-bold text-primary block">15,000+</span>
+                  <span className="font-display-xl text-xl font-bold text-emerald-700 dark:text-emerald-400 block">15,000+</span>
                   <span className="font-label-mono text-[10px] uppercase text-on-surface-variant dark:text-slate-400 font-semibold">Scholars</span>
                 </div>
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center col-span-2 sm:col-span-1">
-                  <span className="font-display-xl text-xl font-bold text-tertiary block">100%</span>
+                  <span className="font-display-xl text-xl font-bold text-cyan-800 dark:text-cyan-300 block">100%</span>
                   <span className="font-label-mono text-[10px] uppercase text-on-surface-variant dark:text-slate-400 font-semibold">Govt Approved</span>
                 </div>
               </div>
@@ -540,8 +540,9 @@ export default function Home() {
 
             <form className="space-y-4" onSubmit={handleWaSubmit}>
               <div className="space-y-1">
-                <label className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">Full Name *</label>
+                <label htmlFor="inquiry-name" className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">Full Name *</label>
                 <input 
+                  id="inquiry-name"
                   name="name" 
                   value={formData.name} 
                   onChange={handleInputChange} 
@@ -549,16 +550,19 @@ export default function Home() {
                   placeholder="Enter your full name" 
                   type="text" 
                   required
+                  aria-label="Full Name"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">Academic Vertical *</label>
+                <label htmlFor="inquiry-course" className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">Academic Vertical *</label>
                 <select 
+                  id="inquiry-course"
                   name="course" 
                   value={formData.course} 
                   onChange={handleInputChange} 
                   className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent outline-none transition-all text-on-surface dark:text-white text-sm cursor-pointer"
+                  aria-label="Academic Vertical"
                 >
                   <option value="NIOS Secondary (Class 10th)">NIOS Secondary (Class 10th)</option>
                   <option value="NIOS Sr. Secondary (Class 12th)">NIOS Sr. Secondary (Class 12th)</option>
@@ -570,8 +574,9 @@ export default function Home() {
               </div>
 
               <div className="space-y-1">
-                <label className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">WhatsApp / Mobile Contact *</label>
+                <label htmlFor="inquiry-phone" className="font-label-mono text-[10px] text-on-surface-variant dark:text-slate-400 uppercase ml-2 font-bold">WhatsApp / Mobile Contact *</label>
                 <input 
+                  id="inquiry-phone"
                   name="phone" 
                   value={formData.phone} 
                   onChange={handleInputChange} 
@@ -579,18 +584,19 @@ export default function Home() {
                   placeholder="+91 98765 43210" 
                   type="tel" 
                   required
+                  aria-label="WhatsApp or Mobile Phone Number"
                 />
               </div>
 
               <button 
-                className="w-full bg-emerald-accent hover:bg-emerald-600 text-white py-3.5 rounded-xl font-bold font-label-mono transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-emerald-accent/20 flex items-center justify-center gap-2 mt-4 text-sm" 
+                className="w-full bg-emerald-accent hover:bg-emerald-600 text-white py-3.5 rounded-xl font-bold font-label-mono transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-emerald-accent/20 flex items-center justify-center gap-2 mt-4 text-sm cursor-pointer" 
                 type="submit"
               >
                 <span>CONNECT WITH COUNSELOR</span>
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>
             </form>
-            <p className="text-center text-[11px] font-label-mono text-emerald-accent/70 mt-4 flex items-center justify-center gap-1">
+            <p className="text-center text-[11px] font-label-mono text-emerald-800 dark:text-emerald-400 font-semibold mt-4 flex items-center justify-center gap-1">
               <span className="material-symbols-outlined text-xs">lock</span> 100% PRIVATE &amp; OFFICIAL GUIDANCE
             </p>
           </div>

@@ -115,11 +115,11 @@ export default function Footer() {
       </div>
 
       {/* Legal & Academic Disclaimer */}
-      <div className="max-w-[1280px] mx-auto pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-500">
-        <p className="max-w-3xl leading-relaxed">
-          <strong>Disclaimer:</strong> Divya Admission Hub is an independent academic advisory and student guidance consultancy. We assist students in preparing documentation and registering for government-recognized boards and universities (such as NIOS and IGNOU). All official board/university fees are transparently routed to their respective institutions.
+      <div className="max-w-[1280px] mx-auto pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-300">
+        <p className="max-w-3xl leading-relaxed text-slate-300">
+          <strong className="text-white">Disclaimer:</strong> Divya Admission Hub is an independent academic advisory and student guidance consultancy. We assist students in preparing documentation and registering for government-recognized boards and universities (such as NIOS and IGNOU). All official board/university fees are transparently routed to their respective institutions.
         </p>
-        <p className="shrink-0 font-label-mono font-medium text-slate-400">
+        <p className="shrink-0 font-label-mono font-medium text-slate-300">
           © {new Date().getFullYear()} Divya Admission Hub. All rights reserved.
         </p>
       </div>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <linearGradient id="nios-g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#065f46" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="nios-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#nios-g1)"/>
+  <circle cx="320" cy="80" r="140" fill="url(#nios-accent)"/>
+  <circle cx="60" cy="340" r="100" fill="url(#nios-accent)"/>
+  <g opacity="0.35" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Open Book Motif -->
+    <path d="M120 180 C 150 165, 180 170, 200 185 C 220 170, 250 165, 280 180 L 280 260 C 250 245, 220 250, 200 265 C 180 250, 150 245, 120 260 Z" fill="none"/>
+    <line x1="200" y1="185" x2="200" y2="265"/>
+    <path d="M135 200 C 155 190, 175 193, 190 202"/>
+    <path d="M135 218 C 155 208, 175 211, 190 220"/>
+    <path d="M210 202 C 225 193, 245 190, 265 200"/>
+    <path d="M210 220 C 225 211, 245 208, 265 218"/>
+  </g>
+  <!-- Architectural grid lines -->
+  <g opacity="0.15" stroke="#047857" stroke-width="1">
+    <line x1="40" y1="40" x2="360" y2="40"/>
+    <line x1="40" y1="100" x2="360" y2="100"/>
+    <line x1="40" y1="300" x2="360" y2="300"/>
+    <line x1="40" y1="360" x2="360" y2="360"/>
+    <line x1="40" y1="40" x2="40" y2="360"/>
+    <line x1="360" y1="40" x2="360" y2="360"/>
+  </g>
+</svg>

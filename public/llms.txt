@@ -1,0 +1,16 @@
+# Divya Admission Hub
+
+> Divya Admission Hub is an academic admission consultancy in Dayalpur, Delhi specializing in NIOS 10th & 12th open schooling admissions, IGNOU distance degrees, and direct university admissions for B.Ed and D.Pharma.
+
+## Core Educational Services
+
+- [NIOS Class 10th & 12th Admissions](https://divya-admission-hub.vercel.app/programs): Full registration and counseling for NIOS Secondary and Senior Secondary boards, Transfer of Credit (TOC), and On-Demand Examinations.
+- [IGNOU Distance Degrees](https://divya-admission-hub.vercel.app/programs): Undergraduate and postgraduate distance education guidance for BA, B.Com, BCA, MCA, and MBA degrees.
+- [Direct Professional Degree Admissions](https://divya-admission-hub.vercel.app/programs): Direct enrollment assistance for B.Ed, DIET/JBT, D.Pharma, and B.Pharma in approved institutions.
+- [About Divya Admission Hub](https://divya-admission-hub.vercel.app/about): Founder background, accreditation support, and academic credentials.
+- [Academic Counseling & Support](https://divya-admission-hub.vercel.app/support): Reach out via phone (+91 8178056407) or visit the Dayalpur center in Delhi.
+
+## Resources
+
+- [Sitemap](https://divya-admission-hub.vercel.app/sitemap.xml): Complete URL index of website pages.
+- [AI Catalog](https://divya-admission-hub.vercel.app/ai-catalog.json): Machine-readable resource discovery manifest.

@@ -1,11 +1,5 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-import React, { useEffect, Suspense, lazy } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import { AnimatePresence, motion } from 'motion/react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
@@ -39,27 +33,18 @@ function AnimatedRoutes() {
   const location = useLocation();
   
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <motion.div
-        key={location.pathname}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.12, ease: "easeOut" }}
-        className="w-full"
-      >
-        <Suspense fallback={<PageLoader />}>
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/programs" element={<Programs />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/developed-by" element={<DevelopedBy />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Suspense>
-      </motion.div>
-    </AnimatePresence>
+    <div key={location.pathname} className="w-full animate-fade-in">
+      <Suspense fallback={<PageLoader />}>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/developed-by" element={<DevelopedBy />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <linearGradient id="ignou-g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="ignou-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#ignou-g1)"/>
+  <circle cx="340" cy="100" r="130" fill="url(#ignou-accent)"/>
+  <circle cx="50" cy="330" r="90" fill="url(#ignou-accent)"/>
+  <g opacity="0.35" stroke="#0891b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Academic Cap / Degree Motif -->
+    <polygon points="200,160 290,195 200,230 110,195" fill="none"/>
+    <path d="M140 210 L140 255 C 140 275, 260 275, 260 255 L260 210" fill="none"/>
+    <path d="M290 195 L290 250"/>
+    <circle cx="290" cy="255" r="3" fill="#0891b2"/>
+  </g>
+  <!-- Modern Geometric Circles -->
+  <g opacity="0.12" stroke="#0891b2" stroke-width="1.5">
+    <circle cx="200" cy="200" r="120" stroke-dasharray="6 6"/>
+    <circle cx="200" cy="200" r="160"/>
+  </g>
+</svg>
