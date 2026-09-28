@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import InteractiveRoadmap from '../components/InteractiveRoadmap';
+import FaqAccordion from '../components/FaqAccordion';
 import SEO from '../components/SEO';
 
 export default function Home() {
@@ -99,8 +100,8 @@ export default function Home() {
     <main className="relative z-10 pt-28 md:pt-36 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
         title="Class 10th & 12th by Open Near Me | NIOS Dayalpur Delhi | Divya Admission Hub" 
-        description="Looking for Class 10th & 12th by open near me in Dayalpur, Delhi? Divya Admission Hub offers direct NIOS admission, IGNOU distance degrees, B.Ed, and D.Pharma. Call +91-8178056407." 
-        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, open schooling Delhi 110094" 
+        description="Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS admission, IGNOU degrees, B.Ed & D.Pharma. Call +91-8178056407." 
+        keywords="Class 10th by open near me, Class 12th by open near me, Class 10 th by open, Class 12th by open, Nios admission in dayalpur, Divya admission hub, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, NIOS study centre Dayalpur, open schooling Delhi 110094" 
         schema={[
           {
             "@context": "https://schema.org",
@@ -181,9 +182,9 @@ export default function Home() {
             <span className="font-label-mono text-[11px] tracking-widest text-premium-gold uppercase font-bold">Authorized Academic Consultancy • Dayalpur Delhi 110094</span>
           </div>
 
-          <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
+          <h1 className="hero-title font-display-xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
             Divya Admission Hub
-            <span className="block text-2xl sm:text-3xl md:text-4xl text-emerald-accent font-semibold mt-2.5">
+            <span className="hero-subtitle block text-2xl sm:text-3xl md:text-4xl text-emerald-accent font-semibold mt-2.5">
               Class 10th &amp; 12th by Open Near Me • NIOS &amp; IGNOU Admissions
             </span>
           </h1>
@@ -543,6 +544,149 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Local SEO & Academic Authority Section */}
+      <section className="mb-28 md:mb-36" id="open-schooling-delhi" aria-labelledby="local-seo-heading">
+        <div className="glass-panel p-6 sm:p-10 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/80 dark:bg-slate-800/80">
+          <div className="flex flex-col items-center text-center mb-10">
+            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 px-3.5 py-1 rounded-full border border-emerald-300/60 dark:border-emerald-700/60 font-bold mb-3">
+              Official Academic Help Desk • Dayalpur Delhi 110094
+            </span>
+            <h2 id="local-seo-heading" className="local-seo-heading font-display-xl text-3xl sm:text-4xl md:text-5xl text-navy-deep dark:text-white max-w-3xl leading-tight">
+              Class 10th &amp; 12th by Open Near Me in <span className="text-emerald-accent">Dayalpur, Delhi</span>
+            </h2>
+            <div className="h-1 w-24 bg-emerald-accent rounded-full mt-3 mb-4"></div>
+            <p className="local-seo-description text-on-surface-variant dark:text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+              Divya Admission Hub is the premier authorized consultancy in North East Delhi offering direct admission guidance for NIOS 10th &amp; 12th open schooling, IGNOU distance degrees, and direct professional college admissions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {/* Card 1 */}
+            <div className="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/60 border border-glass-border dark:border-white/10 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-900 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 flex items-center justify-center mb-4">
+                  <span className="material-symbols-outlined text-2xl">school</span>
+                </div>
+                <h3 className="font-display-xl text-xl font-bold text-navy-deep dark:text-white mb-2">
+                  NIOS Class 10th &amp; 12th Open Board
+                </h3>
+                <p className="text-on-surface-variant dark:text-slate-300 text-xs md:text-sm leading-relaxed mb-4">
+                  Government of India recognized certificate equivalent to CBSE/ICSE. 100% eligible for NEET, JEE, CUET, NDA, and government jobs with flexible on-demand examination options.
+                </p>
+              </div>
+              <ul className="space-y-1.5 text-xs text-on-surface-variant dark:text-slate-300 font-medium">
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-emerald-accent text-sm">check_circle</span> Transfer of Credit (TOC) to save your year</li>
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-emerald-accent text-sm">check_circle</span> Science, Commerce &amp; Arts streams</li>
+              </ul>
+            </div>
+
+            {/* Card 2 */}
+            <div className="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/60 border border-glass-border dark:border-white/10 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-950/80 text-cyan-900 dark:text-cyan-300 border border-cyan-300/60 dark:border-cyan-700/60 flex items-center justify-center mb-4">
+                  <span className="material-symbols-outlined text-2xl">history_edu</span>
+                </div>
+                <h3 className="font-display-xl text-xl font-bold text-navy-deep dark:text-white mb-2">
+                  IGNOU Distance Degrees &amp; Support
+                </h3>
+                <p className="text-on-surface-variant dark:text-slate-300 text-xs md:text-sm leading-relaxed mb-4">
+                  Complete admission counseling for BA, B.Com, BCA, MBA, and MCA degrees from India's premier central open university with solved assignments and project guidance.
+                </p>
+              </div>
+              <ul className="space-y-1.5 text-xs text-on-surface-variant dark:text-slate-300 font-medium">
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-cyan-700 dark:text-cyan-400 text-sm">check_circle</span> UGC-DEB approved university degrees</li>
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-cyan-700 dark:text-cyan-400 text-sm">check_circle</span> Ideal for working professionals &amp; remote students</li>
+              </ul>
+            </div>
+
+            {/* Card 3 */}
+            <div className="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/60 border border-glass-border dark:border-white/10 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 border border-amber-300/60 dark:border-amber-700/60 flex items-center justify-center mb-4">
+                  <span className="material-symbols-outlined text-2xl">workspace_premium</span>
+                </div>
+                <h3 className="font-display-xl text-xl font-bold text-navy-deep dark:text-white mb-2">
+                  Direct B.Ed, D.Pharma &amp; Degree Admissions
+                </h3>
+                <p className="text-on-surface-variant dark:text-slate-300 text-xs md:text-sm leading-relaxed mb-4">
+                  Direct admission consultation for professional programs including B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, and B.Pharma in top UGC and NCTE/PCI approved universities.
+                </p>
+              </div>
+              <ul className="space-y-1.5 text-xs text-on-surface-variant dark:text-slate-300 font-medium">
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-amber-700 dark:text-amber-400 text-sm">check_circle</span> 100% verified colleges &amp; authentic documentation</li>
+                <li className="flex items-center gap-1.5"><span className="material-symbols-outlined text-amber-700 dark:text-amber-400 text-sm">check_circle</span> Transparent fee structure with no hidden charges</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Local Service Area Pills */}
+          <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-glass-border dark:border-white/10 mb-8 text-center">
+            <span className="font-label-mono text-[11px] uppercase tracking-wider text-on-surface-variant dark:text-slate-400 font-bold block mb-3">
+              Serving Students Across Delhi NCR &amp; North East Delhi:
+            </span>
+            <div className="flex flex-wrap justify-center gap-2">
+              {[
+                'Dayalpur',
+                'Karawal Nagar',
+                'Khajuri Khas',
+                'Bhajanpura',
+                'Yamuna Vihar',
+                'Shahdara',
+                'Mustafabad',
+                'Gokalpuri',
+                'Dilshad Garden',
+                'Seelampur',
+                'Nand Nagri',
+                'North East Delhi',
+                'Delhi NCR'
+              ].map((locality, idx) => (
+                <span 
+                  key={idx}
+                  className="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-label-mono font-medium text-navy-deep dark:text-slate-300"
+                >
+                  📍 {locality}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Physical Center Address & Quick Action Bar */}
+          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-emerald-950/90 to-slate-950 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-label-mono font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                VISIT COUNSELING CENTER
+              </div>
+              <h4 className="font-display-xl text-xl font-bold text-white">
+                Divya Admission Hub • Dayalpur Branch
+              </h4>
+              <p className="text-slate-300 text-xs md:text-sm max-w-xl">
+                2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur, Delhi 110094. Counseling Hours: Monday – Saturday, 09:30 AM to 07:30 PM.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a 
+                href="https://maps.google.com/?q=Prime+Dental+Clinic+Pani+Ki+Tanki+Dayalpur+Delhi+110094" 
+                target="_blank" 
+                rel="noreferrer"
+                className="px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 font-label-mono text-xs font-bold flex items-center gap-1.5 transition-all"
+              >
+                <span className="material-symbols-outlined text-sm">directions</span> Get Directions
+              </a>
+              <a 
+                href="tel:+918178056407"
+                className="px-5 py-3 rounded-full bg-emerald-accent hover:bg-emerald-700 text-white font-label-mono text-xs font-bold flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+              >
+                <span className="material-symbols-outlined text-sm">call</span> Call +91 8178056407
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <FaqAccordion />
 
       {/* Fast-Track Admission Query Box */}
       <section className="mb-28 md:mb-36 flex justify-center w-full" id="query-box">

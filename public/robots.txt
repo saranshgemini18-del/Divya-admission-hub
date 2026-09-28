@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /developed-by
 
 Sitemap: https://divya-admission-hub.vercel.app/sitemap.xml
