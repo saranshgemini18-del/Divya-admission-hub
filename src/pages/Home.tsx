@@ -98,39 +98,79 @@ export default function Home() {
   return (
     <main className="relative z-10 pt-28 md:pt-36 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
-        title="Class 10th & 12th by Open Near Me | NIOS Dayalpur" 
-        description="Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407." 
-        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma" 
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Divya Admission Hub - Premier NIOS & IGNOU Admissions",
-          "url": "https://divya-admission-hub.vercel.app/",
-          "description": "Comprehensive admission consulting for NIOS Secondary & Senior Secondary, IGNOU degrees, and higher education programs in India.",
-          "provider": {
-            "@id": "https://divya-admission-hub.vercel.app/#organization"
+        title="Class 10th & 12th by Open Near Me | NIOS Dayalpur Delhi | Divya Admission Hub" 
+        description="Looking for Class 10th & 12th by open near me in Dayalpur, Delhi? Divya Admission Hub offers direct NIOS admission, IGNOU distance degrees, B.Ed, and D.Pharma. Call +91-8178056407." 
+        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, open schooling Delhi 110094" 
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Divya Admission Hub - Class 10th & 12th by Open Near Me",
+            "url": "https://divya-admission-hub.vercel.app/",
+            "description": "Comprehensive admission consulting for NIOS Secondary & Senior Secondary, IGNOU degrees, and higher education programs in Dayalpur, Delhi.",
+            "provider": {
+              "@id": "https://divya-admission-hub.vercel.app/#organization"
+            },
+            "about": [
+              {
+                "@type": "Service",
+                "name": "NIOS 10th & 12th Admission Guidance",
+                "serviceType": "Open Schooling Admission",
+                "description": "Stream 1 & 2 admission assistance, on-demand examination scheduling, and Transfer of Credit (TOC) for CBSE/ICSE students."
+              },
+              {
+                "@type": "Service",
+                "name": "IGNOU Distance Degree Admission",
+                "serviceType": "University Admissions",
+                "description": "Undergraduate (BCA, B.Com, BA) and Postgraduate (MBA, MCA, MA) distance education registration and assignment mentorship."
+              },
+              {
+                "@type": "Service",
+                "name": "Transfer of Credit (TOC) Guidance",
+                "serviceType": "Academic Year Protection",
+                "description": "Transfer passed subject marks from failed boards to save full academic year with official recognized marksheet."
+              }
+            ]
           },
-          "about": [
-            {
-              "@type": "Service",
-              "name": "NIOS 10th & 12th Admission Guidance",
-              "serviceType": "Open Schooling Admission",
-              "description": "Stream 1 & 2 admission assistance, on-demand examination scheduling, and Transfer of Credit (TOC) for CBSE/ICSE students."
-            },
-            {
-              "@type": "Service",
-              "name": "IGNOU Distance Degree Admission",
-              "serviceType": "University Admissions",
-              "description": "Undergraduate (BCA, B.Com, BA) and Postgraduate (MBA, MCA, MA) distance education registration and assignment mentorship."
-            },
-            {
-              "@type": "Service",
-              "name": "Transfer of Credit (TOC) Guidance",
-              "serviceType": "Academic Year Protection",
-              "description": "Transfer passed subject marks from failed boards to save full academic year with official recognized marksheet."
-            }
-          ]
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How to get admission in Class 10th & 12th through open schooling near me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Divya Admission Hub provides direct admission assistance for NIOS Class 10th and 12th in Dayalpur, Delhi. Students can enroll with flexible examination schedules, on-demand exams, and Transfer of Credit (TOC) to save their academic year."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is NIOS 10th & 12th certificate valid for NEET, JEE, and Government Jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, NIOS is a national board under the Ministry of Education, Government of India. NIOS certificates are 100% equivalent to CBSE/ICSE and eligible for NEET, JEE, CUET, NDA, UPSC, and all Indian universities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Divya Admission Hub located in Delhi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Divya Admission Hub is located at 2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur, Delhi 110094. Helpline: +91-8178056407."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What courses are offered through IGNOU and direct admission?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We provide admission guidance for IGNOU degrees including BA, B.Com, BCA, MBA, MCA, as well as direct admissions for professional programs like B.Ed, DIET, JBT, D.Pharma, and B.Pharma."
+                }
+              }
+            ]
+          }
+        ]}
       />
 
       {/* Hero Section */}
@@ -144,7 +184,7 @@ export default function Home() {
           <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
             Divya Admission Hub
             <span className="block text-2xl sm:text-3xl md:text-4xl text-emerald-accent font-semibold mt-2.5">
-              Premier NIOS, IGNOU &amp; University Admissions
+              Class 10th &amp; 12th by Open Near Me • NIOS &amp; IGNOU Admissions
             </span>
           </h1>
 

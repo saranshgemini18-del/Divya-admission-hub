@@ -42,7 +42,7 @@ export default function Footer() {
               <Link to="/about" className="text-slate-400 hover:text-emerald-400 transition-colors">About Divya Admission Hub</Link>
             </li>
             <li>
-              <Link to="/developed-by" className="text-slate-400 hover:text-emerald-400 transition-colors">Architecture &amp; Technical Credits</Link>
+              <Link to="/developed-by" rel="nofollow" className="text-slate-400 hover:text-emerald-400 transition-colors">Developer: Saransh (+91 8851285088)</Link>
             </li>
           </ul>
         </div>
@@ -116,12 +116,16 @@ export default function Footer() {
 
       {/* Legal & Academic Disclaimer */}
       <div className="max-w-[1280px] mx-auto pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-300">
-        <p className="max-w-3xl leading-relaxed text-slate-300">
+        <p className="max-w-2xl leading-relaxed text-slate-300">
           <strong className="text-white">Disclaimer:</strong> Divya Admission Hub is an independent academic advisory and student guidance consultancy. We assist students in preparing documentation and registering for government-recognized boards and universities (such as NIOS and IGNOU). All official board/university fees are transparently routed to their respective institutions.
         </p>
-        <p className="shrink-0 font-label-mono font-medium text-slate-300">
-          © {new Date().getFullYear()} Divya Admission Hub. All rights reserved.
-        </p>
+        <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0 font-label-mono text-xs text-slate-300">
+          <span>© {new Date().getFullYear()} Divya Admission Hub.</span>
+          <span className="hidden sm:inline text-slate-600">•</span>
+          <Link to="/developed-by" rel="nofollow" className="text-emerald-400 hover:text-emerald-300 hover:underline">
+            Developed by Saransh (+91 8851285088)
+          </Link>
+        </div>
       </div>
     </footer>
   );
