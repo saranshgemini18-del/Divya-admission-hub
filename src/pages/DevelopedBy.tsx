@@ -38,7 +38,7 @@ export default function DevelopedBy() {
 
         <section className="flex justify-center mb-16">
           <div className="max-w-2xl w-full glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl relative overflow-hidden bg-white/85 dark:bg-slate-800/90 text-center">
-            <div className="w-20 h-20 mx-auto rounded-2xl bg-emerald-accent/15 flex items-center justify-center mb-6 shadow-sm border border-emerald-accent/30 text-emerald-600 dark:text-emerald-400">
+            <div className="w-20 h-20 mx-auto rounded-2xl bg-emerald-100 dark:bg-emerald-950/80 flex items-center justify-center mb-6 shadow-sm border border-emerald-300/60 dark:border-emerald-700/60 text-emerald-900 dark:text-emerald-300">
               <span className="material-symbols-outlined text-4xl">code</span>
             </div>
             <h2 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white mb-1">

@@ -1,13 +1,10 @@
 {
-  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
   "specVersion": "1.0",
-  "name": "Divya Admission Hub AI Catalog",
-  "description": "Agentic discovery manifest for Divya Admission Hub academic counseling services, NIOS open schooling, IGNOU distance degrees, and direct admissions in Dayalpur, Delhi.",
   "entries": [
     {
       "identifier": "urn:air:divya-admission-hub.vercel.app:service:nios-admission",
       "displayName": "NIOS 10th & 12th Board Admission Guidance",
-      "type": "application/json",
+      "type": "application/agent-card+json",
       "url": "https://divya-admission-hub.vercel.app/programs",
       "description": "Comprehensive admission consulting for NIOS secondary (10th) and senior secondary (12th) examinations, transfer of credit (TOC), and stream 1/2 guidance.",
       "representativeQueries": [
@@ -20,7 +17,7 @@
     {
       "identifier": "urn:air:divya-admission-hub.vercel.app:service:ignou-degree",
       "displayName": "IGNOU Distance Degree Counseling",
-      "type": "application/json",
+      "type": "application/agent-card+json",
       "url": "https://divya-admission-hub.vercel.app/programs",
       "description": "Guidance for IGNOU undergraduate and postgraduate degree enrollments, assignment solving, and term-end examination preparation.",
       "representativeQueries": [
@@ -32,7 +29,7 @@
     {
       "identifier": "urn:air:divya-admission-hub.vercel.app:service:direct-admission",
       "displayName": "Direct College & Professional Degree Admission",
-      "type": "application/json",
+      "type": "application/agent-card+json",
       "url": "https://divya-admission-hub.vercel.app/programs",
       "description": "Direct admission consulting for professional programs including B.Ed, DIET, JBT, D.Pharma, and B.Pharma in UGC-approved universities.",
       "representativeQueries": [

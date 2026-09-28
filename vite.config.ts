@@ -15,7 +15,18 @@ export default defineConfig(() => {
       cssCodeSplit: true,
       sourcemap: false,
       chunkSizeWarningLimit: 1000,
-      rollupOptions: {},
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
+              return 'vendor-react';
+            }
+            if (id.includes('node_modules/react-router')) {
+              return 'vendor-router';
+            }
+          },
+        },
+      },
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

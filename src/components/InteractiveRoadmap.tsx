@@ -92,7 +92,7 @@ export default function InteractiveRoadmap() {
           className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between transition-opacity duration-300 ease-out"
         >
           <div className="space-y-2 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-accent/15 text-emerald-800 dark:text-emerald-300 font-label-mono text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 font-label-mono text-xs font-bold uppercase tracking-wider">
               Step {roadmapSteps[activeStep].id} of {roadmapSteps.length}
             </div>
             <h3 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white font-bold">

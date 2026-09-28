@@ -82,8 +82,8 @@ export default function Navbar() {
                   to={item.path}
                   className={`px-4 py-2 rounded-full transition-all ${
                     isActive
-                      ? 'bg-emerald-accent/15 text-emerald-accent font-bold'
-                      : 'text-on-surface-variant dark:text-slate-300 hover:text-emerald-accent hover:bg-black/5 dark:hover:bg-white/5'
+                      ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 font-bold'
+                      : 'text-on-surface-variant dark:text-slate-300 hover:text-emerald-800 dark:hover:text-emerald-300 hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
                   {item.label}

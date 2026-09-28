@@ -46,7 +46,7 @@ const programsData: ProgramDetail[] = [
     category: 'nios',
     title: 'NIOS Senior Secondary (Class 12th)',
     tag: 'NEET / JEE Valid',
-    tagColor: 'bg-emerald-accent/15 text-emerald-accent',
+    tagColor: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60',
     icon: 'school',
     iconColor: 'text-emerald-accent',
     shortDesc: '12th standard certification recognized by all universities, IITs, AIIMS, NEET, NDA, and UPSC. Ideal for competitive exam aspirants and working students.',

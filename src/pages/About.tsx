@@ -96,7 +96,7 @@ export default function About() {
                 }
               ].map((value, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-accent/15 text-emerald-accent flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="material-symbols-outlined text-xl">check_circle</span>
                   </div>
                   <div>

@@ -271,7 +271,7 @@ export default function Home() {
               <span className="material-symbols-outlined text-emerald-accent dark:text-emerald-400 text-3xl">menu_book</span>
             </div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-accent/15 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-label-mono mb-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 text-xs font-bold font-label-mono mb-2">
                 STREAM 1 & 2
               </div>
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-emerald-accent transition-colors">NIOS Board</h3>
@@ -373,7 +373,7 @@ export default function Home() {
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white">{streamInfo[selectedLevel].title}</h3>
-              <span className="px-3 py-0.5 rounded-full bg-emerald-accent/15 text-emerald-accent text-xs font-label-mono font-bold">
+              <span className="px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 text-xs font-label-mono font-bold">
                 {streamInfo[selectedLevel].badge}
               </span>
             </div>

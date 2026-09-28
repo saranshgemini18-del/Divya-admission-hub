@@ -25,7 +25,16 @@
       ]
     },
     {
-      "source": "/(.*\\.(?:svg|png|jpg|jpeg|webp|ico|json|txt|xml))",
+      "source": "/(.*\\.(?:svg|png|jpg|jpeg|webp|ico|woff2?))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(?:json|txt|xml))",
       "headers": [
         {
           "key": "Cache-Control",

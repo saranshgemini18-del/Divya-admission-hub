@@ -1,9 +1,11 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import FloatingContact from './components/FloatingContact';
-import BackToTop from './components/BackToTop';
+
+// Lazy load non-critical below-the-fold and interactive components
+const Footer = lazy(() => import('./components/Footer'));
+const FloatingContact = lazy(() => import('./components/FloatingContact'));
+const BackToTop = lazy(() => import('./components/BackToTop'));
 
 // Lazy load route components for ultra-fast mobile loading
 const Home = lazy(() => import('./pages/Home'));
@@ -58,9 +60,11 @@ export default function App() {
       </div>
       <Navbar />
       <AnimatedRoutes />
-      <FloatingContact />
-      <BackToTop />
-      <Footer />
+      <Suspense fallback={null}>
+        <FloatingContact />
+        <BackToTop />
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   );
 }
