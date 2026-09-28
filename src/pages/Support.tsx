@@ -305,7 +305,10 @@ export default function Support() {
               <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-emerald-accent/40 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-lg group">
                 <img 
                   src="/director-divya.svg" 
-                  alt="Divya Dhariwal - Founder & Director, Divya Admission Hub" 
+                  alt="Divya Dhariwal - Founder &amp; Director, Divya Admission Hub" 
+                  width="144"
+                  height="144"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />

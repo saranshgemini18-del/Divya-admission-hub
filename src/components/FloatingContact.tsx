@@ -110,7 +110,8 @@ Message: ${formData.message.trim()}`;
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)}
-                  className="relative z-10 text-white/70 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10"
+                  className="relative z-10 text-white/70 hover:text-white transition-colors min-w-[40px] min-h-[40px] w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10"
+                  aria-label="Close inquiry window"
                 >
                   <span className="material-symbols-outlined text-xl">close</span>
                 </button>

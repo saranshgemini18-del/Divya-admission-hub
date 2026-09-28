@@ -12,7 +12,7 @@ export default function About() {
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About Divya Admission Hub",
-          "url": "https://divyaadmissionhub.com/about",
+          "url": "https://divya-admission-hub.vercel.app/about",
           "description": "Educational leadership and 12+ years history of Divya Admission Hub under Divya Dhariwal.",
           "mainEntity": {
             "@type": "EducationalOrganization",
@@ -117,7 +117,10 @@ export default function About() {
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-4 border-emerald-accent/30 shadow-2xl bg-slate-900 group">
                 <img 
                   src="/director-divya.svg" 
-                  alt="Divya Dhariwal - Founder & Director, Divya Admission Hub" 
+                  alt="Divya Dhariwal - Founder &amp; Director, Divya Admission Hub" 
+                  width="288"
+                  height="384"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />

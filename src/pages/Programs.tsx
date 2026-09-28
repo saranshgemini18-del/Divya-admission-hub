@@ -198,7 +198,7 @@ export default function Programs() {
             "provider": {
               "@type": "EducationalOrganization",
               "name": "Divya Admission Hub",
-              "url": "https://divyaadmissionhub.com/"
+              "url": "https://divya-admission-hub.vercel.app/"
             }
           }))
         }}

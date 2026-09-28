@@ -105,10 +105,10 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Divya Admission Hub - Premier NIOS & IGNOU Admissions",
-          "url": "https://divyaadmissionhub.com/",
+          "url": "https://divya-admission-hub.vercel.app/",
           "description": "Comprehensive admission consulting for NIOS Secondary & Senior Secondary, IGNOU degrees, and higher education programs in India.",
           "provider": {
-            "@id": "https://divyaadmissionhub.com/#organization"
+            "@id": "https://divya-admission-hub.vercel.app/#organization"
           },
           "about": [
             {

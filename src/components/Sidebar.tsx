@@ -58,7 +58,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </Link>
               <button 
                 onClick={onClose}
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                className="min-w-[40px] min-h-[40px] w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                aria-label="Close navigation menu"
               >
                 <span className="material-symbols-outlined text-lg">close</span>
               </button>

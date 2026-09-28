@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-2.5 shrink-0 -translate-x-1 sm:-translate-x-1.5">
             <button 
               onClick={() => setIsSidebarOpen(true)}
-              className="w-10 h-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center text-navy-deep dark:text-white shrink-0"
+              className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center text-navy-deep dark:text-white shrink-0"
               aria-label="Open navigation menu"
             >
               <span className="material-symbols-outlined text-2xl leading-none flex items-center justify-center">menu</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 md:gap-2.5 shrink-0">
             <button 
               onClick={toggleTheme}
-              className="w-10 h-10 rounded-full p-0 flex items-center justify-center shrink-0 aspect-square bg-white/90 dark:bg-slate-800/90 text-on-surface dark:text-white border border-black/10 dark:border-white/10 shadow-xs hover:scale-105 active:scale-95 transition-all outline-none"
+              className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full p-0 flex items-center justify-center shrink-0 aspect-square bg-white/90 dark:bg-slate-800/90 text-on-surface dark:text-white border border-black/10 dark:border-white/10 shadow-xs hover:scale-105 active:scale-95 transition-all outline-none"
               aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
               title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
             >
@@ -138,7 +138,7 @@ export default function Navbar() {
               href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20consult%20regarding%20admissions." 
               target="_blank" 
               rel="noreferrer" 
-              className="bg-emerald-accent hover:bg-emerald-600 text-white h-10 px-4 sm:px-5 rounded-full font-label-mono text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-emerald-accent/20 flex items-center justify-center gap-1.5 shrink-0"
+              className="bg-emerald-accent hover:bg-emerald-600 text-white min-h-[44px] h-11 px-4 sm:px-5 rounded-full font-label-mono text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-emerald-accent/20 flex items-center justify-center gap-1.5 shrink-0"
             >
               <span className="material-symbols-outlined text-sm leading-none flex items-center justify-center">support_agent</span>
               <span className="hidden sm:inline">CONSULT NOW</span>
