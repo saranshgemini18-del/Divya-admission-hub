@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import InteractiveRoadmap from '../components/InteractiveRoadmap';
 import SEO from '../components/SEO';
+import HomeFAQ, { homeFaqData } from '../components/HomeFAQ';
+import LocalCatchment from '../components/LocalCatchment';
+import OpenSchoolingAdvantage from '../components/OpenSchoolingAdvantage';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -95,42 +98,142 @@ export default function Home() {
     }
   };
 
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://divya-admission-hub.vercel.app/#webpage",
+        "url": "https://divya-admission-hub.vercel.app/",
+        "name": "Class 10th & 12th by Open Near Me | NIOS Dayalpur | Divya Admission Hub",
+        "description": "Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407.",
+        "inLanguage": "en-IN",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://divya-admission-hub.vercel.app/#website",
+          "name": "Divya Admission Hub",
+          "url": "https://divya-admission-hub.vercel.app/"
+        },
+        "about": [
+          {
+            "@type": "Service",
+            "name": "Class 10th Open Admission (NIOS Secondary)",
+            "serviceType": "Open Schooling Admission",
+            "description": "Stream 1 & 2 admission assistance, on-demand exams, and marksheet verification for Class 10th in Dayalpur, Delhi."
+          },
+          {
+            "@type": "Service",
+            "name": "Class 12th Open Admission (NIOS Senior Secondary)",
+            "serviceType": "Open Schooling Admission",
+            "description": "Stream 1 & 2 admission assistance for Class 12th, valid for NEET, JEE, CUET, and NDA entrance examinations."
+          },
+          {
+            "@type": "Service",
+            "name": "Transfer of Credit (TOC) Guidance",
+            "serviceType": "Academic Year Protection",
+            "description": "Transfer passed subject marks from failed boards to save full academic year with official recognized marksheet."
+          },
+          {
+            "@type": "Service",
+            "name": "IGNOU Distance Degree Admission",
+            "serviceType": "University Admissions",
+            "description": "Undergraduate (BCA, B.Com, BA) and Postgraduate (MBA, MCA, MA) distance education registration and assignment mentorship."
+          },
+          {
+            "@type": "Service",
+            "name": "Direct Admissions in B.Ed, DIET/JBT & D.Pharma",
+            "serviceType": "Professional Degree Admissions",
+            "description": "Direct admission consulting for professional teacher education (B.Ed, JBT) and pharmacy (D.Pharma, B.Pharma) in recognized colleges."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://divya-admission-hub.vercel.app/#faq",
+        "mainEntity": homeFaqData.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+      },
+      {
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "@id": "https://divya-admission-hub.vercel.app/#organization",
+        "name": "Divya Admission Hub",
+        "alternateName": [
+          "NIOS Admission Center Dayalpur",
+          "Class 10th & 12th Open Schooling Near Me",
+          "IGNOU Help Desk Delhi",
+          "Divya Dhariwal Admission Hub"
+        ],
+        "url": "https://divya-admission-hub.vercel.app/",
+        "logo": "https://divya-admission-hub.vercel.app/favicon.svg",
+        "image": "https://divya-admission-hub.vercel.app/director-divya-alt.svg",
+        "founder": {
+          "@type": "Person",
+          "name": "Divya Dhariwal",
+          "jobTitle": "Director & Principal Academic Counselor",
+          "sameAs": "https://instagram.com/dhriti19977777"
+        },
+        "telephone": "+91-8178056407",
+        "email": "Divya19970719@gmail.com",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur",
+          "addressLocality": "Delhi",
+          "addressRegion": "Delhi",
+          "postalCode": "110094",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.7174,
+          "longitude": 77.2662
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:30",
+            "closes": "19:30"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "reviewCount": "1280"
+        },
+        "areaServed": [
+          "Dayalpur",
+          "Bhajanpura",
+          "Karawal Nagar",
+          "Yamuna Vihar",
+          "Khajuri Khas",
+          "Gokalpuri",
+          "Shahdara",
+          "Dilshad Garden",
+          "Seelampur",
+          "Nand Nagri",
+          "Shastri Park",
+          "Delhi NCR",
+          "India"
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="relative z-10 pt-28 md:pt-36 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
         title="Class 10th & 12th by Open Near Me | NIOS Dayalpur" 
         description="Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407." 
-        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma" 
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Divya Admission Hub - Premier NIOS & IGNOU Admissions",
-          "url": "https://divya-admission-hub.vercel.app/",
-          "description": "Comprehensive admission consulting for NIOS Secondary & Senior Secondary, IGNOU degrees, and higher education programs in India.",
-          "provider": {
-            "@id": "https://divya-admission-hub.vercel.app/#organization"
-          },
-          "about": [
-            {
-              "@type": "Service",
-              "name": "NIOS 10th & 12th Admission Guidance",
-              "serviceType": "Open Schooling Admission",
-              "description": "Stream 1 & 2 admission assistance, on-demand examination scheduling, and Transfer of Credit (TOC) for CBSE/ICSE students."
-            },
-            {
-              "@type": "Service",
-              "name": "IGNOU Distance Degree Admission",
-              "serviceType": "University Admissions",
-              "description": "Undergraduate (BCA, B.Com, BA) and Postgraduate (MBA, MCA, MA) distance education registration and assignment mentorship."
-            },
-            {
-              "@type": "Service",
-              "name": "Transfer of Credit (TOC) Guidance",
-              "serviceType": "Academic Year Protection",
-              "description": "Transfer passed subject marks from failed boards to save full academic year with official recognized marksheet."
-            }
-          ]
-        }}
+        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, open schooling Delhi, NIOS center Bhajanpura, NIOS Karawal Nagar" 
+        schema={homePageSchema}
       />
 
       {/* Hero Section */}
@@ -141,15 +244,15 @@ export default function Home() {
             <span className="font-label-mono text-[11px] tracking-widest text-premium-gold uppercase font-bold">Authorized Academic Consultancy • Dayalpur Delhi 110094</span>
           </div>
 
-          <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
-            Divya Admission Hub
-            <span className="block text-2xl sm:text-3xl md:text-4xl text-emerald-accent font-semibold mt-2.5">
-              Premier NIOS, IGNOU &amp; University Admissions
+          <h1 className="font-display-xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
+            Class 10th &amp; 12th by Open <span className="text-emerald-accent">Near Me</span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl text-navy-deep dark:text-slate-200 font-semibold mt-2.5">
+              Divya Admission Hub &bull; NIOS &amp; IGNOU Admissions in Dayalpur, Delhi
             </span>
           </h1>
 
           <p className="font-body-md text-on-surface-variant dark:text-slate-300 text-base md:text-xl max-w-2xl leading-relaxed text-left">
-            Fast-track admissions for <strong>NIOS 10th &amp; 12th</strong>, <strong>IGNOU University Portals</strong>, and <strong>Prestige Degrees</strong>. Save your academic year with Transfer of Credit (TOC) and verified counseling.
+            Looking for <strong>Class 10th by open near me</strong> or <strong>Class 12th by open near me</strong>? Fast-track admissions for <strong>NIOS 10th &amp; 12th</strong>, <strong>IGNOU University Portals</strong>, and <strong>Direct B.Ed / D.Pharma Courses</strong>. Save your academic year with Transfer of Credit (TOC) and verified counseling.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-3 justify-start items-center">
@@ -246,6 +349,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Local SEO & Catchment Presence */}
+      <LocalCatchment />
+
       {/* Support Verticals - Bento Grid (Clean & Fast Rendering) */}
       <section className="mb-28 md:mb-36" id="programs-section">
         <div className="flex flex-col items-center mb-12 gap-2">
@@ -339,6 +445,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Open Schooling vs Traditional Advantage Matrix */}
+      <OpenSchoolingAdvantage />
 
       {/* Interactive Academic Stream Finder */}
       <section className="mb-28 md:mb-36 glass-panel p-6 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/70 dark:bg-slate-900/70">
@@ -503,6 +612,9 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* SEO FAQ Section with Structured Content */}
+      <HomeFAQ />
 
       {/* Fast-Track Admission Query Box */}
       <section className="mb-28 md:mb-36 flex justify-center w-full" id="query-box">
