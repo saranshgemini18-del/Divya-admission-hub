@@ -106,13 +106,24 @@ export default function Home() {
         "@id": "https://divya-admission-hub.vercel.app/#webpage",
         "url": "https://divya-admission-hub.vercel.app/",
         "name": "Class 10th & 12th by Open Near Me | NIOS Dayalpur | Divya Admission Hub",
-        "description": "Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407.",
+        "description": "Class 10th & 12th by open near me in Dayalpur Delhi. Get 100% recognized NIOS & IGNOU admission, TOC credit transfer, B.Ed & D.Pharma. Call 8178056407 today!",
         "inLanguage": "en-IN",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "https://divya-admission-hub.vercel.app/#website",
           "name": "Divya Admission Hub",
           "url": "https://divya-admission-hub.vercel.app/"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://divya-admission-hub.vercel.app/"
+            }
+          ]
         },
         "about": [
           {
@@ -164,14 +175,16 @@ export default function Home() {
         "@id": "https://divya-admission-hub.vercel.app/#organization",
         "name": "Divya Admission Hub",
         "alternateName": [
-          "NIOS Admission Center Dayalpur",
-          "Class 10th & 12th Open Schooling Near Me",
-          "IGNOU Help Desk Delhi",
-          "Divya Dhariwal Admission Hub"
+          "NIOS Admission Dayalpur",
+          "Class 10th & 12th by Open Near Me",
+          "Divya Dhariwal Admission Hub",
+          "NIOS & IGNOU Help Desk Delhi",
+          "Divya Academia"
         ],
         "url": "https://divya-admission-hub.vercel.app/",
         "logo": "https://divya-admission-hub.vercel.app/favicon.svg",
         "image": "https://divya-admission-hub.vercel.app/director-divya-alt.svg",
+        "description": "Expert center for Class 10th & 12th by open near me, NIOS admission in Dayalpur, Transfer of Credit (TOC), IGNOU degrees, and direct admissions for B.Ed, D.Pharma, and JBT.",
         "founder": {
           "@type": "Person",
           "name": "Divya Dhariwal",
@@ -181,6 +194,8 @@ export default function Home() {
         "telephone": "+91-8178056407",
         "email": "Divya19970719@gmail.com",
         "priceRange": "₹₹",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, UPI, Net Banking, Credit Card",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur",
@@ -194,6 +209,7 @@ export default function Home() {
           "latitude": 28.7174,
           "longitude": 77.2662
         },
+        "hasMap": "https://maps.google.com/?q=28.7174,77.2662",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -206,8 +222,29 @@ export default function Home() {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
           "bestRating": "5",
+          "worstRating": "1",
           "reviewCount": "1280"
         },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Priya Sharma" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Cleared NIOS 12th with on-demand exams while continuing sports trials. Divya Admission Hub provided exceptional guidance."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Rahul Verma" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Seamless admission guidance for engineering degree. Documentation was verified promptly without procedural delays."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Amit Kumar" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Navigating IGNOU re-registration and assignments was made effortless by the counselors here."
+          }
+        ],
         "areaServed": [
           "Dayalpur",
           "Bhajanpura",
@@ -231,8 +268,8 @@ export default function Home() {
     <main className="relative z-10 pt-28 md:pt-36 px-4 md:px-12 max-w-[1280px] mx-auto">
       <SEO 
         title="Class 10th & 12th by Open Near Me | NIOS Dayalpur" 
-        description="Looking for Class 10th & 12th by open near me? Divya Admission Hub in Dayalpur, Delhi offers NIOS/IGNOU admission, college NIOS courses, B.Ed, and D.Pharma. Call 8178056407." 
-        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, open schooling Delhi, NIOS center Bhajanpura, NIOS Karawal Nagar" 
+        description="Class 10th & 12th by open near me in Dayalpur Delhi. Get 100% recognized NIOS & IGNOU admission, TOC credit transfer, B.Ed & D.Pharma. Call 8178056407 today!" 
+        keywords="Divya admission hub, Nios admission in dayalpur, Class 10 th by open, Class 12th by open, Class 12th by open near me, Class 10 th by open near me, College nios course, IGNOU help desk, direct admission B.Ed, BA-B.Ed, DIET, JBT, D.Pharma, B.Pharma, open schooling Delhi, NIOS center Bhajanpura, NIOS Karawal Nagar, Yamuna Vihar open school" 
         schema={homePageSchema}
       />
 
@@ -250,6 +287,25 @@ export default function Home() {
               Divya Admission Hub &bull; NIOS &amp; IGNOU Admissions in Dayalpur, Delhi
             </span>
           </h1>
+
+          {/* Quick Search Intent Badges */}
+          <div className="flex flex-wrap gap-2 pt-1">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              <span className="material-symbols-outlined text-xs">school</span> Class 10th &amp; 12th Open
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              <span className="material-symbols-outlined text-xs">update</span> On-Demand Exams
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              <span className="material-symbols-outlined text-xs">published_with_changes</span> TOC Credit Transfer
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              <span className="material-symbols-outlined text-xs">assignment_turned_in</span> IGNOU Distance Degrees
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              <span className="material-symbols-outlined text-xs">workspace_premium</span> Direct B.Ed &amp; D.Pharma
+            </span>
+          </div>
 
           <p className="font-body-md text-on-surface-variant dark:text-slate-300 text-base md:text-xl max-w-2xl leading-relaxed text-left">
             Looking for <strong>Class 10th by open near me</strong> or <strong>Class 12th by open near me</strong>? Fast-track admissions for <strong>NIOS 10th &amp; 12th</strong>, <strong>IGNOU University Portals</strong>, and <strong>Direct B.Ed / D.Pharma Courses</strong>. Save your academic year with Transfer of Credit (TOC) and verified counseling.
