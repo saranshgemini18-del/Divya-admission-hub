@@ -95,14 +95,14 @@ export default function Footer() {
             </p>
             <p className="flex items-center gap-2">
               <span className="material-symbols-outlined text-blue-400 text-base shrink-0">mail</span>
-              <a href="mailto:Divya19970719@gmail.com" className="hover:text-blue-400 text-slate-200">
-                Divya19970719@gmail.com
+              <a href="mailto:divyaadmissionhub@gmail.com" className="hover:text-blue-400 text-slate-200">
+                divyaadmissionhub@gmail.com
               </a>
             </p>
             <p className="flex items-center gap-2">
               <span className="material-symbols-outlined text-blue-400 text-base shrink-0">public</span>
-              <a href="https://instagram.com/dhriti19977777" target="_blank" rel="noreferrer" className="hover:text-blue-400 text-slate-200">
-                Instagram: @dhriti19977777
+              <a href="https://instagram.com/director_divya" target="_blank" rel="noreferrer" className="hover:text-blue-400 text-slate-200">
+                Instagram: @director_divya
               </a>
             </p>
             <div className="pt-2">

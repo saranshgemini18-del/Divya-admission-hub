@@ -23,7 +23,7 @@ export default function About() {
               "@type": "Person",
               "name": "Divya Dhariwal",
               "jobTitle": "Principal Academic Strategist & Founder",
-              "sameAs": "https://instagram.com/dhriti19977777"
+              "sameAs": "https://instagram.com/director_divya"
             }
           }
         }}
@@ -148,13 +148,13 @@ export default function About() {
                   Connect Directly on WhatsApp
                 </a>
                 <a 
-                  href="https://instagram.com/dhriti19977777" 
+                  href="https://instagram.com/director_divya" 
                   target="_blank" 
                   rel="noreferrer"
                   className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-blue-600 dark:text-blue-400 transition-colors"
                 >
                   <span className="material-symbols-outlined text-sm text-[#E1306C]">photo_camera</span>
-                  Instagram @dhriti19977777
+                  Instagram @director_divya
                 </a>
               </div>
             </div>

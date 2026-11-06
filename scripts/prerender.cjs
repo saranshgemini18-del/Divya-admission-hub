@@ -221,7 +221,7 @@ const pages = [
         ],
         "image": "https://divya-admission-hub.vercel.app/director-divya.jpg",
         "sameAs": [
-          "https://instagram.com/dhriti19977777",
+          "https://instagram.com/director_divya",
           "https://wa.me/918178056407"
         ]
       }
@@ -259,10 +259,10 @@ const pages = [
             <strong>Phone / WhatsApp:</strong> +91 81780 56407
           </p>
           <p class="text-slate-600 dark:text-slate-300 mb-2">
-            <strong>Email:</strong> Divya19970719@gmail.com
+            <strong>Email:</strong> divyaadmissionhub@gmail.com
           </p>
           <p class="text-slate-600 dark:text-slate-300">
-            <strong>Instagram:</strong> @dhriti19977777
+            <strong>Instagram:</strong> @director_divya
           </p>
         </div>
       </section>
@@ -287,7 +287,7 @@ const pages = [
         "@type": "EducationalOrganization",
         "name": "Divya Admission Hub",
         "telephone": "+91-8178056407",
-        "email": "Divya19970719@gmail.com",
+        "email": "divyaadmissionhub@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur",

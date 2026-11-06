@@ -68,7 +68,7 @@ export default function Support() {
             "@type": "EducationalOrganization",
             "name": "Divya Admission Hub",
             "telephone": "+918178056407",
-            "email": "Divya19970719@gmail.com",
+            "email": "divyaadmissionhub@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki (Water Tank), Dayalpur",
@@ -353,13 +353,13 @@ export default function Support() {
                     15,000+ Students Mentored
                   </span>
                   <a 
-                    href="https://instagram.com/dhriti19977777" 
+                    href="https://instagram.com/director_divya" 
                     target="_blank" 
                     rel="noreferrer"
                     className="flex items-center gap-1 text-[#E1306C] hover:underline"
                   >
                     <span className="material-symbols-outlined text-base">photo_camera</span>
-                    @dhriti19977777
+                    @director_divya
                   </a>
                 </div>
               </div>
@@ -413,8 +413,8 @@ export default function Support() {
                 </div>
                 <div>
                   <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Official Correspondence</p>
-                  <a href="mailto:Divya19970719@gmail.com" className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 block hover:text-blue-600 dark:text-blue-400 break-all">
-                    Divya19970719@gmail.com
+                  <a href="mailto:divyaadmissionhub@gmail.com" className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 block hover:text-blue-600 dark:text-blue-400 break-all">
+                    divyaadmissionhub@gmail.com
                   </a>
                 </div>
               </div>

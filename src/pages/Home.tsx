@@ -191,10 +191,10 @@ export default function Home() {
           "@type": "Person",
           "name": "Divya Dhariwal",
           "jobTitle": "Director & Principal Academic Counselor",
-          "sameAs": "https://instagram.com/dhriti19977777"
+          "sameAs": "https://instagram.com/director_divya"
         },
         "telephone": "+91-8178056407",
-        "email": "Divya19970719@gmail.com",
+        "email": "divyaadmissionhub@gmail.com",
         "priceRange": "₹₹",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, UPI, Net Banking, Credit Card",
@@ -348,12 +348,12 @@ export default function Home() {
             </a>
             
             <a 
-              href="https://instagram.com/dhriti19977777" 
+              href="https://instagram.com/director_divya" 
               target="_blank" 
               rel="noreferrer" 
               className="group relative flex items-center justify-center w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-md hover:shadow-[#E1306C]/30 transition-all hover:scale-110"
-              aria-label="Instagram Page (@dhriti19977777)"
-              title="Follow @dhriti19977777 on Instagram"
+              aria-label="Instagram Page (@director_divya)"
+              title="Follow @director_divya on Instagram"
             >
               <svg viewBox="0 0 24 24" width="24" height="24" fill="url(#ig-grad)" className="drop-shadow-xs">
                 <defs>
@@ -368,10 +368,10 @@ export default function Home() {
             </a>
             
             <a 
-              href="mailto:Divya19970719@gmail.com" 
+              href="mailto:divyaadmissionhub@gmail.com" 
               className="group relative flex items-center justify-center w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-md hover:shadow-[#D44638]/30 transition-all hover:scale-110"
               aria-label="Email Divya Admission Hub"
-              title="Email: Divya19970719@gmail.com"
+              title="Email: divyaadmissionhub@gmail.com"
             >
               <span className="material-symbols-outlined text-[#D44638] text-2xl">mail</span>
             </a>
