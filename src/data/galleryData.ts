@@ -9,6 +9,7 @@ export interface GalleryItem {
   date: string;
   description: string;
   highlights: string[];
+  objectPosition?: string;
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -22,7 +23,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'New Delhi, India',
     date: '2025',
     description: 'Divya Dhariwal receiving the prestigious "The Best Educator Award" plaque at the Google for Education Leader Series India national conference.',
-    highlights: ['Google for Education recognition', 'Best Educator Award Plaque', 'National Education Leadership']
+    highlights: ['Google for Education recognition', 'Best Educator Award Plaque', 'National Education Leadership'],
+    objectPosition: 'center 20%'
   },
   {
     id: 'et-education-summit',
@@ -34,7 +36,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'New Delhi',
     date: '2026',
     description: 'Delivering keynote lecture on "India\'s Education Revolution: For the World, with the World" co-presented by Accenture, Google Cloud, and IBM.',
-    highlights: ['The Economic Times Stage', 'Accenture & Google Cloud Summit', 'Education Revolution Speaker']
+    highlights: ['The Economic Times Stage', 'Accenture & Google Cloud Summit', 'Education Revolution Speaker'],
+    objectPosition: 'center 20%'
   },
   {
     id: 'swami-vivekananda-award',
@@ -46,7 +49,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Greater Noida / Delhi NCR',
     date: '2026',
     description: 'Presented with the framed Swami Vivekananda Academic Award by senior Delhi Police Officer and institutional leadership.',
-    highlights: ['Conferred by Delhi Police ACP', 'Swami Vivekananda Honor', 'GNIOT Greater Noida']
+    highlights: ['Conferred by Delhi Police ACP', 'Swami Vivekananda Honor', 'GNIOT Greater Noida'],
+    objectPosition: 'center 32%'
   },
   {
     id: 'womens-day-press-meet',
@@ -58,7 +62,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'BVIMR / Delhi',
     date: 'March 8, 2026',
     description: 'Addressing national media press conference holding the International Women\'s Day award with microphones from Zee, DD News, News 24, ABP, and Bharat News.',
-    highlights: ['Covered by 15+ News Channels', 'Women in Leadership Honor', 'Press Conference Address']
+    highlights: ['Covered by 15+ News Channels', 'Women in Leadership Honor', 'Press Conference Address'],
+    objectPosition: 'center 20%'
   },
   {
     id: 'zee-news-interview',
@@ -70,7 +75,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'New Delhi',
     date: '2026',
     description: 'Special televised broadcast with Zee News discussing the crucial role of NIOS open schooling, credit transfer (TOC), and student career counseling.',
-    highlights: ['Zee News Official Microphone', 'Televised Special on Open Schooling', 'Career Guidance Expert']
+    highlights: ['Zee News Official Microphone', 'Televised Special on Open Schooling', 'Career Guidance Expert'],
+    objectPosition: 'center 12%'
   },
   {
     id: 'zee-crc-briefing',
@@ -82,7 +88,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'University Campus, Delhi',
     date: '2026',
     description: 'Briefing media correspondents on university placement stats, job readiness, and degree authentication at the central Corporate Resource Center.',
-    highlights: ['CRC Placement Authority', 'Media Q&A with Zee News', 'Industry-Academia Bridge']
+    highlights: ['CRC Placement Authority', 'Media Q&A with Zee News', 'Industry-Academia Bridge'],
+    objectPosition: 'center 20%'
   },
   {
     id: 'constitution-club-address',
@@ -94,7 +101,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Constitution Club of India, Rafi Marg, New Delhi',
     date: '2026',
     description: 'Delivering an address from the prestigious Constitution Club of India podium to academic strategists, counselors, and educators.',
-    highlights: ['Constitution Club of India Podium', 'National Policy Discussions', 'New Delhi Dignitaries']
+    highlights: ['Constitution Club of India Podium', 'National Policy Discussions', 'New Delhi Dignitaries'],
+    objectPosition: 'center 32%'
   },
   {
     id: 'shikshak-samman',
@@ -106,7 +114,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Delhi',
     date: '2026',
     description: 'Honored at the annual Teacher Felicitation Ceremony for outstanding dedication in guiding over 15,000 students to legitimate board certifications.',
-    highlights: ['Teacher of the Year Honor', '15,000+ Students Mentored', 'Auditorium Felicitation']
+    highlights: ['Teacher of the Year Honor', '15,000+ Students Mentored', 'Auditorium Felicitation'],
+    objectPosition: 'center 18%'
   },
   {
     id: 'prantiya-sammelan-stage',
@@ -118,7 +127,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Indira Gandhi Pratishthan, Gomti Nagar',
     date: 'June 26, 2026',
     description: 'Conferred stage honors by ministers and educational chancellors at Indira Gandhi Pratishthan during the 48th Annual State Convention.',
-    highlights: ['Cabinet Ministers on Stage', 'Indira Gandhi Pratishthan', 'State Level Recognition']
+    highlights: ['Cabinet Ministers on Stage', 'Indira Gandhi Pratishthan', 'State Level Recognition'],
+    objectPosition: 'center 35%'
   },
   {
     id: 'maharishi-uni-trophy',
@@ -130,31 +140,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Maharishi University of Information Technology',
     date: '2026',
     description: 'Receiving the Golden Emblem Trophy and Certificate of Academic Contribution from leadership at Maharishi University of Information Technology.',
-    highlights: ['Golden Ashoka Emblem Trophy', 'Maharishi University (MUIT)', 'Academic Leadership Plaque']
+    highlights: ['Golden Ashoka Emblem Trophy', 'Maharishi University (MUIT)', 'Academic Leadership Plaque'],
+    objectPosition: 'center 35%'
   },
   {
     id: 'maharishi-stage-honor-1',
-    filename: 'IMG-20260929-WA0022.jpg',
-    src: '/images/IMG-20260929-WA0022.jpg',
+    filename: 'IMG-20260929-WA0023.jpg',
+    src: '/images/IMG-20260929-WA0023.jpg',
     title: 'MUIT Chancellor & Faculty Felicitation',
     category: 'Awards',
     event: 'Higher Education Leadership Summit',
     location: 'MUIT Auditorium',
     date: '2026',
     description: 'Honored in royal blue attire on the grand stage of MUIT by the university vice-chancellor, registrar, and senior academic council.',
-    highlights: ['Auditorium Grand Stage', 'Vice-Chancellor Felicitation', 'Special Recognition Award']
-  },
-  {
-    id: 'maharishi-stage-honor-2',
-    filename: 'IMG-20260929-WA0023.jpg',
-    src: '/images/IMG-20260929-WA0023.jpg',
-    title: 'National Educator Stage Citation',
-    category: 'Awards',
-    event: 'Education Vanguard Summit',
-    location: 'MUIT Main Campus',
-    date: '2026',
-    description: 'A ceremony recognizing Divya Dhariwal\'s work in preventing student academic year dropouts through strategic counseling.',
-    highlights: ['Stage Citation Ceremony', 'Drop-out Prevention Advocate', 'University Partnership']
+    highlights: ['Auditorium Grand Stage', 'Vice-Chancellor Felicitation', 'Special Recognition Award'],
+    objectPosition: 'center 35%'
   },
   {
     id: 'mmyrv-conference-podium',
@@ -166,7 +166,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'MMYRV Main Hall',
     date: '2026',
     description: 'Delivering the invited address at the flower-adorned podium during the Mahesh Yogi Ramayan Vishwavidyalaya National Conference.',
-    highlights: ['MMYRV National Conference', 'Flower Adorned Dais', 'Values-Based Education']
+    highlights: ['MMYRV National Conference', 'Flower Adorned Dais', 'Values-Based Education'],
+    objectPosition: 'center 20%'
   },
   {
     id: 'kiet-international-folk',
@@ -178,19 +179,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'KIET Group of Institutions (NAAC A+ Grade)',
     date: '2026',
     description: 'Standing alongside European and Polish educational delegates and university faculty at KIET Group of Institutions during cultural-academic exchange.',
-    highlights: ['NAAC A+ KIET Group', 'Polish Cultural Delegates', 'Global Academic Exchange']
-  },
-  {
-    id: 'ims-dia-delegation',
-    filename: 'IMG-20260929-WA0033.jpg',
-    src: '/images/IMG-20260929-WA0033.jpg',
-    title: 'IMS Design & Innovation Academy Felicitation',
-    category: 'Students',
-    event: 'IMS DIA Certificate Presentation Ceremony',
-    location: 'IMS Campus, Sector 62, Noida',
-    date: '2026',
-    description: 'Surrounded by graduating students and faculty members holding certificate folios and university gift bags on the campus stairs.',
-    highlights: ['IMS DIA Noida Campus', '20+ Graduating Students', 'Certificate Distribution']
+    highlights: ['NAAC A+ KIET Group', 'Polish Cultural Delegates', 'Global Academic Exchange'],
+    objectPosition: 'center 35%'
   },
   {
     id: 'saksham-trust-award-1',
@@ -199,10 +189,24 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Saksham Educational Trust Convocation',
     category: 'Students',
     event: 'Saksham Educational and Charitable Trust Annual Day',
-    location: 'Delhi',
+    location: 'Delhi NCR',
     date: '2025',
     description: 'Presenting the Certificate of Achievement to an outstanding candidate in partnership with Saksham Educational and Charitable Trust.',
-    highlights: ['Saksham Educational Trust', 'Student Convocation Medal', 'Scholarship Distribution']
+    highlights: ['Saksham Educational Trust', 'Student Convocation Medal', 'Scholarship Distribution'],
+    objectPosition: 'center 22%'
+  },
+  {
+    id: 'saksham-trust-award-male',
+    filename: 'IMG-20260929-WA0028.jpg',
+    src: '/images/IMG-20260929-WA0028.jpg',
+    title: 'Saksham Educational Trust Merit Convocation',
+    category: 'Students',
+    event: 'Saksham Educational and Charitable Trust Annual Day',
+    location: 'Delhi NCR',
+    date: '2025',
+    description: 'Conferring the Certificate of Achievement to student scholar at the annual Saksham Educational and Charitable Trust convocation ceremony.',
+    highlights: ['Saksham Educational Trust', 'Student Felicitation Ceremony', 'Merit Certificate'],
+    objectPosition: 'center 22%'
   },
   {
     id: 'saksham-trust-award-2',
@@ -214,7 +218,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Delhi NCR',
     date: '2025',
     description: 'Jointly conferring academic passing certificates and honors to young female scholars embarking on college degrees.',
-    highlights: ['Female Scholar Empowerment', 'Certificate of Completion', 'Trust Dignitaries']
+    highlights: ['Female Scholar Empowerment', 'Certificate of Completion', 'Trust Dignitaries'],
+    objectPosition: 'center 22%'
   },
   {
     id: 'saksham-trust-award-3',
@@ -226,6 +231,20 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Delhi NCR',
     date: '2025',
     description: 'Awarding certificate of merit and medal to an accomplished board candidate who successfully cleared exams through strategic guidance.',
-    highlights: ['Board Candidate Success', 'Medal of Excellence', 'Annual Felicitation']
+    highlights: ['Board Candidate Success', 'Medal of Excellence', 'Annual Felicitation'],
+    objectPosition: 'center 22%'
+  },
+  {
+    id: 'divya-portrait-executive',
+    filename: 'IMG-20260923-WA0018.jpg',
+    src: '/images/IMG-20260923-WA0018.jpg',
+    title: 'Director Divya Dhariwal - Field & Executive Visit',
+    category: 'Media',
+    event: 'Divya Admission Hub Outreach & Field Counseling',
+    location: 'Delhi NCR & North India Hubs',
+    date: '2026',
+    description: 'Executive portrait of Director Divya Dhariwal during educational outreach and institutional liaison visits across North India.',
+    highlights: ['Director Divya Dhariwal', 'Educational Outreach', 'Student Mentorship Leader'],
+    objectPosition: 'center 35%'
   }
 ];

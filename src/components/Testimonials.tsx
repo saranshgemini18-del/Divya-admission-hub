@@ -10,32 +10,40 @@ export default function Testimonials() {
       initials: "RV",
       program: "B.Tech Computer Science",
       institution: "Delhi NCR University Placement",
+      event: "Youth Excellence Medal & Certificate Recipient",
       quote: "The consulting team at Divya Admission Hub made my admission process seamless. Their documentation verification was prompt and saved me months of procedural hurdles.",
-      avatar: "/images/student-rahul.jpg"
+      avatar: "/images/student-rahul.jpg",
+      avatarPosition: "44% 22%"
     },
     {
       name: "Priya Sharma",
       initials: "PS",
       program: "NIOS Sr. Secondary (12th)",
       institution: "State Athlete & Sports Aspirant",
+      event: "Saksham Educational Trust Convocation Awardee",
       quote: "I needed to clear senior secondary via NIOS to pursue national sports trials. The guidance was highly professional and accommodated my training schedule with on-demand exams.",
-      avatar: "/images/student-priya.jpg"
+      avatar: "/images/student-priya.jpg",
+      avatarPosition: "40% 18%"
     },
     {
       name: "Amit Kumar",
       initials: "AK",
       program: "Master of Arts & B.Ed",
       institution: "IGNOU Central University",
+      event: "Annual Academic Convocation Honoree",
       quote: "Navigating IGNOU's re-registration and assignment deadlines was overwhelming at first. Divya Admission Hub's structured support was invaluable to finishing my degree on time.",
-      avatar: "/images/student-amit.jpg"
+      avatar: "/images/student-amit.jpg",
+      avatarPosition: "53% 20%"
     },
     {
       name: "Sneha Patel",
       initials: "SP",
       program: "PhD Research & Thesis",
       institution: "UGC-CARE Accredited University",
+      event: "Women Scholars Felicitation Honoree",
       quote: "The personalized attention I received during my PhD application was outstanding. They guided my research proposal structuring and viva preparation with deep academic rigor.",
-      avatar: "/images/student-sneha.jpg"
+      avatar: "/images/student-sneha.jpg",
+      avatarPosition: "47% 22%"
     }
   ];
 
@@ -71,16 +79,17 @@ export default function Testimonials() {
           key={currentIndex}
           className="glass-panel p-6 sm:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg flex flex-col items-center text-center bg-white/80 dark:bg-slate-800/90 w-full transition-opacity duration-300 ease-out"
         >
-          <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-blue-600/40 mb-4 shrink-0 bg-blue-50 dark:bg-slate-700 flex items-center justify-center">
-            <span className="font-display-xl text-lg font-bold text-blue-600 dark:text-blue-300 select-none">
+          <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-blue-600/40 mb-4 shrink-0 bg-blue-50 dark:bg-slate-700 flex items-center justify-center shadow-md">
+            <span className="font-display-xl text-xl font-bold text-blue-600 dark:text-blue-300 select-none">
               {testimonials[currentIndex].initials}
             </span>
             <img 
               src={testimonials[currentIndex].avatar} 
               alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
-              width="64"
-              height="64"
+              width="80"
+              height="80"
               decoding="async"
+              style={{ objectPosition: testimonials[currentIndex].avatarPosition || 'center 20%' }}
               className="absolute inset-0 w-full h-full object-cover" 
               loading="lazy"
               referrerPolicy="no-referrer"
@@ -110,6 +119,12 @@ export default function Testimonials() {
             <p className="text-xs text-on-surface-variant dark:text-slate-400 font-medium mt-0.5">
               {testimonials[currentIndex].institution}
             </p>
+            {testimonials[currentIndex].event && (
+              <span className="inline-flex items-center gap-1 mt-2.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-[11px] font-label-mono text-blue-700 dark:text-blue-300 font-bold">
+                <span className="material-symbols-outlined text-xs text-blue-500">verified</span>
+                {testimonials[currentIndex].event}
+              </span>
+            )}
           </div>
         </div>
         

@@ -185,7 +185,7 @@ export default function Home() {
         ],
         "url": "https://divya-admission-hub.vercel.app/",
         "logo": "https://divya-admission-hub.vercel.app/logo.svg",
-        "image": "https://divya-admission-hub.vercel.app/images/IMG-20260929-WA0022.jpg",
+        "image": "https://divya-admission-hub.vercel.app/director-divya.jpg",
         "description": "Expert center for Class 10th & 12th by open near me, NIOS admission in Dayalpur, Transfer of Credit (TOC), IGNOU degrees, and direct admissions for B.Ed, D.Pharma, and JBT.",
         "founder": {
           "@type": "Person",

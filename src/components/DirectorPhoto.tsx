@@ -13,7 +13,8 @@ export default function DirectorPhoto({ className = '' }: { className?: string }
           width="288"
           height="384"
           decoding="async"
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          style={{ objectPosition: 'center 12%' }}
           loading="lazy"
           onError={() => {
             if (imgSrc !== '/director-divya.jpg') {

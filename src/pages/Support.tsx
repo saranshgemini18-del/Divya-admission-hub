@@ -317,7 +317,8 @@ export default function Support() {
                   width="144"
                   height="144"
                   decoding="async"
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  style={{ objectPosition: 'center 12%' }}
                   loading="lazy"
                 />
               </div>

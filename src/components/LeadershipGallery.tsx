@@ -34,6 +34,7 @@ function GalleryPhotoCard({
           <img
             src={item.src}
             alt={`${item.title} - ${item.event}`}
+            style={{ objectPosition: item.objectPosition || 'center 20%' }}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
             onError={() => setImgFailed(true)}
