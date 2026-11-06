@@ -51,7 +51,7 @@ export default function FloatingContact() {
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-20 md:bottom-8 right-6 md:right-8 z-50 bg-primary hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all hover:scale-110 active:scale-95 group cursor-pointer"
+        className="fixed bottom-20 md:bottom-8 right-6 md:right-8 z-50 bg-primary hover:bg-blue-700 text-white w-14 h-14 rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all hover:scale-110 active:scale-95 group cursor-pointer"
         aria-label="Quick Inquiry"
         title="Quick Inquiry (Alt + C)"
       >
@@ -74,7 +74,7 @@ export default function FloatingContact() {
       >
         {/* Header */}
         <div className="bg-navy-deep dark:bg-slate-800 p-6 flex justify-between items-center relative overflow-hidden flex-shrink-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent pointer-events-none"></div>
           <div className="relative z-10">
             <h3 className="text-white font-display-xl text-xl">Quick Inquiry</h3>
             <p className="text-slate-300 text-xs mt-1">Real-time support connection</p>
@@ -147,7 +147,7 @@ export default function FloatingContact() {
                   required
                 />
               </div>
-              <button type="submit" className="w-full bg-primary hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition-all shadow-md mt-2 flex items-center justify-center gap-2 text-sm cursor-pointer">
+              <button type="submit" className="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md mt-2 flex items-center justify-center gap-2 text-sm cursor-pointer">
                 <span>Send Inquiry</span>
                 <span className="material-symbols-outlined text-sm">send</span>
               </button>

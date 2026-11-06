@@ -1,5 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import LeadershipGallery from '../components/LeadershipGallery';
+import DirectorPhoto from '../components/DirectorPhoto';
 
 export default function About() {
   return (
@@ -30,14 +32,14 @@ export default function About() {
       <div className="relative z-10 pt-28 md:pt-36 pb-24 px-4 md:px-12 max-w-[1280px] mx-auto">
         {/* Header */}
         <header className="mb-16 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
-            <span className="material-symbols-outlined text-emerald-accent text-sm">verified</span>
-            <span className="font-label-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600/10 border border-blue-500/20 mb-4">
+            <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-sm">verified</span>
+            <span className="font-label-mono text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
               12+ Years of Educational Leadership
             </span>
           </div>
           <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl text-navy-deep dark:text-white leading-[1.15] mb-5 font-bold">
-            Bridging Potential with <span className="text-emerald-accent">Academic Success</span>
+            Bridging Potential with <span className="text-blue-600 dark:text-blue-400">Academic Success</span>
           </h1>
           <p className="text-on-surface-variant dark:text-slate-300 text-base md:text-xl leading-relaxed">
             Divya Admission Hub was founded with a singular purpose: to remove bureaucratic obstacles and provide unambiguous, authoritative guidance for secondary schooling and higher education degrees.
@@ -47,7 +49,7 @@ export default function About() {
         {/* Story & Philosophy */}
         <section className="grid md:grid-cols-2 gap-10 items-center mb-20">
           <div className="space-y-5">
-            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">
+            <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">
               Our Genesis
             </span>
             <h2 className="font-display-xl text-3xl md:text-4xl text-navy-deep dark:text-white">
@@ -62,11 +64,11 @@ export default function About() {
 
             <div className="pt-2 grid grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10">
-                <span className="font-display-xl text-2xl font-bold text-emerald-accent block">15,000+</span>
+                <span className="font-display-xl text-2xl font-bold text-blue-600 dark:text-blue-400 block">15,000+</span>
                 <span className="text-xs text-on-surface-variant dark:text-slate-400 font-medium">Students Successfully Enrolled</span>
               </div>
               <div className="p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10">
-                <span className="font-display-xl text-2xl font-bold text-emerald-accent block">99.4%</span>
+                <span className="font-display-xl text-2xl font-bold text-blue-600 dark:text-blue-400 block">99.4%</span>
                 <span className="text-xs text-on-surface-variant dark:text-slate-400 font-medium">Clearance &amp; Verification Rate</span>
               </div>
             </div>
@@ -96,7 +98,7 @@ export default function About() {
                 }
               ].map((value, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="material-symbols-outlined text-xl">check_circle</span>
                   </div>
                   <div>
@@ -114,28 +116,12 @@ export default function About() {
           <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* Director Photo Frame */}
             <div className="md:col-span-5 flex flex-col items-center">
-              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-4 border-emerald-accent/30 shadow-2xl bg-slate-900 group">
-                <img 
-                  src="/director-divya.svg" 
-                  alt="Divya Dhariwal - Founder &amp; Director, Divya Admission Hub" 
-                  width="288"
-                  height="384"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-center">
-                  <span className="font-label-mono text-[10px] uppercase font-bold tracking-widest text-emerald-400 bg-emerald-950/70 px-3 py-1 rounded-full border border-emerald-500/30">
-                    Founder &amp; Director
-                  </span>
-                </div>
-              </div>
+              <DirectorPhoto />
             </div>
 
             {/* Director's Note & Philosophy */}
             <div className="md:col-span-7 space-y-5 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold font-label-mono uppercase">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/10 text-blue-600 dark:text-blue-400 text-xs font-bold font-label-mono uppercase">
                 <span className="material-symbols-outlined text-sm">format_quote</span> Director's Note
               </div>
               <blockquote className="font-display-xl text-xl sm:text-2xl text-navy-deep dark:text-white leading-relaxed italic">
@@ -143,7 +129,7 @@ export default function About() {
               </blockquote>
               <div className="space-y-1">
                 <h3 className="font-display-xl text-2xl font-bold text-navy-deep dark:text-white">Divya Dhariwal</h3>
-                <p className="font-label-mono text-xs text-emerald-accent uppercase font-bold tracking-wider">
+                <p className="font-label-mono text-xs text-blue-600 dark:text-blue-400 uppercase font-bold tracking-wider">
                   Founder &amp; Principal Academic Counselor
                 </p>
               </div>
@@ -156,7 +142,7 @@ export default function About() {
                   href="https://wa.me/918178056407?text=Hello%20Divya%20Dhariwal,%20I%20would%20like%20to%20consult%20regarding%20my%20academic%20pathway." 
                   target="_blank" 
                   rel="noreferrer"
-                  className="bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md transition-all"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-label-mono text-xs font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md transition-all"
                 >
                   <span className="material-symbols-outlined text-sm">chat</span>
                   Connect Directly on WhatsApp
@@ -165,7 +151,7 @@ export default function About() {
                   href="https://instagram.com/dhriti19977777" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-emerald-accent transition-colors"
+                  className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-blue-600 dark:text-blue-400 transition-colors"
                 >
                   <span className="material-symbols-outlined text-sm text-[#E1306C]">photo_camera</span>
                   Instagram @dhriti19977777
@@ -174,6 +160,12 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* Leadership & Honours Gallery */}
+        <LeadershipGallery 
+          title="National Honours, Media & Leadership Archive"
+          subtitle="Explore documented milestones: Google for Education Best Educator Award, ET Education Keynote, Zee News coverage, Constitution Club address & university convocations."
+        />
 
         {/* Final CTA Strip */}
         <section className="text-center max-w-xl mx-auto">
@@ -188,7 +180,7 @@ export default function About() {
               href="https://wa.me/918178056407?text=Hello%20Divya%20Dhariwal,%20I%20would%20like%20to%20consult%20regarding%20my%20admission%20pathway."
               target="_blank" 
               rel="noreferrer" 
-              className="inline-flex items-center gap-2 bg-emerald-accent hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full font-label-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-accent/20 transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-label-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-blue-600/20 transition-all hover:scale-105 active:scale-95"
             >
               <span className="material-symbols-outlined text-base">chat</span>
               WhatsApp Director Directly

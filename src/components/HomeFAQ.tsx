@@ -49,13 +49,13 @@ export default function HomeFAQ() {
   return (
     <section className="mb-28 md:mb-36" id="faq-section" aria-labelledby="faq-heading">
       <div className="flex flex-col items-center mb-12 gap-2 text-center">
-        <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">
+        <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">
           Got Questions? We Have Answers
         </span>
         <h2 id="faq-heading" className="font-display-xl text-3xl md:text-5xl text-navy-deep dark:text-white">
-          Frequently Asked <span className="text-emerald-accent">Questions</span>
+          Frequently Asked <span className="text-blue-600 dark:text-blue-400">Questions</span>
         </h2>
-        <div className="h-1 w-24 bg-emerald-accent rounded-full mb-3"></div>
+        <div className="h-1 w-24 bg-blue-600 rounded-full mb-3"></div>
         <p className="text-on-surface-variant dark:text-slate-400 text-sm md:text-base max-w-2xl">
           Everything you need to know about Class 10th &amp; 12th open schooling, NIOS admission in Dayalpur, Transfer of Credit (TOC), and higher education options.
         </p>
@@ -69,8 +69,8 @@ export default function HomeFAQ() {
               key={idx} 
               className={`glass-panel rounded-2xl border transition-all duration-200 overflow-hidden ${
                 isOpen 
-                  ? 'border-emerald-accent/50 bg-white/90 dark:bg-slate-800/95 shadow-lg' 
-                  : 'border-glass-border dark:border-white/10 bg-white/60 dark:bg-slate-900/60 hover:border-emerald-accent/30'
+                  ? 'border-blue-600/50 bg-white/90 dark:bg-slate-800/95 shadow-lg' 
+                  : 'border-glass-border dark:border-white/10 bg-white/60 dark:bg-slate-900/60 hover:border-blue-600/30'
               }`}
             >
               <button
@@ -79,10 +79,10 @@ export default function HomeFAQ() {
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${idx}`}
                 id={`faq-question-${idx}`}
-                className="w-full text-left p-5 md:p-6 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-accent"
+                className="w-full text-left p-5 md:p-6 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="flex flex-col gap-1 pr-2">
-                  <span className="font-label-mono text-[11px] uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-bold">
+                  <span className="font-label-mono text-[11px] uppercase tracking-wider text-blue-700 dark:text-blue-400 font-bold">
                     {item.category}
                   </span>
                   <span className="font-display-xl text-base md:text-lg text-navy-deep dark:text-white font-semibold leading-snug">
@@ -92,7 +92,7 @@ export default function HomeFAQ() {
                 <div 
                   className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                     isOpen 
-                      ? 'bg-emerald-accent text-white rotate-180' 
+                      ? 'bg-blue-600 text-white rotate-180' 
                       : 'bg-black/5 dark:bg-white/10 text-on-surface-variant dark:text-slate-300'
                   }`}
                 >
@@ -122,7 +122,7 @@ export default function HomeFAQ() {
             href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub!%20I%20have%20a%20question%20regarding%20open%20schooling%20admission."
             target="_blank"
             rel="noreferrer"
-            className="text-emerald-accent font-bold hover:underline inline-flex items-center gap-1"
+            className="text-blue-600 dark:text-blue-400 font-bold hover:underline inline-flex items-center gap-1"
           >
             Chat with an Academic Counselor <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </a>

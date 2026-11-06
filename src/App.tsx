@@ -17,7 +17,7 @@ const DevelopedBy = lazy(() => import('./pages/DevelopedBy'));
 function PageLoader() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center gap-3">
-      <div className="w-9 h-9 rounded-full border-2 border-emerald-500/20 border-t-emerald-500 animate-spin" />
+      <div className="w-9 h-9 rounded-full border-2 border-blue-500/20 border-t-blue-600 animate-spin" />
       <span className="font-label-mono text-xs uppercase tracking-widest text-slate-400">Loading</span>
     </div>
   );

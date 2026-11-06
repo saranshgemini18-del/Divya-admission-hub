@@ -8,17 +8,23 @@ export default function Footer() {
         
         {/* Brand Column */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-emerald-accent text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src="/logo.svg" 
+              alt="Divya Admission Hub Logo" 
+              className="w-10 h-10 object-contain drop-shadow-sm" 
+              width="40"
+              height="40"
+            />
             <span className="font-display-xl text-xl font-extrabold tracking-tighter uppercase text-white">
-              DIVYA <span className="text-emerald-accent">ADMISSION HUB</span>
+              DIVYA <span className="text-blue-400">ADMISSION HUB</span>
             </span>
           </div>
           <p className="text-sm text-slate-400 leading-relaxed">
             Premier educational consultancy offering structured, transparent, and authoritative admission guidance for NIOS 10th/12th, IGNOU distance degrees, and premier accredited universities.
           </p>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-label-mono text-emerald-400 font-bold">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-label-mono text-blue-400 font-bold">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
             Govt. Recognized Boards &amp; Portals
           </div>
         </div>
@@ -30,19 +36,19 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/" className="text-slate-400 hover:text-emerald-400 transition-colors">Home &amp; Stream Finder</Link>
+              <Link to="/" className="text-slate-400 hover:text-blue-400 transition-colors">Home &amp; Stream Finder</Link>
             </li>
             <li>
-              <Link to="/programs" className="text-slate-400 hover:text-emerald-400 transition-colors">Academic Programs &amp; Fees</Link>
+              <Link to="/programs" className="text-slate-400 hover:text-blue-400 transition-colors">Academic Programs &amp; Fees</Link>
             </li>
             <li>
-              <Link to="/support" className="text-slate-400 hover:text-emerald-400 transition-colors">Priority Inquiries &amp; Helpdesk</Link>
+              <Link to="/support" className="text-slate-400 hover:text-blue-400 transition-colors">Priority Inquiries &amp; Helpdesk</Link>
             </li>
             <li>
-              <Link to="/about" className="text-slate-400 hover:text-emerald-400 transition-colors">About Divya Admission Hub</Link>
+              <Link to="/about" className="text-slate-400 hover:text-blue-400 transition-colors">About Divya Admission Hub</Link>
             </li>
             <li>
-              <Link to="/developed-by" rel="nofollow" className="text-slate-400 hover:text-emerald-400 transition-colors">Developer: Saransh (+91 8851285088)</Link>
+              <Link to="/developed-by" rel="nofollow" className="text-slate-400 hover:text-blue-400 transition-colors">Developer: Saransh (+91 8851285088)</Link>
             </li>
           </ul>
         </div>
@@ -78,24 +84,24 @@ export default function Footer() {
           </h4>
           <div className="space-y-2.5 text-xs text-slate-400">
             <p className="flex items-start gap-2">
-              <span className="material-symbols-outlined text-emerald-accent text-base shrink-0">location_on</span>
+              <span className="material-symbols-outlined text-blue-400 text-base shrink-0">location_on</span>
               <span>2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki (Water Tank), Dayalpur, Delhi - 110094</span>
             </p>
             <p className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-emerald-accent text-base shrink-0">call</span>
-              <a href="tel:+918178056407" className="hover:text-emerald-400 font-bold text-slate-200">
+              <span className="material-symbols-outlined text-blue-400 text-base shrink-0">call</span>
+              <a href="tel:+918178056407" className="hover:text-blue-400 font-bold text-slate-200">
                 +91 81780 56407
               </a>
             </p>
             <p className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-emerald-accent text-base shrink-0">mail</span>
-              <a href="mailto:Divya19970719@gmail.com" className="hover:text-emerald-400 text-slate-200">
+              <span className="material-symbols-outlined text-blue-400 text-base shrink-0">mail</span>
+              <a href="mailto:Divya19970719@gmail.com" className="hover:text-blue-400 text-slate-200">
                 Divya19970719@gmail.com
               </a>
             </p>
             <p className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-emerald-accent text-base shrink-0">public</span>
-              <a href="https://instagram.com/dhriti19977777" target="_blank" rel="noreferrer" className="hover:text-emerald-400 text-slate-200">
+              <span className="material-symbols-outlined text-blue-400 text-base shrink-0">public</span>
+              <a href="https://instagram.com/dhriti19977777" target="_blank" rel="noreferrer" className="hover:text-blue-400 text-slate-200">
                 Instagram: @dhriti19977777
               </a>
             </p>
@@ -104,7 +110,7 @@ export default function Footer() {
                 href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20need%20quick%20counseling%20support."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-label-mono text-xs font-bold transition-all shadow-md"
               >
                 <span className="material-symbols-outlined text-sm">chat</span>
                 WhatsApp Helpline
@@ -122,7 +128,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0 font-label-mono text-xs text-slate-300">
           <span>© {new Date().getFullYear()} Divya Admission Hub.</span>
           <span className="hidden sm:inline text-slate-600">•</span>
-          <Link to="/developed-by" rel="nofollow" className="text-emerald-400 hover:text-emerald-300 hover:underline">
+          <Link to="/developed-by" rel="nofollow" className="text-blue-400 hover:text-blue-300 hover:underline">
             Developed by Saransh (+91 8851285088)
           </Link>
         </div>

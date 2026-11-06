@@ -1,13 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10b981"/>
-      <stop offset="100%" stop-color="#059669"/>
+    <!-- Primary Theme Colors matching user logo -->
+    <linearGradient id="mortarboard-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B4C7E"/>
+      <stop offset="100%" stop-color="#1E3A6E"/>
+    </linearGradient>
+    <linearGradient id="upper-petals-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6388B4"/>
+      <stop offset="100%" stop-color="#5275A1"/>
+    </linearGradient>
+    <linearGradient id="lower-petals-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A3C1E2"/>
+      <stop offset="100%" stop-color="#8FAECF"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#0F172A"/>
-  <path d="M32 14L14 24L32 34L50 24L32 14Z" fill="url(#hubGrad)"/>
-  <path d="M20 30.5V41C20 45 25.4 48 32 48C38.6 48 44 45 44 41V30.5L32 37.5L20 30.5Z" fill="#10b981" opacity="0.9"/>
-  <path d="M47 26.5V38.5" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="47" cy="41" r="2.5" fill="#B45309"/>
+
+  <!-- 1. Top 4-point Diamond Star Sparkle -->
+  <path d="M 250 100 Q 250 128 274 128 Q 250 128 250 156 Q 250 128 226 128 Q 250 128 250 100 Z" 
+        fill="#557CA6" />
+
+  <!-- 2. Mortarboard Diamond (Graduation Cap) -->
+  <path d="M 250 160 L 336 195 L 250 226 L 164 195 Z" 
+        fill="#274777" />
+
+  <!-- Cap under-rim skull base -->
+  <path d="M 202 210 L 202 222 C 202 235 224 244 250 244 C 276 244 298 235 298 222 L 298 210 C 283 218 267 222 250 222 C 233 222 217 218 202 210 Z" 
+        fill="#203B64" />
+
+  <!-- Cap Tassel -->
+  <path d="M 250 192 Q 315 200 326 208 L 326 238" 
+        stroke="#203B64" stroke-width="3.5" fill="none" stroke-linecap="round" />
+  <rect x="322" y="238" width="8" height="18" rx="3.5" fill="#203B64" />
+
+  <!-- 3. Student Head Silhouette -->
+  <circle cx="250" cy="268" r="30" fill="#274777" />
+
+  <!-- 4. Upper Open Book Pages / Upper Lotus Petals -->
+  <!-- Left Upper Wing -->
+  <path d="M 138 266 C 138 266 142 304 144 316 C 180 326 226 348 250 370 C 242 342 222 312 186 295 C 166 285 148 274 138 266 Z" 
+        fill="#5B81AD" />
+  <!-- Right Upper Wing -->
+  <path d="M 362 266 C 362 266 358 304 356 316 C 320 326 274 348 250 370 C 258 342 278 312 314 295 C 334 285 352 274 362 266 Z" 
+        fill="#5B81AD" />
+
+  <!-- 5. Lower Lotus Petals / Foundation Cradle -->
+  <!-- Left Lower Petal -->
+  <path d="M 135 328 C 158 382 208 402 250 412 C 248 395 240 372 216 352 C 188 332 156 326 135 328 Z" 
+        fill="#93B5D9" />
+  <!-- Right Lower Petal -->
+  <path d="M 365 328 C 342 382 292 402 250 412 C 252 395 260 372 284 352 C 312 332 344 326 365 328 Z" 
+        fill="#93B5D9" />
 </svg>

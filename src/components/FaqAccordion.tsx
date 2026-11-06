@@ -77,13 +77,13 @@ export default function FaqAccordion() {
         </script>
       </Helmet>
       <div className="flex flex-col items-center mb-8 text-center">
-        <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold mb-2">
+        <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold mb-2">
           Knowledge Base &amp; Clarifications
         </span>
         <h2 className="font-display-xl text-3xl md:text-4xl text-navy-deep dark:text-white">
-          Frequently Asked <span className="text-emerald-accent">Questions</span>
+          Frequently Asked <span className="text-blue-600 dark:text-blue-400">Questions</span>
         </h2>
-        <div className="h-1 w-24 bg-emerald-accent rounded-full mt-3"></div>
+        <div className="h-1 w-24 bg-blue-600 rounded-full mt-3"></div>
       </div>
 
       {/* Search Input for FAQs */}
@@ -94,7 +94,7 @@ export default function FaqAccordion() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search FAQs (e.g. NIOS, NEET, documents, TOC)..."
-            className="w-full bg-white dark:bg-slate-800 border border-glass-border dark:border-slate-700 rounded-full px-5 py-3 pl-12 text-sm text-on-surface dark:text-white outline-none focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent shadow-xs"
+            className="w-full bg-white dark:bg-slate-800 border border-glass-border dark:border-slate-700 rounded-full px-5 py-3 pl-12 text-sm text-on-surface dark:text-white outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 shadow-xs"
           />
           <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">
             search
@@ -121,7 +121,7 @@ export default function FaqAccordion() {
               href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20have%20a%20specific%20question%20regarding%20admissions."
               target="_blank"
               rel="noreferrer"
-              className="inline-block mt-3 text-xs font-label-mono font-bold text-emerald-accent underline"
+              className="inline-block mt-3 text-xs font-label-mono font-bold text-blue-600 dark:text-blue-400 underline"
             >
               Ask our counselor directly on WhatsApp →
             </a>
@@ -134,8 +134,8 @@ export default function FaqAccordion() {
                 key={index} 
                 className={`glass-card rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-emerald-accent/40 shadow-sm bg-white dark:bg-slate-800' 
-                    : 'border-glass-border dark:border-white/10 hover:border-emerald-accent/20 bg-white/60 dark:bg-slate-800/60'
+                    ? 'border-blue-600/40 shadow-sm bg-white dark:bg-slate-800' 
+                    : 'border-glass-border dark:border-white/10 hover:border-blue-600/20 bg-white/60 dark:bg-slate-800/60'
                 }`}
               >
                 <button 
@@ -144,12 +144,12 @@ export default function FaqAccordion() {
                   aria-expanded={isOpen}
                 >
                   <span className={`font-display-xl text-base md:text-lg font-semibold transition-colors ${
-                    isOpen ? 'text-emerald-600 dark:text-emerald-400' : 'text-navy-deep dark:text-slate-200'
+                    isOpen ? 'text-blue-600 dark:text-blue-400' : 'text-navy-deep dark:text-slate-200'
                   }`}>
                     {faq.question}
                   </span>
                   <span className={`material-symbols-outlined shrink-0 text-xl transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 text-emerald-accent' : 'text-slate-400'
+                    isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : 'text-slate-400'
                   }`}>
                     expand_more
                   </span>

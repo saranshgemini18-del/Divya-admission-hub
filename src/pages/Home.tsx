@@ -6,6 +6,8 @@ import SEO from '../components/SEO';
 import HomeFAQ, { homeFaqData } from '../components/HomeFAQ';
 import LocalCatchment from '../components/LocalCatchment';
 import OpenSchoolingAdvantage from '../components/OpenSchoolingAdvantage';
+import LeadershipGallery from '../components/LeadershipGallery';
+import DirectorPhoto from '../components/DirectorPhoto';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -182,8 +184,8 @@ export default function Home() {
           "Divya Academia"
         ],
         "url": "https://divya-admission-hub.vercel.app/",
-        "logo": "https://divya-admission-hub.vercel.app/favicon.svg",
-        "image": "https://divya-admission-hub.vercel.app/director-divya-alt.svg",
+        "logo": "https://divya-admission-hub.vercel.app/logo.svg",
+        "image": "https://divya-admission-hub.vercel.app/images/IMG-20260929-WA0022.jpg",
         "description": "Expert center for Class 10th & 12th by open near me, NIOS admission in Dayalpur, Transfer of Credit (TOC), IGNOU degrees, and direct admissions for B.Ed, D.Pharma, and JBT.",
         "founder": {
           "@type": "Person",
@@ -282,7 +284,7 @@ export default function Home() {
           </div>
 
           <h1 className="font-display-xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
-            Class 10th &amp; 12th by Open <span className="text-emerald-accent">Near Me</span>
+            Class 10th &amp; 12th by Open <span className="text-blue-600 dark:text-blue-400">Near Me</span>
             <span className="block text-2xl sm:text-3xl md:text-4xl text-navy-deep dark:text-slate-200 font-semibold mt-2.5">
               Divya Admission Hub &bull; NIOS &amp; IGNOU Admissions in Dayalpur, Delhi
             </span>
@@ -290,19 +292,19 @@ export default function Home() {
 
           {/* Quick Search Intent Badges */}
           <div className="flex flex-wrap gap-2 pt-1">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600/10 dark:bg-blue-600/20 text-blue-900 dark:text-blue-300 text-xs font-semibold border border-blue-500/30">
               <span className="material-symbols-outlined text-xs">school</span> Class 10th &amp; 12th Open
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600/10 dark:bg-blue-600/20 text-blue-900 dark:text-blue-300 text-xs font-semibold border border-blue-500/30">
               <span className="material-symbols-outlined text-xs">update</span> On-Demand Exams
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600/10 dark:bg-blue-600/20 text-blue-900 dark:text-blue-300 text-xs font-semibold border border-blue-500/30">
               <span className="material-symbols-outlined text-xs">published_with_changes</span> TOC Credit Transfer
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600/10 dark:bg-blue-600/20 text-blue-900 dark:text-blue-300 text-xs font-semibold border border-blue-500/30">
               <span className="material-symbols-outlined text-xs">assignment_turned_in</span> IGNOU Distance Degrees
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600/10 dark:bg-blue-600/20 text-blue-900 dark:text-blue-300 text-xs font-semibold border border-blue-500/30">
               <span className="material-symbols-outlined text-xs">workspace_premium</span> Direct B.Ed &amp; D.Pharma
             </span>
           </div>
@@ -313,11 +315,11 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-4 mt-3 justify-start items-center">
             <Link to="/programs" className="bg-navy-deep hover:bg-slate-800 text-white font-bold px-8 py-3.5 rounded-full flex items-center gap-2.5 shadow-lg shadow-navy-deep/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base">
-              Explore Programs <span className="material-symbols-outlined text-emerald-accent text-lg">arrow_forward</span>
+              Explore Programs <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-lg">arrow_forward</span>
             </Link>
             <button 
               onClick={() => scrollToSection('query-box')} 
-              className="bg-emerald-accent hover:bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-full flex items-center gap-2 shadow-lg shadow-emerald-accent/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-full flex items-center gap-2 shadow-lg shadow-blue-600/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base"
             >
               <span className="material-symbols-outlined text-lg">bolt</span> Fast-Track Inquiry
             </button>
@@ -375,7 +377,7 @@ export default function Home() {
 
             <a 
               href="tel:+918178056407" 
-              className="group relative flex items-center justify-center w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-md hover:shadow-emerald-500/30 transition-all hover:scale-110"
+              className="group relative flex items-center justify-center w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-md hover:shadow-blue-500/30 transition-all hover:scale-110"
               aria-label="Direct Call"
               title="Direct Phone Call (+91 8178056407)"
             >
@@ -387,11 +389,11 @@ export default function Home() {
         {/* Quick Highlights Strip */}
         <div className="w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-emerald-700 dark:text-emerald-400 font-bold">15,000+</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-blue-700 dark:text-blue-400 font-bold">15,000+</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Students Guided</span>
           </div>
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
-            <span className="font-display-xl text-2xl md:text-3xl text-emerald-700 dark:text-emerald-400 font-bold">100%</span>
+            <span className="font-display-xl text-2xl md:text-3xl text-blue-700 dark:text-blue-400 font-bold">100%</span>
             <span className="font-label-mono text-[10px] md:text-xs text-on-surface-variant dark:text-slate-400 uppercase tracking-wider font-semibold mt-1">Govt Recognized</span>
           </div>
           <div className="glass-panel p-4 rounded-2xl border border-glass-border dark:border-white/10 flex flex-col items-center">
@@ -412,7 +414,7 @@ export default function Home() {
       <section className="mb-28 md:mb-36" id="programs-section">
         <div className="flex flex-col items-center mb-12 gap-2">
           <h2 className="font-display-xl text-3xl md:text-5xl text-center dark:text-white">Academic <span className="text-premium-gold">Verticals</span></h2>
-          <div className="h-1 w-24 bg-emerald-accent rounded-full"></div>
+          <div className="h-1 w-24 bg-blue-600 rounded-full"></div>
           <p className="text-on-surface-variant dark:text-slate-400 text-center max-w-xl text-sm md:text-base mt-2">
             Select your preferred academic pathway for comprehensive guidance and verified enrollment.
           </p>
@@ -422,25 +424,25 @@ export default function Home() {
           {/* NIOS Card */}
           <Link 
             to="/programs" 
-            className="group glass-panel p-8 rounded-3xl border border-glass-border dark:border-white/10 shadow-md hover:shadow-xl transition-all relative overflow-hidden h-[400px] flex flex-col justify-end bg-gradient-to-br from-emerald-900/10 via-slate-900/5 to-slate-100 dark:from-slate-800 dark:to-slate-900"
+            className="group glass-panel p-8 rounded-3xl border border-glass-border dark:border-white/10 shadow-md hover:shadow-xl transition-all relative overflow-hidden h-[400px] flex flex-col justify-end bg-gradient-to-br from-blue-950/10 via-slate-900/5 to-slate-100 dark:from-slate-800 dark:to-slate-900"
           >
             <div 
-              className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-nios.svg')" }}
+              className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
+              style={{ backgroundImage: "url('/assets/card-nios.jpg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-navy-deep/5 dark:bg-white/10 p-4 rounded-2xl border border-navy-deep/10 dark:border-white/20 backdrop-blur-sm">
-              <span className="material-symbols-outlined text-emerald-accent dark:text-emerald-400 text-3xl">menu_book</span>
+              <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-3xl">menu_book</span>
             </div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 text-xs font-bold font-label-mono mb-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60 text-xs font-bold font-label-mono mb-2">
                 STREAM 1 & 2
               </div>
-              <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-emerald-accent transition-colors">NIOS Board</h3>
+              <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mb-2 group-hover:text-blue-600 dark:text-blue-400 transition-colors">NIOS Board</h3>
               <p className="text-on-surface-variant dark:text-slate-300 text-sm mb-4 font-medium leading-relaxed">
                 Complete Secondary (10th) and Senior Secondary (12th) certificates with flexible on-demand exams and credit transfers.
               </p>
-              <div className="flex items-center gap-2 text-emerald-accent font-bold text-sm">
+              <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm">
                 EXPLORE PROGRAM <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </div>
             </div>
@@ -452,8 +454,8 @@ export default function Home() {
             className="group glass-panel p-8 rounded-3xl border border-glass-border dark:border-white/10 shadow-md hover:shadow-xl transition-all relative overflow-hidden h-[400px] flex flex-col justify-end bg-gradient-to-br from-teal-900/10 via-slate-900/5 to-slate-100 dark:from-slate-800 dark:to-slate-900"
           >
             <div 
-              className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-ignou.svg')" }}
+              className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
+              style={{ backgroundImage: "url('/assets/card-ignou.jpg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-tertiary/10 dark:bg-tertiary/20 p-4 rounded-2xl border border-tertiary/20 backdrop-blur-sm">
@@ -479,8 +481,8 @@ export default function Home() {
             className="group glass-panel p-8 rounded-3xl border border-glass-border dark:border-white/10 shadow-md hover:shadow-xl transition-all relative overflow-hidden h-[400px] flex flex-col justify-end bg-gradient-to-br from-amber-900/10 via-slate-900/5 to-slate-100 dark:from-slate-800 dark:to-slate-900"
           >
             <div 
-              className="absolute inset-0 z-[-1] opacity-35 group-hover:opacity-50 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-degrees.svg')" }}
+              className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
+              style={{ backgroundImage: "url('/assets/card-degrees.jpg')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-premium-gold/10 dark:bg-premium-gold/20 p-4 rounded-2xl border border-premium-gold/20 backdrop-blur-sm">
@@ -509,7 +511,7 @@ export default function Home() {
       <section className="mb-28 md:mb-36 glass-panel p-6 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/70 dark:bg-slate-900/70">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 pb-6 border-b border-glass-border dark:border-white/10">
           <div>
-            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">Quick Academic Advisor</span>
+            <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">Quick Academic Advisor</span>
             <h2 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white mt-1">Not Sure Where to Start?</h2>
             <p className="text-sm md:text-base text-on-surface-variant dark:text-slate-400 mt-1">Select your current academic goal to view the recommended pathway.</p>
           </div>
@@ -520,7 +522,7 @@ export default function Home() {
                 onClick={() => setSelectedLevel(level)}
                 className={`px-4 py-2 rounded-xl font-label-mono text-xs font-bold transition-all ${
                   selectedLevel === level
-                    ? 'bg-emerald-accent text-white shadow-md shadow-emerald-accent/20 scale-105'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20 scale-105'
                     : 'bg-black/5 dark:bg-white/5 text-on-surface-variant dark:text-slate-300 hover:bg-black/10 dark:hover:bg-white/10'
                 }`}
               >
@@ -538,7 +540,7 @@ export default function Home() {
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white">{streamInfo[selectedLevel].title}</h3>
-              <span className="px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 text-xs font-label-mono font-bold">
+              <span className="px-3 py-0.5 rounded-full bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60 text-xs font-label-mono font-bold">
                 {streamInfo[selectedLevel].badge}
               </span>
             </div>
@@ -548,7 +550,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-2.5 pt-2">
               {streamInfo[selectedLevel].highlights.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2 text-xs md:text-sm text-on-surface-variant dark:text-slate-300">
-                  <span className="material-symbols-outlined text-emerald-accent text-lg">check_circle</span>
+                  <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-lg">check_circle</span>
                   <span>{item}</span>
                 </div>
               ))}
@@ -562,7 +564,7 @@ export default function Home() {
               href={`https://wa.me/918178056407?text=Hello,%20I%20am%20interested%20in%20${encodeURIComponent(streamInfo[selectedLevel].title)}.%20Please%20share%20the%20admission%20process.`}
               target="_blank"
               rel="noreferrer"
-              className="bg-emerald-accent hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-xs font-label-mono transition-all shadow-md flex items-center justify-center gap-2"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-xs font-label-mono transition-all shadow-md flex items-center justify-center gap-2"
             >
               <span>Get Free Guidance</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -574,9 +576,9 @@ export default function Home() {
       {/* Workflow Timeline */}
       <section className="mb-28 md:mb-36" id="workflow">
         <div className="flex flex-col mb-12">
-          <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold mb-2">Clear 4-Step Process</span>
+          <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold mb-2">Clear 4-Step Process</span>
           <h2 className="font-display-xl text-3xl md:text-4xl text-on-surface dark:text-white leading-tight mb-4">
-            Your Journey to <span className="text-emerald-accent">Academic Excellence</span>
+            Your Journey to <span className="text-blue-600 dark:text-blue-400">Academic Excellence</span>
           </h2>
           <p className="text-on-surface-variant dark:text-slate-400 text-base md:text-lg max-w-2xl">
             Our streamlined workflow ensures a transparent, stress-free transition into your chosen academic program.
@@ -592,34 +594,17 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* Director Photo */}
             <div className="md:col-span-5 flex justify-center">
-              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-4 border-emerald-accent/40 shadow-2xl bg-slate-900 group">
-                <img 
-                  src="/director-divya-alt.svg" 
-                  alt="Divya Dhariwal - Founder &amp; Director, Divya Admission Hub" 
-                  width="288"
-                  height="384"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-center">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 font-label-mono text-[10px] font-bold uppercase tracking-wider">
-                    <span className="material-symbols-outlined text-xs">verified</span>
-                    Divya Dhariwal &bull; Director
-                  </div>
-                </div>
-              </div>
+              <DirectorPhoto />
             </div>
 
             {/* Director Bio & Vision */}
             <div className="md:col-span-7 space-y-5 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-label-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600/10 text-blue-900 dark:text-blue-300 text-xs font-bold font-label-mono uppercase tracking-wider">
                 <span className="material-symbols-outlined text-sm">school</span>
                 Direct Leadership &amp; Mentorship
               </div>
               <h2 className="font-display-xl text-3xl sm:text-4xl text-navy-deep dark:text-white font-bold leading-tight">
-                Guided by <span className="text-emerald-accent">Divya Dhariwal</span>
+                Guided by <span className="text-blue-600 dark:text-blue-400">Divya Dhariwal</span>
               </h2>
               <p className="font-label-mono text-xs uppercase font-bold text-premium-gold tracking-widest">
                 Founder &amp; Principal Academic Counselor
@@ -630,11 +615,11 @@ export default function Home() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center">
-                  <span className="font-display-xl text-xl font-bold text-emerald-700 dark:text-emerald-400 block">12+ Yrs</span>
+                  <span className="font-display-xl text-xl font-bold text-blue-700 dark:text-blue-400 block">12+ Yrs</span>
                   <span className="font-label-mono text-[10px] uppercase text-on-surface-variant dark:text-slate-400 font-semibold">Experience</span>
                 </div>
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center">
-                  <span className="font-display-xl text-xl font-bold text-emerald-700 dark:text-emerald-400 block">15,000+</span>
+                  <span className="font-display-xl text-xl font-bold text-blue-700 dark:text-blue-400 block">15,000+</span>
                   <span className="font-label-mono text-[10px] uppercase text-on-surface-variant dark:text-slate-400 font-semibold">Scholars</span>
                 </div>
                 <div className="p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-glass-border dark:border-white/10 text-center col-span-2 sm:col-span-1">
@@ -648,14 +633,14 @@ export default function Home() {
                   href="https://wa.me/918178056407?text=Hello%20Divya%20Dhariwal,%20I%20would%20like%20to%20consult%20regarding%20my%20admissions."
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md transition-all hover:scale-105"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-label-mono text-xs font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md transition-all hover:scale-105"
                 >
                   <span className="material-symbols-outlined text-sm">chat</span>
                   Consult With Divya Dhariwal
                 </a>
                 <Link
                   to="/about"
-                  className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-emerald-accent transition-colors"
+                  className="glass-panel text-navy-deep dark:text-white font-label-mono text-xs font-bold px-5 py-3 rounded-full inline-flex items-center gap-2 border border-glass-border dark:border-white/10 hover:text-blue-600 dark:text-blue-400 transition-colors"
                 >
                   <span>Read Full Story</span>
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -665,6 +650,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Verified Media, National Honors & Leadership Gallery */}
+      <LeadershipGallery 
+        limit={6}
+        title="Verified Media, Honors &amp; Leadership Gallery"
+        subtitle="Explore documented proof: Google for Education Best Educator Award, ET Education Keynote, Zee News broadcast, Constitution Club address &amp; university convocations."
+      />
 
       {/* Testimonials */}
       <Testimonials />
@@ -676,7 +668,7 @@ export default function Home() {
       <section className="mb-28 md:mb-36 flex justify-center w-full" id="query-box">
         <div className="w-full max-w-2xl">
           <div className="glass-panel p-6 md:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-2xl relative bg-white/85 dark:bg-slate-800/90 transition-transform duration-200">
-            <div className="absolute -top-4 -right-4 bg-emerald-accent p-3 rounded-2xl shadow-lg animate-bounce">
+            <div className="absolute -top-4 -right-4 bg-blue-600 p-3 rounded-2xl shadow-lg animate-bounce">
               <span className="material-symbols-outlined text-white">rocket_launch</span>
             </div>
             <h3 className="font-display-xl text-2xl md:text-3xl text-center mb-2 text-navy-deep dark:text-white">Start Your Admission Query</h3>
@@ -692,9 +684,9 @@ export default function Home() {
             )}
 
             {formStatus === 'success' && (
-              <div className="mb-5 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs md:text-sm font-medium flex items-center justify-between">
+              <div className="mb-5 p-4 rounded-xl bg-blue-600/10 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs md:text-sm font-medium flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl text-emerald-accent">check_circle</span>
+                  <span className="material-symbols-outlined text-xl text-blue-600 dark:text-blue-400">check_circle</span>
                   <span>WhatsApp conversation initialized! Opening chat...</span>
                 </div>
                 <button 
@@ -714,7 +706,7 @@ export default function Home() {
                   name="name" 
                   value={formData.name} 
                   onChange={handleInputChange} 
-                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent outline-none transition-all text-on-surface dark:text-white text-sm" 
+                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all text-on-surface dark:text-white text-sm" 
                   placeholder="Enter your full name" 
                   type="text" 
                   required
@@ -729,7 +721,7 @@ export default function Home() {
                   name="course" 
                   value={formData.course} 
                   onChange={handleInputChange} 
-                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent outline-none transition-all text-on-surface dark:text-white text-sm cursor-pointer"
+                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all text-on-surface dark:text-white text-sm cursor-pointer"
                   aria-label="Academic Vertical"
                 >
                   <option value="NIOS Secondary (Class 10th)">NIOS Secondary (Class 10th)</option>
@@ -748,7 +740,7 @@ export default function Home() {
                   name="phone" 
                   value={formData.phone} 
                   onChange={handleInputChange} 
-                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent outline-none transition-all text-on-surface dark:text-white text-sm" 
+                  className="w-full bg-white dark:bg-slate-900 border border-glass-border dark:border-slate-700 rounded-xl px-4 py-3 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all text-on-surface dark:text-white text-sm" 
                   placeholder="+91 98765 43210" 
                   type="tel" 
                   required
@@ -757,14 +749,14 @@ export default function Home() {
               </div>
 
               <button 
-                className="w-full bg-emerald-accent hover:bg-emerald-600 text-white py-3.5 rounded-xl font-bold font-label-mono transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-emerald-accent/20 flex items-center justify-center gap-2 mt-4 text-sm cursor-pointer" 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold font-label-mono transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2 mt-4 text-sm cursor-pointer" 
                 type="submit"
               >
                 <span>CONNECT WITH COUNSELOR</span>
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>
             </form>
-            <p className="text-center text-[11px] font-label-mono text-emerald-800 dark:text-emerald-400 font-semibold mt-4 flex items-center justify-center gap-1">
+            <p className="text-center text-[11px] font-label-mono text-blue-900 dark:text-blue-400 font-semibold mt-4 flex items-center justify-center gap-1">
               <span className="material-symbols-outlined text-xs">lock</span> 100% PRIVATE &amp; OFFICIAL GUIDANCE
             </p>
           </div>
@@ -778,7 +770,7 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-75 dark:opacity-65">
           <div className="flex items-center gap-2 text-navy-deep dark:text-slate-200">
-            <span className="material-symbols-outlined text-3xl text-emerald-accent">verified</span>
+            <span className="material-symbols-outlined text-3xl text-blue-600 dark:text-blue-400">verified</span>
             <span className="font-display-xl text-lg font-bold">NIOS MHRD</span>
           </div>
           <div className="flex items-center gap-2 text-navy-deep dark:text-slate-200">

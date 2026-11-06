@@ -44,10 +44,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         }`}
       >
         <div className="p-6 flex items-center justify-between border-b border-glass-border dark:border-white/10">
-          <Link to="/" onClick={onClose} className="flex items-center gap-2" title="Divya Admission Hub">
-            <span className="material-symbols-outlined text-emerald-accent text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+          <Link to="/" onClick={onClose} className="flex items-center gap-2.5" title="Divya Admission Hub">
+            <img 
+              src="/logo.svg" 
+              alt="Divya Admission Hub Logo" 
+              className="w-8 h-8 object-contain drop-shadow-xs" 
+              width="32"
+              height="32"
+            />
             <span className="font-display-xl text-base font-extrabold tracking-tighter uppercase">
-              <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-emerald-accent">ADMISSION HUB</span>
+              <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-blue-600 dark:text-blue-400">ADMISSION HUB</span>
             </span>
           </Link>
           <button 
@@ -69,8 +75,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl font-label-mono text-xs uppercase tracking-wider font-semibold transition-all ${
                   isActive
-                    ? 'bg-emerald-accent text-white font-bold shadow-md shadow-emerald-accent/20'
-                    : 'text-on-surface-variant dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-800/60 hover:text-emerald-accent'
+                    ? 'bg-blue-600 text-white font-bold shadow-md shadow-blue-600/20'
+                    : 'text-on-surface-variant dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-800/60 hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
               >
                 <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
@@ -87,7 +93,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20consult%20regarding%20admissions."
             target="_blank"
             rel="noreferrer"
-            className="w-full bg-emerald-accent hover:bg-emerald-600 text-white py-3 rounded-xl font-label-mono text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-label-mono text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2"
           >
             <span className="material-symbols-outlined text-sm">support_agent</span>
             TALK TO COUNSELOR

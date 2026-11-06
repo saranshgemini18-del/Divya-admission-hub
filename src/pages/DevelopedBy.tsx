@@ -16,14 +16,14 @@ export default function DevelopedBy() {
       />
       <div className="relative z-10 pt-28 md:pt-36 pb-24 px-4 md:px-12 max-w-[1280px] mx-auto">
         <header className="mb-14 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
-            <span className="material-symbols-outlined text-emerald-accent text-sm">terminal</span>
-            <span className="font-label-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600/10 border border-blue-500/20 mb-4">
+            <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-sm">terminal</span>
+            <span className="font-label-mono text-xs font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider">
               Engineering &amp; Development Credits
             </span>
           </div>
           <h1 className="font-display-xl text-4xl sm:text-5xl md:text-6xl text-navy-deep dark:text-white leading-tight mb-4">
-            Architected &amp; Built by <span className="text-emerald-accent">{developerName}</span>
+            Architected &amp; Built by <span className="text-blue-600 dark:text-blue-400">{developerName}</span>
           </h1>
           <p className="text-on-surface-variant dark:text-slate-300 text-base md:text-lg max-w-2xl mx-auto">
             High-performance, accessible academic portal developed by {developerName} for Divya Admission Hub, Dayalpur, Delhi.
@@ -33,22 +33,22 @@ export default function DevelopedBy() {
         {/* Developer Contact & Profile Card */}
         <section className="flex justify-center mb-12">
           <div className="max-w-2xl w-full glass-panel p-8 md:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl relative overflow-hidden bg-white/90 dark:bg-slate-800/90 text-center">
-            <div className="w-20 h-20 mx-auto rounded-2xl bg-emerald-100 dark:bg-emerald-950/80 flex items-center justify-center mb-4 shadow-sm border border-emerald-300/60 dark:border-emerald-700/60 text-emerald-900 dark:text-emerald-300">
+            <div className="w-20 h-20 mx-auto rounded-2xl bg-blue-100 dark:bg-blue-950/80 flex items-center justify-center mb-4 shadow-sm border border-blue-300/60 dark:border-blue-700/60 text-blue-950 dark:text-blue-300">
               <span className="material-symbols-outlined text-4xl">code</span>
             </div>
             
             <h2 className="font-display-xl text-3xl font-extrabold text-navy-deep dark:text-white mb-1">
               {developerName}
             </h2>
-            <p className="text-emerald-700 dark:text-emerald-400 font-label-mono font-bold tracking-widest text-xs mb-4 uppercase">
+            <p className="text-blue-700 dark:text-blue-400 font-label-mono font-bold tracking-widest text-xs mb-4 uppercase">
               Lead Software Engineer &amp; Web Architect
             </p>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-600 mb-6">
-              <span className="material-symbols-outlined text-emerald-accent text-lg">call</span>
+              <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-lg">call</span>
               <a 
                 href={`tel:${developerPhone}`} 
-                className="font-label-mono text-sm sm:text-base font-bold text-navy-deep dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                className="font-label-mono text-sm sm:text-base font-bold text-navy-deep dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {developerPhoneDisplay}
               </a>
@@ -61,7 +61,7 @@ export default function DevelopedBy() {
             <div className="flex flex-wrap gap-3 justify-center mb-8">
               <a 
                 href={`tel:${developerPhone}`}
-                className="px-6 py-3 rounded-full bg-emerald-accent hover:bg-emerald-700 text-white font-label-mono text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+                className="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-800 text-white font-label-mono text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
               >
                 <span className="material-symbols-outlined text-base">call</span>
                 Call {developerPhoneDisplay}

@@ -18,18 +18,18 @@ const COVERED_LOCALITIES = [
 export default function LocalCatchment() {
   return (
     <section className="mb-28 md:mb-36" id="local-presence" aria-labelledby="local-heading">
-      <div className="glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-gradient-to-br from-white/90 via-slate-50/80 to-emerald-50/30 dark:from-slate-900/90 dark:via-slate-800/80 dark:to-emerald-950/20">
+      <div className="glass-panel p-8 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-gradient-to-br from-white/90 via-slate-50/80 to-blue-50/30 dark:from-slate-900/90 dark:via-slate-800/80 dark:to-blue-950/20">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column: Local Search Authority Content */}
           <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 text-xs font-bold font-label-mono uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60 text-xs font-bold font-label-mono uppercase tracking-wider">
               <span className="material-symbols-outlined text-sm">location_on</span>
               <span>Local Open Schooling &amp; Admission Center</span>
             </div>
 
             <h2 id="local-heading" className="font-display-xl text-3xl sm:text-4xl text-navy-deep dark:text-white font-bold leading-tight">
-              Class 10th &amp; 12th by Open <span className="text-emerald-accent">Near Me</span> in Dayalpur, Delhi
+              Class 10th &amp; 12th by Open <span className="text-blue-600 dark:text-blue-400">Near Me</span> in Dayalpur, Delhi
             </h2>
 
             <p className="text-on-surface-variant dark:text-slate-300 text-sm md:text-base leading-relaxed">
@@ -45,9 +45,9 @@ export default function LocalCatchment() {
                 {COVERED_LOCALITIES.map((loc, idx) => (
                   <div 
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white dark:bg-slate-800 border border-glass-border dark:border-white/10 text-xs font-medium shadow-2xs hover:border-emerald-accent/50 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white dark:bg-slate-800 border border-glass-border dark:border-white/10 text-xs font-medium shadow-2xs hover:border-blue-600/50 transition-colors"
                   >
-                    <span className="material-symbols-outlined text-emerald-accent text-sm">check</span>
+                    <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-sm">check</span>
                     <span className="text-navy-deep dark:text-white font-semibold">{loc.name}</span>
                     <span className="text-[10px] text-on-surface-variant dark:text-slate-400 font-label-mono">({loc.badge})</span>
                   </div>
@@ -58,19 +58,19 @@ export default function LocalCatchment() {
             {/* Quick Benefits Checklist for Local Students */}
             <div className="grid sm:grid-cols-2 gap-3 pt-3">
               <div className="flex items-start gap-2.5 text-xs md:text-sm text-on-surface-variant dark:text-slate-300">
-                <span className="material-symbols-outlined text-emerald-accent text-base mt-0.5">verified</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base mt-0.5">verified</span>
                 <span>Direct on-spot documentation &amp; verification</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs md:text-sm text-on-surface-variant dark:text-slate-300">
-                <span className="material-symbols-outlined text-emerald-accent text-base mt-0.5">verified</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base mt-0.5">verified</span>
                 <span>Solved TMA assignments &amp; study books support</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs md:text-sm text-on-surface-variant dark:text-slate-300">
-                <span className="material-symbols-outlined text-emerald-accent text-base mt-0.5">verified</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base mt-0.5">verified</span>
                 <span>Practical exam center guidance in Delhi</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs md:text-sm text-on-surface-variant dark:text-slate-300">
-                <span className="material-symbols-outlined text-emerald-accent text-base mt-0.5">verified</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base mt-0.5">verified</span>
                 <span>One-on-one counselor guidance with Divya Dhariwal</span>
               </div>
             </div>
@@ -82,27 +82,27 @@ export default function LocalCatchment() {
               
               <div className="flex items-center justify-between pb-4 border-b border-glass-border dark:border-white/10">
                 <div>
-                  <span className="font-label-mono text-[10px] uppercase text-emerald-accent font-bold tracking-widest block">
+                  <span className="font-label-mono text-[10px] uppercase text-blue-600 dark:text-blue-400 font-bold tracking-widest block">
                     Physical Consultation Office
                   </span>
                   <h3 className="font-display-xl text-xl font-bold text-navy-deep dark:text-white">
                     Dayalpur Center
                   </h3>
                 </div>
-                <div className="w-12 h-12 rounded-2xl bg-emerald-accent/10 border border-emerald-accent/20 flex items-center justify-center text-emerald-accent">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-600 dark:text-blue-400">
                   <span className="material-symbols-outlined text-2xl">storefront</span>
                 </div>
               </div>
 
               {/* Address with Landmark */}
               <div className="flex items-start gap-3.5">
-                <span className="material-symbols-outlined text-emerald-accent text-xl mt-0.5 shrink-0">pin_drop</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-xl mt-0.5 shrink-0">pin_drop</span>
                 <div>
                   <h4 className="font-display-xl text-sm font-bold text-navy-deep dark:text-white">Center Address &amp; Landmark</h4>
                   <p className="text-xs md:text-sm text-on-surface-variant dark:text-slate-300 leading-relaxed mt-0.5">
                     2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur, Delhi - 110094
                   </p>
-                  <span className="text-[11px] font-label-mono text-emerald-700 dark:text-emerald-400 font-bold block mt-1">
+                  <span className="text-[11px] font-label-mono text-blue-700 dark:text-blue-400 font-bold block mt-1">
                     Landmark: Above Prime Dental Clinic, Pani Ki Tanki Road
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export default function LocalCatchment() {
               <div className="pt-2 space-y-2.5">
                 <a 
                   href="tel:+918178056407"
-                  className="w-full bg-emerald-accent hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-xs font-label-mono transition-all shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-xs font-label-mono transition-all shadow-md flex items-center justify-center gap-2"
                 >
                   <span className="material-symbols-outlined text-base">call</span>
                   <span>Call Center: +91 8178056407</span>

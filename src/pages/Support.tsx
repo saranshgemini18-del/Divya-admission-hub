@@ -92,20 +92,20 @@ export default function Support() {
       <section className="mb-14 text-center md:text-left">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-3xl">
-            <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold mb-2 inline-block">
+            <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold mb-2 inline-block">
               Authoritative Advisory &amp; Inquiries
             </span>
             <h1 className="font-display-xl text-3xl sm:text-4xl md:text-5xl mb-4 text-navy-deep dark:text-white leading-tight">
-              Design Your <span className="text-emerald-accent">Academic Future</span>
+              Design Your <span className="text-blue-600 dark:text-blue-400">Academic Future</span>
             </h1>
             <p className="font-body-md text-base md:text-lg text-on-surface-variant dark:text-slate-300 max-w-xl md:mx-0 mx-auto">
               We bridge the gap between institutional regulations and your academic aspirations. Reach our certified educational mentors directly.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <div className="glass-card px-4 py-3 rounded-2xl flex items-center gap-2.5 border-emerald-500/20 dark:border-white/10 bg-white/70 dark:bg-slate-800/80">
-              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-              <span className="font-label-mono text-xs text-emerald-700 dark:text-emerald-300 uppercase tracking-widest font-bold">
+            <div className="glass-card px-4 py-3 rounded-2xl flex items-center gap-2.5 border-blue-500/20 dark:border-white/10 bg-white/70 dark:bg-slate-800/80">
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></div>
+              <span className="font-label-mono text-xs text-blue-700 dark:text-blue-300 uppercase tracking-widest font-bold">
                 Counselors Online Now
               </span>
             </div>
@@ -123,10 +123,10 @@ export default function Support() {
           <div className="glass-card p-6 md:p-10 rounded-3xl relative overflow-hidden bg-white/90 dark:bg-slate-800/90 shadow-lg border border-glass-border dark:border-white/10">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-glass-border dark:border-white/10">
               <h2 className="font-display-xl text-xl md:text-2xl text-navy-deep dark:text-white flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-emerald-accent text-2xl">mail_lock</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-2xl">mail_lock</span>
                 Priority Inquiry Portal
               </h2>
-              <span className="font-label-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full">
+              <span className="font-label-mono text-[11px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider bg-blue-600/10 px-3 py-1 rounded-full">
                 SLA: &lt; 2 Hours
               </span>
             </div>
@@ -140,7 +140,7 @@ export default function Support() {
             
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center text-center py-12">
-                <div className="w-20 h-20 bg-emerald-500/15 rounded-full flex items-center justify-center mb-5 text-emerald-500">
+                <div className="w-20 h-20 bg-blue-600/15 rounded-full flex items-center justify-center mb-5 text-blue-500">
                   <span className="material-symbols-outlined text-4xl">check_circle</span>
                 </div>
                 <h3 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white mb-3">
@@ -154,7 +154,7 @@ export default function Support() {
                     href={`https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20just%20submitted%20my%20inquiry%20for%20${encodeURIComponent(formData.interest)}.%20My%20name%20is%20${encodeURIComponent(formData.name)}.`}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold uppercase px-6 py-3 rounded-full shadow-md transition-all flex items-center gap-2"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-label-mono text-xs font-bold uppercase px-6 py-3 rounded-full shadow-md transition-all flex items-center gap-2"
                   >
                     <span className="material-symbols-outlined text-base">chat</span>
                     Open WhatsApp Chat
@@ -190,7 +190,7 @@ export default function Support() {
                       value={formData.name} 
                       onChange={handleInputChange} 
                       type="text" 
-                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="Enter candidate full name" 
                       required 
                       aria-label="Candidate Full Name"
@@ -206,7 +206,7 @@ export default function Support() {
                       value={formData.email} 
                       onChange={handleInputChange} 
                       type="email" 
-                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="Enter email address" 
                       required 
                       aria-label="Email Address"
@@ -225,7 +225,7 @@ export default function Support() {
                       value={formData.phone} 
                       onChange={handleInputChange} 
                       type="tel" 
-                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all" 
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-on-surface dark:text-white outline-none text-sm transition-all" 
                       placeholder="+91 98765 43210" 
                       aria-label="Mobile or WhatsApp Number"
                     />
@@ -239,7 +239,7 @@ export default function Support() {
                       name="interest" 
                       value={formData.interest} 
                       onChange={handleInputChange} 
-                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all"
+                      className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-on-surface dark:text-white outline-none text-sm transition-all"
                       aria-label="Academic Vertical of Interest"
                     >
                       <option value="NIOS Board Admissions (10th/12th)">NIOS Board Admissions (10th/12th)</option>
@@ -263,7 +263,7 @@ export default function Support() {
                         value="Standard" 
                         checked={formData.urgency === 'Standard'} 
                         onChange={handleInputChange} 
-                        className="accent-emerald-600"
+                        className="accent-blue-600"
                       />
                       <span>Standard (Within 24 Hours)</span>
                     </label>
@@ -274,7 +274,7 @@ export default function Support() {
                         value="Immediate" 
                         checked={formData.urgency === 'Immediate'} 
                         onChange={handleInputChange} 
-                        className="accent-emerald-600"
+                        className="accent-blue-600"
                       />
                       <span className="text-amber-600 dark:text-amber-400 font-semibold">Immediate Priority (Session Deadline)</span>
                     </label>
@@ -289,7 +289,7 @@ export default function Support() {
                     name="narrative" 
                     value={formData.narrative} 
                     onChange={handleInputChange} 
-                    className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-emerald-accent focus:ring-1 focus:ring-emerald-accent text-on-surface dark:text-white outline-none text-sm transition-all resize-none" 
+                    className="w-full bg-surface-container dark:bg-slate-900/60 border border-glass-border dark:border-slate-700 rounded-xl py-3 px-4 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-on-surface dark:text-white outline-none text-sm transition-all resize-none" 
                     placeholder="Briefly describe your qualification, previous board/college, and what admission outcome you are seeking..." 
                     rows={4} 
                     required
@@ -298,7 +298,7 @@ export default function Support() {
                 
                 <button 
                   type="submit" 
-                  className="w-full py-4 rounded-xl bg-emerald-accent hover:bg-emerald-600 text-white font-bold font-label-mono text-sm uppercase tracking-wider shadow-lg shadow-emerald-accent/20 active:scale-[0.99] transition-all flex justify-center items-center gap-2"
+                  className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold font-label-mono text-sm uppercase tracking-wider shadow-lg shadow-blue-600/20 active:scale-[0.99] transition-all flex justify-center items-center gap-2"
                 >
                   <span>SUBMIT PRIORITY INQUIRY</span>
                   <span className="material-symbols-outlined text-lg">lock</span>
@@ -310,14 +310,14 @@ export default function Support() {
           {/* Director & Principal Academic Counselor Profile */}
           <div className="glass-card p-6 sm:p-8 rounded-3xl border border-glass-border dark:border-white/10 bg-white/80 dark:bg-slate-800/80 shadow-md">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-emerald-accent/40 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-lg group">
+              <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-blue-600/40 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-lg group">
                 <img 
-                  src="/director-divya.svg" 
+                  src="/director-divya.jpg" 
                   alt="Divya Dhariwal - Founder &amp; Director, Divya Admission Hub" 
                   width="144"
                   height="144"
                   decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
               </div>
@@ -326,12 +326,12 @@ export default function Support() {
                 <div className="flex flex-wrap items-center justify-center sm:justify-between gap-2">
                   <div>
                     <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white font-bold">Divya Dhariwal</h3>
-                    <p className="text-emerald-600 dark:text-emerald-400 font-label-mono text-xs uppercase font-bold tracking-wider mt-0.5">
+                    <p className="text-blue-600 dark:text-blue-400 font-label-mono text-xs uppercase font-bold tracking-wider mt-0.5">
                       Founder &amp; Principal Academic Counselor
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold font-label-mono uppercase">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Accepting Consultations
+                  <span className="inline-flex items-center gap-1.5 bg-blue-600/10 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold font-label-mono uppercase">
+                    <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> Accepting Consultations
                   </span>
                 </div>
 
@@ -340,7 +340,7 @@ export default function Support() {
                 </p>
 
                 <div className="pt-3 border-t border-black/5 dark:border-white/10 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold text-navy-deep dark:text-slate-200">
-                  <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+                  <span className="flex items-center gap-1 text-blue-600 dark:text-blue-400">
                     <span className="material-symbols-outlined text-base">verified</span>
                     Verified Academic Strategist
                   </span>
@@ -367,7 +367,7 @@ export default function Support() {
         <aside className="lg:col-span-4 space-y-6">
           <div className="glass-card rounded-3xl overflow-hidden bg-white/90 dark:bg-slate-800/90 shadow-lg border border-glass-border dark:border-white/10 p-6 md:p-8 space-y-6">
             <div>
-              <span className="font-label-mono text-[10px] uppercase tracking-widest text-emerald-accent font-bold">
+              <span className="font-label-mono text-[10px] uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">
                 Central Office
               </span>
               <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white mt-1">
@@ -380,7 +380,7 @@ export default function Support() {
 
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <div className="p-2.5 rounded-xl bg-blue-600/10 text-blue-600 dark:text-blue-400 shrink-0">
                   <span className="material-symbols-outlined text-xl">location_on</span>
                 </div>
                 <div>
@@ -392,24 +392,24 @@ export default function Support() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <div className="p-2.5 rounded-xl bg-blue-600/10 text-blue-600 dark:text-blue-400 shrink-0">
                   <span className="material-symbols-outlined text-xl">call</span>
                 </div>
                 <div>
                   <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Direct Helpline</p>
-                  <a href="tel:+918178056407" className="text-navy-deep dark:text-slate-200 font-bold text-xs mt-1 block hover:text-emerald-accent">
+                  <a href="tel:+918178056407" className="text-navy-deep dark:text-slate-200 font-bold text-xs mt-1 block hover:text-blue-600 dark:text-blue-400">
                     +91 81780 56407
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <div className="p-2.5 rounded-xl bg-blue-600/10 text-blue-600 dark:text-blue-400 shrink-0">
                   <span className="material-symbols-outlined text-xl">mail</span>
                 </div>
                 <div>
                   <p className="font-label-mono text-[10px] uppercase font-bold text-on-surface-variant dark:text-slate-400">Official Correspondence</p>
-                  <a href="mailto:Divya19970719@gmail.com" className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 block hover:text-emerald-accent break-all">
+                  <a href="mailto:Divya19970719@gmail.com" className="text-navy-deep dark:text-slate-200 font-medium text-xs mt-1 block hover:text-blue-600 dark:text-blue-400 break-all">
                     Divya19970719@gmail.com
                   </a>
                 </div>
@@ -422,7 +422,7 @@ export default function Support() {
                 href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20speak%20with%20an%20academic%20counselor."
                 target="_blank"
                 rel="noreferrer"
-                className="w-full bg-emerald-accent hover:bg-emerald-600 text-white font-label-mono text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-label-mono text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all"
               >
                 <span className="material-symbols-outlined text-base">chat</span>
                 Instant WhatsApp Chat
@@ -446,7 +446,7 @@ export default function Support() {
               </div>
               <div className="flex justify-between text-on-surface-variant dark:text-slate-300">
                 <span>Sunday &amp; Holidays:</span>
-                <span className="font-semibold text-emerald-600 dark:text-emerald-400">WhatsApp Support On</span>
+                <span className="font-semibold text-blue-600 dark:text-blue-400">WhatsApp Support On</span>
               </div>
             </div>
           </div>

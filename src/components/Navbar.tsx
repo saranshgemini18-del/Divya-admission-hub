@@ -64,10 +64,16 @@ export default function Navbar() {
             >
               <span className="material-symbols-outlined text-2xl leading-none flex items-center justify-center">menu</span>
             </button>
-            <Link to="/" className="flex items-center gap-2 group shrink-0" title="Divya Admission Hub - Home">
-              <span className="material-symbols-outlined text-emerald-accent text-2xl group-hover:scale-110 transition-transform shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+            <Link to="/" className="flex items-center gap-2.5 group shrink-0" title="Divya Admission Hub - Home">
+              <img 
+                src="/logo.svg" 
+                alt="Divya Admission Hub Logo" 
+                className="w-9 h-9 md:w-10 md:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 drop-shadow-xs" 
+                width="40"
+                height="40"
+              />
               <span className="font-display-xl text-base sm:text-lg md:text-xl font-extrabold tracking-tighter uppercase whitespace-nowrap">
-                <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-emerald-accent">ADMISSION HUB</span>
+                <span className="text-navy-deep dark:text-white">DIVYA</span> <span className="text-blue-600 dark:text-blue-400">ADMISSION HUB</span>
               </span>
             </Link>
           </div>
@@ -82,8 +88,8 @@ export default function Navbar() {
                   to={item.path}
                   className={`px-4 py-2 rounded-full transition-all ${
                     isActive
-                      ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 font-bold'
-                      : 'text-on-surface-variant dark:text-slate-300 hover:text-emerald-800 dark:hover:text-emerald-300 hover:bg-black/5 dark:hover:bg-white/5'
+                      ? 'bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 font-bold'
+                      : 'text-on-surface-variant dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
                   {item.label}
@@ -138,7 +144,7 @@ export default function Navbar() {
               href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20would%20like%20to%20consult%20regarding%20admissions." 
               target="_blank" 
               rel="noreferrer" 
-              className="bg-emerald-accent hover:bg-emerald-600 text-white min-h-[44px] h-11 px-4 sm:px-5 rounded-full font-label-mono text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-emerald-accent/20 flex items-center justify-center gap-1.5 shrink-0"
+              className="bg-blue-600 hover:bg-blue-700 text-white min-h-[44px] h-11 px-4 sm:px-5 rounded-full font-label-mono text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-blue-600/20 flex items-center justify-center gap-1.5 shrink-0"
             >
               <span className="material-symbols-outlined text-sm leading-none flex items-center justify-center">support_agent</span>
               <span className="hidden sm:inline">CONSULT NOW</span>

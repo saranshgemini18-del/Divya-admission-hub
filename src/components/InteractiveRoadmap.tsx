@@ -48,7 +48,7 @@ export default function InteractiveRoadmap() {
         {/* Connecting Line */}
         <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-glass-border dark:bg-slate-700 rounded-full z-0 overflow-hidden">
           <div 
-            className="h-full bg-emerald-accent transition-all duration-300 ease-in-out"
+            className="h-full bg-blue-600 transition-all duration-300 ease-in-out"
             style={{ width: `${(activeStep / (roadmapSteps.length - 1)) * 100}%` }}
           />
         </div>
@@ -64,8 +64,8 @@ export default function InteractiveRoadmap() {
             <div 
               className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-sm md:text-base transition-all duration-300 ${
                 index <= activeStep
-                  ? 'bg-emerald-accent text-white shadow-lg shadow-emerald-accent/25 ring-4 ring-emerald-accent/20 scale-105'
-                  : 'bg-white dark:bg-slate-800 text-on-surface-variant dark:text-slate-400 border border-glass-border dark:border-slate-700 group-hover:border-emerald-accent'
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25 ring-4 ring-blue-600/20 scale-105'
+                  : 'bg-white dark:bg-slate-800 text-on-surface-variant dark:text-slate-400 border border-glass-border dark:border-slate-700 group-hover:border-blue-600'
               }`}
             >
               <span className="material-symbols-outlined text-lg md:text-xl">
@@ -75,8 +75,8 @@ export default function InteractiveRoadmap() {
             <span 
               className={`absolute -bottom-7 font-label-mono text-[10px] md:text-xs font-semibold whitespace-nowrap transition-colors duration-300 ${
                 index === activeStep 
-                  ? 'text-emerald-700 dark:text-emerald-400 font-bold' 
-                  : 'text-on-surface-variant dark:text-slate-400 group-hover:text-emerald-700'
+                  ? 'text-blue-700 dark:text-blue-400 font-bold' 
+                  : 'text-on-surface-variant dark:text-slate-400 group-hover:text-blue-700'
               }`}
             >
               {step.title}
@@ -92,7 +92,7 @@ export default function InteractiveRoadmap() {
           className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between transition-opacity duration-300 ease-out"
         >
           <div className="space-y-2 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60 font-label-mono text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60 font-label-mono text-xs font-bold uppercase tracking-wider">
               Step {roadmapSteps[activeStep].id} of {roadmapSteps.length}
             </div>
             <h3 className="font-display-xl text-2xl md:text-3xl text-navy-deep dark:text-white font-bold">
@@ -123,7 +123,7 @@ export default function InteractiveRoadmap() {
               className={`min-w-[44px] min-h-[44px] px-5 py-2.5 rounded-full font-label-mono text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                 activeStep === roadmapSteps.length - 1
                   ? 'opacity-40 cursor-not-allowed bg-black/5 dark:bg-white/5 text-on-surface-variant'
-                  : 'bg-emerald-accent hover:bg-emerald-600 text-white shadow-md shadow-emerald-accent/20'
+                  : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/20'
               }`}
               aria-label="Next step"
             >

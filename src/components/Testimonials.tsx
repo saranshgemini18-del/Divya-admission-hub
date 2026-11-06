@@ -11,7 +11,7 @@ export default function Testimonials() {
       program: "B.Tech Computer Science",
       institution: "Delhi NCR University Placement",
       quote: "The consulting team at Divya Admission Hub made my admission process seamless. Their documentation verification was prompt and saved me months of procedural hurdles.",
-      avatar: "/student-rv.svg"
+      avatar: "/images/student-rahul.jpg"
     },
     {
       name: "Priya Sharma",
@@ -19,7 +19,7 @@ export default function Testimonials() {
       program: "NIOS Sr. Secondary (12th)",
       institution: "State Athlete & Sports Aspirant",
       quote: "I needed to clear senior secondary via NIOS to pursue national sports trials. The guidance was highly professional and accommodated my training schedule with on-demand exams.",
-      avatar: "/student-ps.svg"
+      avatar: "/images/student-priya.jpg"
     },
     {
       name: "Amit Kumar",
@@ -27,7 +27,7 @@ export default function Testimonials() {
       program: "Master of Arts & B.Ed",
       institution: "IGNOU Central University",
       quote: "Navigating IGNOU's re-registration and assignment deadlines was overwhelming at first. Divya Admission Hub's structured support was invaluable to finishing my degree on time.",
-      avatar: "/student-ak.svg"
+      avatar: "/images/student-amit.jpg"
     },
     {
       name: "Sneha Patel",
@@ -35,7 +35,7 @@ export default function Testimonials() {
       program: "PhD Research & Thesis",
       institution: "UGC-CARE Accredited University",
       quote: "The personalized attention I received during my PhD application was outstanding. They guided my research proposal structuring and viva preparation with deep academic rigor.",
-      avatar: "/student-sp.svg"
+      avatar: "/images/student-sneha.jpg"
     }
   ];
 
@@ -50,13 +50,13 @@ export default function Testimonials() {
   return (
     <section className="mb-28 md:mb-36" id="testimonials">
       <div className="flex flex-col items-center mb-12 gap-2 text-center">
-        <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">
+        <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">
           Verified Student Testimonials
         </span>
         <h2 className="font-display-xl text-3xl md:text-5xl text-navy-deep dark:text-white">
-          Scholar <span className="text-emerald-accent">Success Stories</span>
+          Scholar <span className="text-blue-600 dark:text-blue-400">Success Stories</span>
         </h2>
-        <div className="h-1 w-24 bg-emerald-accent rounded-full mb-3"></div>
+        <div className="h-1 w-24 bg-blue-600 rounded-full mb-3"></div>
         <p className="text-on-surface-variant dark:text-slate-400 text-sm md:text-base max-w-2xl">
           Join thousands of successful professionals and students who accelerated their education with our consultancy.
         </p>
@@ -71,8 +71,8 @@ export default function Testimonials() {
           key={currentIndex}
           className="glass-panel p-6 sm:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-lg flex flex-col items-center text-center bg-white/80 dark:bg-slate-800/90 w-full transition-opacity duration-300 ease-out"
         >
-          <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-accent/40 mb-4 shrink-0 bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-            <span className="font-display-xl text-lg font-bold text-emerald-accent select-none">
+          <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-blue-600/40 mb-4 shrink-0 bg-blue-50 dark:bg-slate-700 flex items-center justify-center">
+            <span className="font-display-xl text-lg font-bold text-blue-600 dark:text-blue-300 select-none">
               {testimonials[currentIndex].initials}
             </span>
             <img 
@@ -83,6 +83,7 @@ export default function Testimonials() {
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover" 
               loading="lazy"
+              referrerPolicy="no-referrer"
               onError={(e) => {
                 (e.target as HTMLElement).style.display = 'none';
               }}
@@ -103,7 +104,7 @@ export default function Testimonials() {
             <h3 className="font-display-xl text-lg text-navy-deep dark:text-white font-bold leading-tight">
               {testimonials[currentIndex].name}
             </h3>
-            <p className="font-label-mono text-xs text-emerald-700 dark:text-emerald-400 uppercase tracking-wider font-bold mt-1">
+            <p className="font-label-mono text-xs text-blue-700 dark:text-blue-400 uppercase tracking-wider font-bold mt-1">
               {testimonials[currentIndex].program}
             </p>
             <p className="text-xs text-on-surface-variant dark:text-slate-400 font-medium mt-0.5">
@@ -116,7 +117,7 @@ export default function Testimonials() {
         <div className="flex justify-center items-center gap-4 mt-6">
           <button 
             onClick={() => setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
+            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-blue-600 hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs cursor-pointer"
             aria-label="Previous testimonial"
           >
             <span className="material-symbols-outlined text-base">arrow_back</span>
@@ -131,7 +132,7 @@ export default function Testimonials() {
                 aria-label={`Go to testimonial ${idx + 1}`}
               >
                 <span className={`h-2 rounded-full transition-all duration-200 block ${
-                  idx === currentIndex ? 'w-8 bg-emerald-accent' : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
+                  idx === currentIndex ? 'w-8 bg-blue-600' : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
                 }`} />
               </button>
             ))}
@@ -139,7 +140,7 @@ export default function Testimonials() {
           
           <button 
             onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)}
-            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-emerald-accent hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs"
+            className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-navy-deep dark:text-white hover:bg-blue-600 hover:text-white transition-colors border border-glass-border dark:border-slate-700 shadow-xs cursor-pointer"
             aria-label="Next testimonial"
           >
             <span className="material-symbols-outlined text-base">arrow_forward</span>

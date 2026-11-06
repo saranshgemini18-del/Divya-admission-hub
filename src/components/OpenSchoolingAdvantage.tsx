@@ -43,13 +43,13 @@ export default function OpenSchoolingAdvantage() {
   return (
     <section className="mb-28 md:mb-36" id="open-vs-regular" aria-labelledby="advantage-heading">
       <div className="flex flex-col items-center mb-12 gap-2 text-center">
-        <span className="font-label-mono text-xs uppercase tracking-widest text-emerald-accent font-bold">
+        <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">
           Compare &amp; Decide
         </span>
         <h2 id="advantage-heading" className="font-display-xl text-3xl md:text-5xl text-navy-deep dark:text-white">
-          Why Choose <span className="text-emerald-accent">Class 10th &amp; 12th by Open?</span>
+          Why Choose <span className="text-blue-600 dark:text-blue-400">Class 10th &amp; 12th by Open?</span>
         </h2>
-        <div className="h-1 w-24 bg-emerald-accent rounded-full mb-3"></div>
+        <div className="h-1 w-24 bg-blue-600 rounded-full mb-3"></div>
         <p className="text-on-surface-variant dark:text-slate-400 text-sm md:text-base max-w-2xl">
           National Institute of Open Schooling (NIOS) offers government-accredited qualifications with unprecedented flexibility, empowering over 5 lakh students each year.
         </p>
@@ -63,7 +63,7 @@ export default function OpenSchoolingAdvantage() {
                 <th scope="col" className="p-4 sm:p-5 font-display-xl text-xs sm:text-sm font-bold text-navy-deep dark:text-white w-1/3">
                   Academic Dimension
                 </th>
-                <th scope="col" className="p-4 sm:p-5 font-display-xl text-xs sm:text-sm font-bold text-emerald-700 dark:text-emerald-400 w-1/3 bg-emerald-500/10">
+                <th scope="col" className="p-4 sm:p-5 font-display-xl text-xs sm:text-sm font-bold text-blue-700 dark:text-blue-400 w-1/3 bg-blue-600/10">
                   <div className="flex items-center gap-1.5">
                     <span className="material-symbols-outlined text-sm">check_circle</span>
                     <span>NIOS Open Schooling (Our Specialty)</span>
@@ -79,15 +79,15 @@ export default function OpenSchoolingAdvantage() {
                 <tr 
                   key={idx} 
                   className={`hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors ${
-                    adv.highlight ? 'bg-emerald-500/[0.02]' : ''
+                    adv.highlight ? 'bg-blue-600/[0.02]' : ''
                   }`}
                 >
                   <th scope="row" className="p-4 sm:p-5 font-semibold text-navy-deep dark:text-white align-top text-xs sm:text-sm">
                     {adv.feature}
                   </th>
-                  <td className="p-4 sm:p-5 text-on-surface dark:text-slate-200 bg-emerald-500/[0.04] align-top text-xs sm:text-sm font-medium">
+                  <td className="p-4 sm:p-5 text-on-surface dark:text-slate-200 bg-blue-600/[0.04] align-top text-xs sm:text-sm font-medium">
                     <div className="flex items-start gap-2">
-                      <span className="material-symbols-outlined text-emerald-accent text-base shrink-0 mt-0.5">check</span>
+                      <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base shrink-0 mt-0.5">check</span>
                       <span>{adv.openSchooling}</span>
                     </div>
                   </td>
@@ -109,7 +109,7 @@ export default function OpenSchoolingAdvantage() {
             href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub!%20I%20want%20to%20know%20more%20about%20Class%2010th%20or%2012th%20by%20open%20schooling."
             target="_blank"
             rel="noreferrer"
-            className="shrink-0 bg-emerald-accent hover:bg-emerald-600 text-white font-bold py-2.5 px-5 rounded-full text-xs font-label-mono transition-all flex items-center gap-1.5 shadow-md"
+            className="shrink-0 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-full text-xs font-label-mono transition-all flex items-center gap-1.5 shadow-md"
           >
             <span>Ask Counselor Now</span>
             <span className="material-symbols-outlined text-sm">arrow_forward</span>

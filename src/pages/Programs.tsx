@@ -46,9 +46,9 @@ const programsData: ProgramDetail[] = [
     category: 'nios',
     title: 'NIOS Senior Secondary (Class 12th)',
     tag: 'NEET / JEE Valid',
-    tagColor: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300/60 dark:border-emerald-700/60',
+    tagColor: 'bg-blue-100 text-blue-950 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-300/60 dark:border-blue-700/60',
     icon: 'school',
-    iconColor: 'text-emerald-accent',
+    iconColor: 'text-blue-600 dark:text-blue-400',
     shortDesc: '12th standard certification recognized by all universities, IITs, AIIMS, NEET, NDA, and UPSC. Ideal for competitive exam aspirants and working students.',
     eligibility: 'Must have passed Class 10th from any recognized board (CBSE, ICSE, State Board, or NIOS).',
     admissionCycles: 'April Session & October Session + On-Demand Examinations for quick clearance',
@@ -109,9 +109,9 @@ const programsData: ProgramDetail[] = [
     category: 'degrees',
     title: 'Direct Admission: B.Ed, DIET, JBT, D.Pharma & B.Pharma',
     tag: 'Direct Admission',
-    tagColor: 'bg-emerald-600/15 text-emerald-600 dark:text-emerald-400',
+    tagColor: 'bg-blue-600/15 text-blue-600 dark:text-blue-400',
     icon: 'local_pharmacy',
-    iconColor: 'text-emerald-500',
+    iconColor: 'text-blue-500',
     shortDesc: 'Guaranteed direct seat allocation for Teaching (B.Ed, BA-B.Ed, DIET, JBT from CSCU, MDU, CRSU) and Pharmacy council recognized programs (D.Pharma, B.Pharma).',
     eligibility: '10+2 with Science (PCB/PCM) for Pharmacy; Graduation/12th with 50% for B.Ed / DIET / JBT.',
     admissionCycles: 'Current Academic Session 2024 - 2025 Enrollments Open',
@@ -207,14 +207,14 @@ export default function Programs() {
       {/* Header Section */}
       <header className="mb-12 md:mb-16 flex flex-col md:flex-row items-center md:items-end justify-between gap-6 text-center md:text-left">
         <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4 print:hidden">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-emerald-600 dark:text-emerald-400 font-bold font-label-mono text-xs uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600/10 border border-blue-500/20 mb-4 print:hidden">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            <span className="text-blue-600 dark:text-blue-400 font-bold font-label-mono text-xs uppercase tracking-widest">
               2024 — 2025 Admissions Active
             </span>
           </div>
           <h1 className="font-display-xl text-3xl sm:text-4xl md:text-5xl text-navy-deep dark:text-white mb-4 max-w-3xl">
-            Strategic Pathways to <span className="text-emerald-accent">Academic Success</span>
+            Strategic Pathways to <span className="text-blue-600 dark:text-blue-400">Academic Success</span>
           </h1>
           <p className="font-body-md text-base md:text-lg text-on-surface-variant dark:text-slate-300 max-w-2xl">
             Divya Admission Hub simplifies institutional procedures. From secondary schooling to advanced doctoral credentials, select your stream below.
@@ -233,7 +233,7 @@ export default function Programs() {
             href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20please%20send%20me%20the%20complete%20admission%20handbook%20and%20fee%20details."
             target="_blank"
             rel="noreferrer"
-            className="bg-emerald-accent hover:bg-emerald-600 text-white py-3 px-5 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-emerald-accent/20 transition-all duration-200 hover:scale-105 active:scale-95 font-label-mono text-xs font-bold"
+            className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-5 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all duration-200 hover:scale-105 active:scale-95 font-label-mono text-xs font-bold"
           >
             <span className="material-symbols-outlined text-base">chat</span>
             Direct Help
@@ -255,7 +255,7 @@ export default function Programs() {
               onClick={() => setSelectedFilter(tab.key as any)}
               className={`px-4 py-2 rounded-xl font-label-mono text-xs font-bold transition-all ${
                 selectedFilter === tab.key
-                  ? 'bg-emerald-accent text-white shadow-md shadow-emerald-accent/20'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20'
                   : 'bg-white/60 dark:bg-slate-800/60 text-on-surface-variant dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700'
               }`}
             >
@@ -313,7 +313,7 @@ export default function Programs() {
                 href={`https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20am%20interested%20in%20applying%20for%20*${encodeURIComponent(prog.title)}*.%20Please%20share%20the%20admission%20procedure%20and%20eligibility.`}
                 target="_blank"
                 rel="noreferrer"
-                className="grow lg:grow-0 bg-emerald-accent hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-md shadow-emerald-accent/20 text-center font-label-mono text-xs uppercase"
+                className="grow lg:grow-0 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-md shadow-blue-600/20 text-center font-label-mono text-xs uppercase"
               >
                 Apply Via WhatsApp
               </a>
@@ -358,7 +358,7 @@ export default function Programs() {
                 <ul className="space-y-2">
                   {activeModalProgram.keyFeatures.map((feat, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="material-symbols-outlined text-emerald-accent text-base shrink-0 mt-0.5">check_circle</span>
+                      <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base shrink-0 mt-0.5">check_circle</span>
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -392,11 +392,11 @@ export default function Programs() {
                 </ul>
               </div>
 
-              <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
-                <span className="font-label-mono text-xs font-bold text-emerald-700 dark:text-emerald-300 block mb-1">
+              <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
+                <span className="font-label-mono text-xs font-bold text-blue-700 dark:text-blue-300 block mb-1">
                   FEE STRUCTURE &amp; ASSISTANCE
                 </span>
-                <p className="text-xs text-emerald-800 dark:text-emerald-200">
+                <p className="text-xs text-blue-900 dark:text-blue-200">
                   {activeModalProgram.feeRange}. Direct board/university fees with complete transparency and receipt verification.
                 </p>
               </div>
@@ -413,7 +413,7 @@ export default function Programs() {
                 href={`https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20I%20have%20reviewed%20the%20curriculum%20for%20*${encodeURIComponent(activeModalProgram.title)}*%20and%20would%20like%20to%20enroll.`}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-emerald-accent hover:bg-emerald-600 text-white px-6 py-2.5 rounded-xl text-xs font-label-mono font-bold flex items-center justify-center gap-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-xs font-label-mono font-bold flex items-center justify-center gap-2"
               >
                 <span>Proceed with Admission</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -429,7 +429,7 @@ export default function Programs() {
           <div className="bg-white dark:bg-slate-900 border border-glass-border dark:border-white/10 rounded-3xl p-6 md:p-8 max-w-xl w-full shadow-2xl relative">
             <div className="flex justify-between items-start mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-emerald-accent text-3xl">auto_stories</span>
+                <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-3xl">auto_stories</span>
                 <div>
                   <h3 className="font-display-xl text-2xl text-navy-deep dark:text-white">Academic Handbook</h3>
                   <p className="text-xs text-on-surface-variant dark:text-slate-400">Divya Admission Hub 2024-25</p>
@@ -449,15 +449,15 @@ export default function Programs() {
               </p>
               <div className="space-y-2 p-4 rounded-2xl bg-black/5 dark:bg-white/5">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-emerald-accent text-base">check</span>
+                  <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base">check</span>
                   <span>NIOS Secondary &amp; Senior Secondary syllabus breakdown</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-emerald-accent text-base">check</span>
+                  <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base">check</span>
                   <span>IGNOU Assignment submission schedule 2024-25</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-emerald-accent text-base">check</span>
+                  <span className="material-symbols-outlined text-blue-600 dark:text-blue-400 text-base">check</span>
                   <span>Direct degree placement scholarship guidelines</span>
                 </div>
               </div>
@@ -477,7 +477,7 @@ export default function Programs() {
                 href="https://wa.me/918178056407?text=Hello%20Divya%20Admission%20Hub,%20please%20send%20me%20the%20official%20PDF%20brochure%20on%20WhatsApp."
                 target="_blank"
                 rel="noreferrer"
-                className="grow py-3 rounded-xl bg-emerald-accent text-white font-label-mono text-xs font-bold flex items-center justify-center gap-2 hover:bg-emerald-600 transition-colors"
+                className="grow py-3 rounded-xl bg-blue-600 text-white font-label-mono text-xs font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
               >
                 <span className="material-symbols-outlined text-base">chat</span>
                 Receive on WhatsApp
@@ -489,8 +489,8 @@ export default function Programs() {
 
       {/* Stats Section (Clean & Immediate Render) */}
       <section className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div className="glass-card rounded-2xl p-6 text-center border-b-4 border-b-emerald-accent shadow-sm dark:bg-slate-800/80">
-          <div className="text-emerald-accent font-display-xl text-4xl mb-1 font-bold">15k+</div>
+        <div className="glass-card rounded-2xl p-6 text-center border-b-4 border-b-blue-600 shadow-sm dark:bg-slate-800/80">
+          <div className="text-blue-600 dark:text-blue-400 font-display-xl text-4xl mb-1 font-bold">15k+</div>
           <div className="text-on-surface-variant dark:text-slate-400 font-bold font-label-mono text-xs uppercase tracking-widest">
             Successful Admissions
           </div>
