@@ -83,20 +83,23 @@ export default function Testimonials() {
             <span className="font-display-xl text-xl font-bold text-blue-600 dark:text-blue-300 select-none">
               {testimonials[currentIndex].initials}
             </span>
-            <img 
-              src={testimonials[currentIndex].avatar} 
-              alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
-              width="80"
-              height="80"
-              decoding="async"
-              style={{ objectPosition: testimonials[currentIndex].avatarPosition || 'center 20%' }}
-              className="absolute inset-0 w-full h-full object-cover" 
-              loading="lazy"
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = 'none';
-              }}
-            />
+            <picture className="absolute inset-0 w-full h-full block">
+              <source srcSet={testimonials[currentIndex].avatar.replace(/\.jpg$/, '.webp')} type="image/webp" />
+              <img 
+                src={testimonials[currentIndex].avatar} 
+                alt={`${testimonials[currentIndex].name} - Student at Divya Admission Hub`} 
+                width="80"
+                height="80"
+                decoding="async"
+                style={{ objectPosition: testimonials[currentIndex].avatarPosition || 'center 20%' }}
+                className="w-full h-full object-cover" 
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+            </picture>
           </div>
           
           <div className="flex text-premium-gold mb-4 gap-1">

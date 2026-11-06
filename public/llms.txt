@@ -12,5 +12,6 @@
 
 ## Resources
 
-- [Sitemap](https://divya-admission-hub.vercel.app/sitemap.xml): Complete URL index of website pages.
+- [Sitemap](https://divya-admission-hub.vercel.app/sitemap.xml): Complete XML index of all website pages.
+- [Engineering Credits](https://divya-admission-hub.vercel.app/developed-by): Platform architecture and engineering credits by Saransh (+91 8851285088).
 - [AI Catalog](https://divya-admission-hub.vercel.app/ai-catalog.json): Machine-readable resource discovery manifest.

@@ -20,7 +20,7 @@ const getBaseUrl = (): string => {
   }
   return "https://divya-admission-hub.vercel.app";
 };
-const DEFAULT_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuDEMDK-lMRgWcjlI2V-PjeDCPVkV6Sfs1gqwoVcpwF4PX4y3cyZ4InOCUEdyeVazEJdD-34t4j8JIsQK_QIYn_-nCISUVJ8daYKRWW616jEUXd2dLgvrZtJvbakJ2nMAc8Pb3nQFlz1E_zYJ0NNe5Se5BB3qgDx-tcehKiClJKmykOGLOvjrFFOGqhCMIUaKsTGz-ExJApogZPEOplV-f8d9ry0o9tHmFtzRoK-D8OejFdWc5PpUAiLUsUl5NV61k5Fd_96LH1ht7bc";
+const DEFAULT_IMAGE = "https://divya-admission-hub.vercel.app/director-divya.jpg";
 
 export default function SEO({ 
   title, 

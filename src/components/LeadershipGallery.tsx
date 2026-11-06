@@ -31,14 +31,20 @@ function GalleryPhotoCard({
       {/* Photo Container */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900 flex items-center justify-center">
         {!imgFailed ? (
-          <img
-            src={item.src}
-            alt={`${item.title} - ${item.event}`}
-            style={{ objectPosition: item.objectPosition || 'center 20%' }}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            onError={() => setImgFailed(true)}
-          />
+          <picture className="w-full h-full block">
+            <source srcSet={item.src.replace(/\.jpg$/, '.webp')} type="image/webp" />
+            <img
+              src={item.src}
+              alt={`${item.title} - ${item.event}`}
+              width="400"
+              height="300"
+              decoding="async"
+              style={{ objectPosition: item.objectPosition || 'center 20%' }}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              onError={() => setImgFailed(true)}
+            />
+          </picture>
         ) : (
           <div className="w-full h-full p-6 flex flex-col justify-between bg-gradient-to-br from-[#0F172A] via-[#1E3A6E] to-[#0A1128] text-white relative">
             <div className="flex items-center justify-between">

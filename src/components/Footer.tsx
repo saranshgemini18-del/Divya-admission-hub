@@ -48,7 +48,7 @@ export default function Footer() {
               <Link to="/about" className="text-slate-400 hover:text-blue-400 transition-colors">About Divya Admission Hub</Link>
             </li>
             <li>
-              <Link to="/developed-by" rel="nofollow" className="text-slate-400 hover:text-blue-400 transition-colors">Developer: Saransh (+91 8851285088)</Link>
+              <Link to="/developed-by" className="text-slate-400 hover:text-blue-400 transition-colors">Developer: Saransh (+91 8851285088)</Link>
             </li>
           </ul>
         </div>
@@ -128,7 +128,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0 font-label-mono text-xs text-slate-300">
           <span>© {new Date().getFullYear()} Divya Admission Hub.</span>
           <span className="hidden sm:inline text-slate-600">•</span>
-          <Link to="/developed-by" rel="nofollow" className="text-blue-400 hover:text-blue-300 hover:underline">
+          <Link to="/developed-by" className="text-blue-400 hover:text-blue-300 hover:underline">
             Developed by Saransh (+91 8851285088)
           </Link>
         </div>

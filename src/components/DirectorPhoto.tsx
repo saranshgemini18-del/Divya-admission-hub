@@ -7,23 +7,27 @@ export default function DirectorPhoto({ className = '' }: { className?: string }
   return (
     <div className={`relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-4 border-blue-600/40 shadow-2xl bg-gradient-to-br from-[#0F172A] via-[#1E3A6E] to-[#0A1128] group ${className}`}>
       {!loadError ? (
-        <img
-          src={imgSrc}
-          alt="Divya Dhariwal - Founder & Director, Divya Admission Hub"
-          width="288"
-          height="384"
-          decoding="async"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          style={{ objectPosition: 'center 12%' }}
-          loading="lazy"
-          onError={() => {
-            if (imgSrc !== '/director-divya.jpg') {
-              setImgSrc('/director-divya.jpg');
-            } else {
-              setLoadError(true);
-            }
-          }}
-        />
+        <picture className="w-full h-full block">
+          <source srcSet="/director-divya.webp" type="image/webp" />
+          <img
+            src="/director-divya.jpg"
+            alt="Divya Dhariwal - Founder & Director, Divya Admission Hub"
+            width="288"
+            height="384"
+            decoding="async"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            style={{ objectPosition: 'center 12%' }}
+            loading="eager"
+            fetchPriority="high"
+            onError={() => {
+              if (imgSrc !== '/director-divya.jpg') {
+                setImgSrc('/director-divya.jpg');
+              } else {
+                setLoadError(true);
+              }
+            }}
+          />
+        </picture>
       ) : (
         <div className="w-full h-full p-6 flex flex-col justify-between items-center text-center text-white relative bg-gradient-to-br from-[#0B132B] via-[#1E3A6E] to-[#1C2541]">
           <div className="w-20 h-20 rounded-full bg-blue-600/30 border-2 border-blue-400 flex items-center justify-center shadow-lg mt-4">

@@ -428,7 +428,7 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-nios.jpg')" }}
+              style={{ backgroundImage: "url('/assets/card-nios.webp')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-navy-deep/5 dark:bg-white/10 p-4 rounded-2xl border border-navy-deep/10 dark:border-white/20 backdrop-blur-sm">
@@ -455,7 +455,7 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-ignou.jpg')" }}
+              style={{ backgroundImage: "url('/assets/card-ignou.webp')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-tertiary/10 dark:bg-tertiary/20 p-4 rounded-2xl border border-tertiary/20 backdrop-blur-sm">
@@ -482,7 +482,7 @@ export default function Home() {
           >
             <div 
               className="absolute inset-0 z-[-1] opacity-30 group-hover:opacity-45 transition-opacity mix-blend-multiply dark:mix-blend-overlay bg-cover bg-center" 
-              style={{ backgroundImage: "url('/assets/card-degrees.jpg')" }}
+              style={{ backgroundImage: "url('/assets/card-degrees.webp')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent dark:from-slate-950 dark:via-slate-900/90 z-[-1]"></div>
             <div className="absolute top-8 left-8 bg-premium-gold/10 dark:bg-premium-gold/20 p-4 rounded-2xl border border-premium-gold/20 backdrop-blur-sm">

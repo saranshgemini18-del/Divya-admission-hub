@@ -10,9 +10,9 @@ export default function DevelopedBy() {
   return (
     <div className="w-full min-h-screen bg-surface dark:bg-slate-900 text-on-surface dark:text-slate-200">
       <SEO 
-        title={`Developed by ${developerName} (${developerPhoneDisplay})`}
+        title={`Developed by ${developerName} (${developerPhoneDisplay}) | Divya Admission Hub`}
         description={`Platform technical credits and engineering architecture for Divya Admission Hub, developed by ${developerName} (${developerPhoneDisplay}).`}
-        noindex={true}
+        noindex={false}
       />
       <div className="relative z-10 pt-28 md:pt-36 pb-24 px-4 md:px-12 max-w-[1280px] mx-auto">
         <header className="mb-14 text-center">

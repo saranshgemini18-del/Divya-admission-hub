@@ -95,6 +95,44 @@ const pages = [
     robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
     heading: 'Academic Programs & Admission Pathways',
     subheading: 'NIOS Open Schooling, IGNOU Distance Degrees, Teaching & Pharmacy Admissions',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Academic Programs & Admission Pathways",
+      "description": "Comprehensive list of accredited school board and university degree admission programs at Divya Admission Hub.",
+      "itemListElement": [
+        {
+          "@type": "EducationalOccupationalProgram",
+          "position": 1,
+          "name": "NIOS Secondary (Class 10th)",
+          "description": "Flexible open schooling for 10th standard under Ministry of Education, Govt. of India.",
+          "programPrerequisites": "Minimum 14 years of age. Basic reading/writing ability.",
+          "provider": { "@type": "EducationalOrganization", "name": "Divya Admission Hub", "url": "https://divya-admission-hub.vercel.app/" }
+        },
+        {
+          "@type": "EducationalOccupationalProgram",
+          "position": 2,
+          "name": "NIOS Senior Secondary (Class 12th)",
+          "description": "12th standard certification recognized by all universities, IITs, AIIMS, NEET, NDA, and UPSC.",
+          "programPrerequisites": "Must have passed Class 10th from any recognized board.",
+          "provider": { "@type": "EducationalOrganization", "name": "Divya Admission Hub", "url": "https://divya-admission-hub.vercel.app/" }
+        },
+        {
+          "@type": "EducationalOccupationalProgram",
+          "position": 3,
+          "name": "IGNOU Undergraduate & Postgraduate Degrees",
+          "description": "Accredited university degrees (BA, B.Com, BCA, MA, M.Com, MBA, MCA) from central university.",
+          "provider": { "@type": "EducationalOrganization", "name": "Divya Admission Hub", "url": "https://divya-admission-hub.vercel.app/" }
+        },
+        {
+          "@type": "EducationalOccupationalProgram",
+          "position": 4,
+          "name": "Direct Professional Admissions: B.Ed, DIET, JBT, D.Pharma & B.Pharma",
+          "description": "Direct seat allocation for Teaching (B.Ed, JBT) and Pharmacy (D.Pharma, B.Pharma) in NCTE and PCI approved institutions.",
+          "provider": { "@type": "EducationalOrganization", "name": "Divya Admission Hub", "url": "https://divya-admission-hub.vercel.app/" }
+        }
+      ]
+    },
     content: `
       <header class="py-12 text-center max-w-4xl mx-auto px-4">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
@@ -161,6 +199,33 @@ const pages = [
     robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
     heading: 'About Divya Admission Hub & Director Divya Dhariwal',
     subheading: '12+ Years of Academic Guidance & Leadership in Dayalpur, Delhi',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Divya Dhariwal & Divya Admission Hub",
+      "description": "12+ years of educational counseling leadership, Google for Education Best Educator Award recipient, guiding over 15,000 students across Delhi NCR.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Divya Dhariwal",
+        "jobTitle": "Director & Principal Academic Counselor",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Divya Admission Hub",
+          "url": "https://divya-admission-hub.vercel.app/"
+        },
+        "award": [
+          "The Best Educator Award - Google for Education Leader Series India 2025",
+          "Swami Vivekananda Academic Excellence Award",
+          "International Women's Day Leadership Award",
+          "Maharishi University Academic Merit Trophy"
+        ],
+        "image": "https://divya-admission-hub.vercel.app/director-divya.jpg",
+        "sameAs": [
+          "https://instagram.com/dhriti19977777",
+          "https://wa.me/918178056407"
+        ]
+      }
+    },
     content: `
       <header class="py-12 text-center max-w-4xl mx-auto px-4">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
@@ -213,6 +278,32 @@ const pages = [
     robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
     heading: 'Student Support Desk & Helpline',
     subheading: 'Direct Admission Guidance & Form Assistance in Dayalpur, Delhi',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Student Support Desk & Helpline",
+      "description": "Direct student counseling and admission helpline for NIOS open schooling, IGNOU degrees, and TOC transfer in Dayalpur, Delhi.",
+      "mainEntity": {
+        "@type": "EducationalOrganization",
+        "name": "Divya Admission Hub",
+        "telephone": "+91-8178056407",
+        "email": "Divya19970719@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2nd Floor, Prime Dental Clinic, Near Pani Ki Tanki, Dayal Pur",
+          "addressLocality": "Delhi",
+          "postalCode": "110094",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-8178056407",
+          "contactType": "admissions counseling & student support",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        }
+      }
+    },
     content: `
       <header class="py-12 text-center max-w-4xl mx-auto px-4">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
@@ -260,10 +351,10 @@ const pages = [
     route: '/developed-by',
     dir: path.join(distDir, 'developed-by'),
     filename: 'index.html',
-    title: 'Engineering Credits | Divya Admission Hub',
-    description: 'Technical architecture credits for Divya Admission Hub.',
+    title: 'Developed by Saransh (+91 8851285088) | Engineering Credits | Divya Admission Hub',
+    description: 'Technical architecture and engineering credits for Divya Admission Hub, architected and built by Saransh (+91 8851285088).',
     canonical: 'https://divya-admission-hub.vercel.app/developed-by',
-    robots: 'noindex, nofollow',
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
     heading: 'Engineering Credits',
     subheading: 'Technical Architecture',
     content: `
@@ -330,9 +421,15 @@ for (const page of pages) {
     `<meta name="twitter:description" content="${page.description}" />`
   );
 
+  // Inject page-specific JSON-LD Schema
+  if (page.schema) {
+    html = html.replace(
+      '</head>',
+      `    <!-- Route-Specific Structured Data (JSON-LD) -->\n    <script type="application/ld+json">\n    ${JSON.stringify(page.schema, null, 2)}\n    </script>\n  </head>`
+    );
+  }
+
   // Inject prerendered semantic HTML content inside <div id="root"></div>
-  // When JavaScript loads, React replaces/hydrates the root container smoothly.
-  // When Googlebot crawls without JS execution, it sees 100% of the content immediately!
   html = html.replace(
     '<!--APP_HTML-->',
     `\n${page.content}\n    `
@@ -343,4 +440,34 @@ for (const page of pages) {
   console.log(`✓ Generated ${page.route} -> ${outputPath}`);
 }
 
-console.log('All static pages prerendered successfully!');
+console.log('All static pages prerendered successfully with Rich JSON-LD schemas!');
+
+// Ensure sitemap.xml is synchronized to dist
+const publicSitemap = path.resolve(__dirname, '..', 'public', 'sitemap.xml');
+const distSitemap = path.join(distDir, 'sitemap.xml');
+if (fs.existsSync(publicSitemap)) {
+  fs.copyFileSync(publicSitemap, distSitemap);
+  console.log('✓ Synchronized sitemap.xml to dist/sitemap.xml');
+}
+// Synchronize WebP image assets in dist/ for maximum Core Web Vitals speed
+try {
+  const sharp = require('sharp');
+  const distImgDir = path.join(distDir, 'images');
+  if (fs.existsSync(distImgDir)) {
+    const jpgs = fs.readdirSync(distImgDir).filter(f => f.endsWith('.jpg'));
+    for (const j of jpgs) {
+      const webpFile = path.join(distImgDir, j.replace(/\.jpg$/, '.webp'));
+      if (!fs.existsSync(webpFile)) {
+        sharp(path.join(distImgDir, j))
+          .webp({ quality: 82, effort: 6 })
+          .toFile(webpFile);
+      }
+    }
+  }
+  const distDirDivya = path.join(distDir, 'director-divya.jpg');
+  if (fs.existsSync(distDirDivya) && !fs.existsSync(path.join(distDir, 'director-divya.webp'))) {
+    sharp(distDirDivya).webp({ quality: 82, effort: 6 }).toFile(path.join(distDir, 'director-divya.webp'));
+  }
+} catch (e) {
+  // Graceful fallback
+}
