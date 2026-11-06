@@ -278,14 +278,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[580px] md:min-h-[640px] flex flex-col justify-center items-start text-left gap-8 md:gap-10 mb-24 md:mb-32" id="home">
         <div className="flex flex-col gap-5 max-w-3xl text-left items-start">
-          <div className="inline-flex items-center gap-2 self-start bg-premium-gold/10 border border-premium-gold/30 px-4 py-1.5 rounded-full w-fit shadow-xs">
+          {/* Official Name & Location Banner */}
+          <div className="inline-flex items-center gap-2 self-start bg-premium-gold/10 border border-premium-gold/30 px-3.5 py-1.5 rounded-full w-fit shadow-xs">
             <span className="material-symbols-outlined text-premium-gold text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-            <span className="font-label-mono text-[11px] tracking-widest text-premium-gold uppercase font-bold">Authorized Academic Consultancy • Dayalpur Delhi 110094</span>
+            <span className="font-label-mono text-[10px] sm:text-[11px] tracking-wider text-premium-gold uppercase font-bold">Authorized Academic Consultancy • Dayalpur Delhi 110094</span>
           </div>
 
-          <h1 className="font-display-xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.15] tracking-tight text-left animate-slide-left">
+          <h1 className="font-display-xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface dark:text-white leading-[1.12] tracking-tight text-left">
             Class 10th &amp; 12th by Open <span className="text-blue-600 dark:text-blue-400">Near Me</span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl text-navy-deep dark:text-slate-200 font-semibold mt-2.5">
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-navy-deep dark:text-slate-200 font-bold mt-3">
               Divya Admission Hub &bull; NIOS &amp; IGNOU Admissions in Dayalpur, Delhi
             </span>
           </h1>
@@ -408,10 +409,12 @@ export default function Home() {
       </section>
 
       {/* Local SEO & Catchment Presence */}
-      <LocalCatchment />
+      <div className="section-lazy">
+        <LocalCatchment />
+      </div>
 
       {/* Support Verticals - Bento Grid (Clean & Fast Rendering) */}
-      <section className="mb-28 md:mb-36" id="programs-section">
+      <section className="mb-28 md:mb-36 section-lazy" id="programs-section">
         <div className="flex flex-col items-center mb-12 gap-2">
           <h2 className="font-display-xl text-3xl md:text-5xl text-center dark:text-white">Academic <span className="text-premium-gold">Verticals</span></h2>
           <div className="h-1 w-24 bg-blue-600 rounded-full"></div>
@@ -505,10 +508,12 @@ export default function Home() {
       </section>
 
       {/* Open Schooling vs Traditional Advantage Matrix */}
-      <OpenSchoolingAdvantage />
+      <div className="section-lazy">
+        <OpenSchoolingAdvantage />
+      </div>
 
       {/* Interactive Academic Stream Finder */}
-      <section className="mb-28 md:mb-36 glass-panel p-6 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/70 dark:bg-slate-900/70">
+      <section className="mb-28 md:mb-36 glass-panel section-lazy p-6 md:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/70 dark:bg-slate-900/70">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 pb-6 border-b border-glass-border dark:border-white/10">
           <div>
             <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">Quick Academic Advisor</span>
@@ -574,7 +579,7 @@ export default function Home() {
       </section>
 
       {/* Workflow Timeline */}
-      <section className="mb-28 md:mb-36" id="workflow">
+      <section className="mb-28 md:mb-36 section-lazy" id="workflow">
         <div className="flex flex-col mb-12">
           <span className="font-label-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold mb-2">Clear 4-Step Process</span>
           <h2 className="font-display-xl text-3xl md:text-4xl text-on-surface dark:text-white leading-tight mb-4">
@@ -589,7 +594,7 @@ export default function Home() {
       </section>
 
       {/* Director Spotlight Section */}
-      <section className="mb-28 md:mb-36">
+      <section className="mb-28 md:mb-36 section-lazy">
         <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-glass-border dark:border-white/10 shadow-xl bg-white/80 dark:bg-slate-800/80 relative overflow-hidden">
           <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* Director Photo */}
@@ -652,20 +657,26 @@ export default function Home() {
       </section>
 
       {/* Verified Media, National Honors & Leadership Gallery */}
-      <LeadershipGallery 
-        limit={6}
-        title="Verified Media, Honors &amp; Leadership Gallery"
-        subtitle="Explore documented proof: Google for Education Best Educator Award, ET Education Keynote, Zee News broadcast, Constitution Club address &amp; university convocations."
-      />
+      <div className="section-lazy">
+        <LeadershipGallery 
+          limit={6}
+          title="Verified Media, Honors &amp; Leadership Gallery"
+          subtitle="Explore documented proof: Google for Education Best Educator Award, ET Education Keynote, Zee News broadcast, Constitution Club address &amp; university convocations."
+        />
+      </div>
 
       {/* Testimonials */}
-      <Testimonials />
+      <div className="section-lazy">
+        <Testimonials />
+      </div>
 
       {/* SEO FAQ Section with Structured Content */}
-      <HomeFAQ />
+      <div className="section-lazy">
+        <HomeFAQ />
+      </div>
 
       {/* Fast-Track Admission Query Box */}
-      <section className="mb-28 md:mb-36 flex justify-center w-full" id="query-box">
+      <section className="mb-28 md:mb-36 flex justify-center w-full section-lazy" id="query-box">
         <div className="w-full max-w-2xl">
           <div className="glass-panel p-6 md:p-10 rounded-3xl border border-glass-border dark:border-white/10 shadow-2xl relative bg-white/85 dark:bg-slate-800/90 transition-transform duration-200">
             <div className="absolute -top-4 -right-4 bg-blue-600 p-3 rounded-2xl shadow-lg animate-bounce">
@@ -764,7 +775,7 @@ export default function Home() {
       </section>
 
       {/* Trusted By / Partners */}
-      <section className="mb-20 flex flex-col items-center border-t border-glass-border dark:border-white/10 pt-14">
+      <section className="mb-20 flex flex-col items-center border-t border-glass-border dark:border-white/10 pt-14 section-lazy">
         <p className="font-label-mono text-xs uppercase tracking-widest text-on-surface-variant dark:text-slate-400 mb-8 font-bold text-center">
           ACADEMIC RECOGNITIONS &amp; ACCREDITATIONS
         </p>

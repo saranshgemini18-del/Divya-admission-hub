@@ -7,8 +7,9 @@ const Footer = lazy(() => import('./components/Footer'));
 const FloatingContact = lazy(() => import('./components/FloatingContact'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
 
-// Lazy load route components for ultra-fast mobile loading
-const Home = lazy(() => import('./pages/Home'));
+import Home from './pages/Home';
+
+// Lazy load secondary sub-routes for code splitting
 const Programs = lazy(() => import('./pages/Programs'));
 const Support = lazy(() => import('./pages/Support'));
 const About = lazy(() => import('./pages/About'));
@@ -55,7 +56,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       {/* Global Background Shader */}
-      <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
         <div className="absolute inset-0 grid-bg opacity-100"></div>
       </div>
       <Navbar />

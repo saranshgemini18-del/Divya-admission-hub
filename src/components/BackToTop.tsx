@@ -5,10 +5,15 @@ export default function BackToTop() {
 
   useEffect(() => {
     let ticking = false;
+    let lastVisible = false;
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setIsVisible(window.scrollY > 300);
+          const isNowVisible = window.scrollY > 280;
+          if (isNowVisible !== lastVisible) {
+            setIsVisible(isNowVisible);
+            lastVisible = isNowVisible;
+          }
           ticking = false;
         });
         ticking = true;
@@ -29,12 +34,13 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-20 md:bottom-8 left-6 md:left-8 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border border-glass-border dark:border-white/10 shadow-lg flex items-center justify-center text-navy-deep dark:text-white hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-600 dark:text-blue-400 transition-all duration-300 hover:scale-110 active:scale-95 ${
+      className={`fixed bottom-5 left-4 sm:bottom-6 sm:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 dark:bg-slate-800/95 border border-black/10 dark:border-white/10 shadow-lg flex items-center justify-center text-navy-deep dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:scale-110 active:scale-95 ${
         isVisible ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-75 pointer-events-none'
       }`}
       aria-label="Back to top"
+      style={{ willChange: 'transform, opacity' }}
     >
-      <span className="material-symbols-outlined text-2xl">arrow_upward</span>
+      <span className="material-symbols-outlined text-xl sm:text-2xl">arrow_upward</span>
     </button>
   );
 }

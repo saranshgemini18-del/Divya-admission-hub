@@ -17,8 +17,7 @@ export default function DirectorPhoto({ className = '' }: { className?: string }
             decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             style={{ objectPosition: 'center 12%' }}
-            loading="eager"
-            fetchPriority="high"
+            loading="lazy"
             onError={() => {
               if (imgSrc !== '/director-divya.jpg') {
                 setImgSrc('/director-divya.jpg');

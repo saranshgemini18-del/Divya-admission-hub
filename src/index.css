@@ -48,7 +48,6 @@ body {
   font-family: var(--font-body-md);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 html.dark {
@@ -86,25 +85,41 @@ html.dark body {
   contain: layout paint;
 }
 
+/* Optimized high-performance glass panels (isolated GPU layout) */
 .glass-card, .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(0, 0, 0, 0.08);
+  contain: layout paint;
 }
 
 html.dark .glass-card, 
 html.dark .glass-panel {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.92);
   border-color: rgba(255, 255, 255, 0.1);
   color: #f1f5f9;
 }
 
+/* Fast scrolling mode on mobile/touch screens to eliminate scroll jank */
+@media (pointer: coarse) {
+  .glass-card, .glass-panel {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.97);
+  }
+  html.dark .glass-card,
+  html.dark .glass-panel {
+    background: rgba(15, 23, 42, 0.97);
+  }
+}
+
 .emerald-glow, .blue-glow {
-  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.20);
+  box-shadow: 0 10px 24px -6px rgba(37, 99, 235, 0.18);
 }
 
 .cyan-glow {
-  box-shadow: 0 10px 30px -5px rgba(82, 117, 161, 0.20);
+  box-shadow: 0 10px 24px -6px rgba(82, 117, 161, 0.18);
 }
 
 .gradient-text {
@@ -141,15 +156,25 @@ html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #1E3A6E 0%, #2563EB 50%, #5275A1 100%);
 }
 
+/* Isolated GPU Layer for fixed background to prevent scroll repaints */
 .grid-bg {
   background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px), 
                     linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 32px 32px;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 html.dark .grid-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), 
                     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Offscreen lazy rendering for 60fps buttery scrolling */
+.section-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 750px;
 }
 
 @keyframes slideInLeft {

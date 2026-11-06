@@ -70,39 +70,18 @@
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
     <link rel="alternate" type="application/json" href="/ai-catalog.json" title="AI Catalog" />
 
-    <!-- Performance Hints: Preload Critical LCP & Font Assets -->
+    <!-- Performance Hints: Preconnect to Font Servers & Preload Brand Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="preload" href="/director-divya.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v374/kJF4BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJU22ZZLsYEpzC_1ver5Y0J1Llf.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />
 
-    <!-- Fonts: Non-render-blocking async load with noscript fallback for optimal FCP & Speed Index -->
+    <!-- Google Fonts: Display Swap for Zero Font Blocking -->
     <link 
-      rel="preload" 
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Geist:wght@400;500;600&display=swap" 
-      as="style" 
-      onload="this.onload=null;this.rel='stylesheet'" 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Geist:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap" 
     />
-    <noscript>
-      <link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Geist:wght@400;500;600&display=swap" 
-      />
-    </noscript>
-    <link 
-      rel="preload" 
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" 
-      as="style" 
-      onload="this.onload=null;this.rel='stylesheet'" 
-    />
-    <noscript>
-      <link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" 
-      />
-    </noscript>
 
     <!-- Google-Rank-1 Multi-Entity Structured Data Graph (JSON-LD) -->
     <script type="application/ld+json">
