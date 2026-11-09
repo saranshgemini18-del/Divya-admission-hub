@@ -1,4 +1,26 @@
+# Divya Admission Hub - Production robots.txt
+# All search engine crawlers are explicitly allowed full access across all routes
+
 User-agent: *
+Disallow:
 Allow: /
 
+User-agent: Googlebot
+Disallow:
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow:
+Allow: /
+
+User-agent: Googlebot-Mobile
+Disallow:
+Allow: /
+
+User-agent: Bingbot
+Disallow:
+Allow: /
+
+# Canonical XML Sitemap
 Sitemap: https://divya-admission-hub.vercel.app/sitemap.xml
+

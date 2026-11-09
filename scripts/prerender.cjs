@@ -442,12 +442,19 @@ for (const page of pages) {
 
 console.log('All static pages prerendered successfully with Rich JSON-LD schemas!');
 
-// Ensure sitemap.xml is synchronized to dist
+// Ensure sitemap.xml and robots.txt are synchronized to dist
 const publicSitemap = path.resolve(__dirname, '..', 'public', 'sitemap.xml');
 const distSitemap = path.join(distDir, 'sitemap.xml');
 if (fs.existsSync(publicSitemap)) {
   fs.copyFileSync(publicSitemap, distSitemap);
   console.log('✓ Synchronized sitemap.xml to dist/sitemap.xml');
+}
+
+const publicRobots = path.resolve(__dirname, '..', 'public', 'robots.txt');
+const distRobots = path.join(distDir, 'robots.txt');
+if (fs.existsSync(publicRobots)) {
+  fs.copyFileSync(publicRobots, distRobots);
+  console.log('✓ Synchronized robots.txt to dist/robots.txt');
 }
 // Synchronize WebP image assets in dist/ for maximum Core Web Vitals speed
 try {
