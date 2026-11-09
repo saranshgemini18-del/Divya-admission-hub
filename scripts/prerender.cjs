@@ -456,6 +456,15 @@ if (fs.existsSync(publicRobots)) {
   fs.copyFileSync(publicRobots, distRobots);
   console.log('✓ Synchronized robots.txt to dist/robots.txt');
 }
+
+// Ensure Google Search Console verification files are synchronized to dist
+const publicDir = path.resolve(__dirname, '..', 'public');
+fs.readdirSync(publicDir)
+  .filter(f => f.startsWith('google') && f.endsWith('.html'))
+  .forEach(f => {
+    fs.copyFileSync(path.join(publicDir, f), path.join(distDir, f));
+    console.log(`✓ Synchronized ${f} to dist/${f}`);
+  });
 // Synchronize WebP image assets in dist/ for maximum Core Web Vitals speed
 try {
   const sharp = require('sharp');
